@@ -55,21 +55,32 @@
                         <a class="active-menu"  href="index.jsp"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                      <li>
-                        <a  href="AddStyleRecords.jsp"><i class="fa fa-plus-square fa-3x"></i> Add Records</a>
+                        <a  href="#"><i class="fa fa-plus-square fa-3x"></i> Add records</a>
+                        
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="AddStyleRecords.jsp">Add style records</a>
+                            </li>
+                            <li>
+                                <a href="#">Add weekly QCO records</a>
+                            </li>
+                            
+                        </ul>
+                        
                     </li>
                     
                     
                     
                     
                     <li>
-                        <a  href="#"><i class="fa fa-user fa-3x"></i> Authenticate Users</a>
+                        <a  href="AddUser.jsp"><i class="fa fa-user fa-3x"></i> Authenticate Users</a>
                     </li>
 						   <li  >
                         <a   href="AddPlant.jsp"><i class="fa fa-home fa-3x"></i> Authenticate Plants</a>
                     </li>	
                     
                     <li  >
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
+                        <a  href="SetBaselines.jsp"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
                     </li>
                       
                     	
