@@ -58,9 +58,7 @@
                         <a  href="AddStyleRecords.jsp"><i class="fa fa-plus-square fa-3x"></i> Add Records</a>
                     </li>
                     
-                    <li  >
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Advance Information</a>
-                    </li>
+                    
                     
                     
                     <li>
@@ -69,6 +67,10 @@
 						   <li  >
                         <a   href="AddPlant.jsp"><i class="fa fa-home fa-3x"></i> Authenticate Plants</a>
                     </li>	
+                    
+                    <li  >
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
+                    </li>
                       
                     	
                 </ul>
