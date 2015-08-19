@@ -1,11 +1,10 @@
-
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title> pala do yanda..:P :P</title>
 
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -56,24 +55,21 @@
                         <a class="active-menu"  href="index.jsp"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                      <li>
-                        <a  href="#"><i class="fa fa-plus-square fa-3x"></i> Add records</a>
-                        
-                        
-                        
+                        <a  href="AddStyleRecords.jsp"><i class="fa fa-plus-square fa-3x"></i> Add Records</a>
                     </li>
                     
                     
                     
                     
                     <li>
-                        <a  href="AddUser.jsp"><i class="fa fa-user fa-3x"></i> Authenticate Users</a>
+                        <a  href="#"><i class="fa fa-user fa-3x"></i> Authenticate Users</a>
                     </li>
 						   <li  >
                         <a   href="AddPlant.jsp"><i class="fa fa-home fa-3x"></i> Authenticate Plants</a>
                     </li>	
                     
                     <li  >
-                        <a  href="SetBaselines.jsp"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
                     </li>
                       
                     	
