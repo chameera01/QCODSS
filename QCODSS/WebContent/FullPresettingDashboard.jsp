@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html >
+<!DOCTYPE html ">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>QCO Dashboard | MAS Active</title>
-
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>QCODSS | Full presetting dashboard</title>
+	
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -19,34 +19,35 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
-
+	
 
 </head>
 <body>
 
-<div id="wrapper">
+	<div id="wrapper">
 
-<%@ include file="header.jsp" %> 
+	<%@ include file="header.jsp" %> 
 
-<div id="page-wrapper" >
-	 <div id="page-inner">
-	    	
-	    	<div class="row">
+	
+	<div id="page-wrapper">
+	
+		<div id="page-inner"> 
+			
+			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h1>MAS Active QCO Dashboard</h1>   
-	                  <h5>Welcome Nipuna Cooray  </h5>
+	                 <h3>Full prestting dashboard</h3>   
+	                  
 	            </div>
 	    	<!-- /. row  -->	
 	    	</div>
 	    	
 	    	<hr>
-	    	
-	    	
-	    	<div class="row">
-	    		
-	    		<div class="col-md-3 col-sm-6 col-xs-6">           
+			
+			<div class="row">
+				
+				
+					<div class="col-md-3 col-sm-6 col-xs-6">           
 						<div class="panel panel-back noti-box">
                 			<span class="icon-box bg-color-red set-icon">
                     			<i class="fa fa-envelope-o"></i>
@@ -95,14 +96,18 @@
                 		</div>
              			</div>
 		     		</div>
-	    	
-	    	
-	    	<!-- /. row  -->
-	    	</div>
-	    	
-	    	
-	    	
-	    	<div class="row"> 
+					
+				
+				
+				
+				
+				
+				
+			<!-- /. row  -->	
+			</div>
+			
+			
+			<div class="row"> 
                     
                       
                         <div class="col-md-9 col-sm-12 col-xs-12">                     
@@ -142,17 +147,18 @@
                  		</div>
                 
            </div>
-	    	
-	    	
-	    	
-	    	
-	<!-- /. page inner  -->    	
+			
+			
+		<!-- /.page inner  -->
+		</div>
+	
+	
+	
+	
 	</div>
 	
-	<!-- /. page wrapper  -->	
-	</div>
+	
 
-<!-- /. wrapper  -->	
 </div>
 
 	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
@@ -167,7 +173,6 @@
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-
 
 </body>
 </html>

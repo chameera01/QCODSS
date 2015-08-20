@@ -86,6 +86,27 @@
                                             <select class="form-control">
                                                 <option>Recorder</option>
                                                 <option>Viewer</option>
+                                                <option>Top</option>
+                                                
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Select plant</label>
+                                            <select class="form-control">
+                                                <option>Shadowline</option>
+                                                <option>Leisureline</option>
+                                                <option>Contourline</option>
+                                                <option>Shadeline</option>
+                                                <option>Nirmana</option>
+                                                <option>Sleekline</option>
+                                                <option>Synergy</option>
+                                                <option>Vaanavil</option>
+                                                <option>Asialine</option>
+                                                <option>Mihintale</option>
+                                                <option>DM Lanka</option>
+                                                <option>Active center</option>
+                                                
                                                 
                                             </select>
                                         </div>

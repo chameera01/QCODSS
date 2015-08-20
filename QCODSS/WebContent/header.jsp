@@ -56,7 +56,7 @@
                     </li>
                     
                     <li>
-                        <a   href="#"><i class="fa fa-check fa-3x"></i>  Full presetting dashboard</a>
+                        <a   href="FullPresettingDashboard.jsp"><i class="fa fa-desktop fa-3x"></i>  Full presetting dashboard</a>
                     </li>
                     
                     
@@ -68,7 +68,7 @@
                                 <a href="AddStyleRecords.jsp">Add style records</a>
                             </li>
                             <li>
-                                <a href="#">Add weekly records</a>
+                                <a href="AddWeeklyRecords.jsp">Add weekly records</a>
                             </li>
                             
                         </ul>
