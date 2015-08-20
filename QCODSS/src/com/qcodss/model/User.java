@@ -1,5 +1,6 @@
 package com.qcodss.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -10,13 +11,24 @@ public class User {
 	
 	@Id
 	@GeneratedValue
+	@Column(name = "user_id")
 	private int id;
+	
+	@Column(name = "user_name")
 	private String name;
-	private String username;
+	
+	@Column(name = "user_email", unique = true)
 	private String email;
+	
+	@Column(name = "user_password")
 	private String password;
+	
+	@Column(name = "user_profile_pic")
 	private String profile_pic;
+	
+	@Column(name = "user_role")
 	private String role;
+	
 	@OneToOne
 	private Plant  plantid;
 	
@@ -31,12 +43,6 @@ public class User {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getUsername() {
-		return username;
-	}
-	public void setUsername(String username) {
-		this.username = username;
 	}
 	public String getEmail() {
 		return email;

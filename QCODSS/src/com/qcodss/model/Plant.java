@@ -1,17 +1,21 @@
 package com.qcodss.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Plant {
 	
 	@Id
 	@GeneratedValue
+	@Column(name = "plant_id")
 	private int id;
+	
+	@Column(name = "plant_name")
 	private String name;
+	
 	
 	public int getId() {
 		return id;
