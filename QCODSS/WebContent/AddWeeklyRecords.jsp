@@ -4,9 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>QCODSS | Style Record</title>
-
-
+<title>QCODSS | Add weekly records</title>
 
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,7 +19,6 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
 
 </head>
 <body>
@@ -38,7 +35,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Add style record</h3>   
+	                 <h3>Add weekly consolidated style records</h3>   
 	                  
 	            </div>
 	    	<!-- /. row  -->	
@@ -48,165 +45,90 @@
 			
 			<div class="row">
 	    		
-	    		<div class="col-md-9">
+	    		<div class="col-md-8">
 	                 
 	                 <div class="panel panel-default">
 	                 	
 	                 	<div class="panel-heading">
-                            Carefully enter the completed style details in the fields below
+                            Fill  weekly consolidated style records only
                         </div>
 	                 	
 	                 	<div class="panel-body">
 	                 	
 	                 		<div class="row">
-	                 			<div class="col-md-8">
+	                 			<div class="col-md-6">
 	                 				
 	                 				<form> 
 	                 					
 	                 					<div class="form-group">
-                                            <label>Style no</label>
-                                            <input class="form-control" placeholder="Please enter style no" name="" />
-                                        </div>
+			                                            <label>Select month</label>
+			                                            <select class="form-control">
+			                                                <option>January</option>
+			                                                <option>February</option>
+			                                                <option>March</option>
+			                                                <option>April</option>
+			                                                <option>May</option>
+			                                                <option>June</option>
+			                                                <option>July</option>
+			                                                <option>August</option>
+			                                                <option>September</option>
+			                                                <option>October</option>
+			                                                <option>November</option>
+			                                                <option>December</option>
+			                                                
+			                                                
+			                                            </select>
+			                              </div>
+			                              
+			                              <div class="form-group">
+                                            <label>Enter week number</label>
+                                            <input class="form-control" placeholder="Please enter week no" name="" />
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label>Enter number of new styles</label>
+                                            <input class="form-control" placeholder="Please enter no of new styles" name="" />
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label>Enter number of repeat styles</label>
+                                            <input class="form-control" placeholder="Please enter no of repeat styles" name="" />
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label>Enter full presetting hit rate</label>
+                                            <input class="form-control" placeholder="Please enter full presetting hit rate" name="" />
+                                          </div>
+                                          
+                                           <div class="form-group">
+                                            <label>Enter silhouette base hit rate</label>
+                                            <input class="form-control" placeholder="Please enter silhouette base hit rate" name="" />
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label>Enter average feeding time</label>
+                                            <input class="form-control" placeholder="Please enter average feeding time" name="" />
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label>Enter QCO time average of all new styles</label>
+                                            <input class="form-control" placeholder="Please enter QCO time average of all new styles" name="" />
+                                          </div>
+                                          
+                                          <div class="form-group">
+                                            <label>Enter QCO time average of all repeat styles</label>
+                                            <input class="form-control" placeholder="Please enter QCO time average of all repeat styles" name="" />
+                                          </div>
 	                 					
-	                 					
-                                        
-                                        <div class="form-group">
-                                            <label>Style new/repeat</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />New
-                                                </label>
-                                            </div>
-                                            
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>Repeat
-                                                </label>
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Style started date</label>
-                                            <input class="form-control" placeholder="Please style started date" name="" />
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Module no</label>
-                                            <input class="form-control" placeholder="Please enter module no" name="" />
-                                        </div>
-                                        
-                                        <div class = "row">
-                                        
-                                        <div class="col-md-3">
-                                        
-                                        <div class="form-group">
-                                            <label>Pre machine setting</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked />True
-                                                </label>
-                                            </div>
-                                            
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2"/>False
-                                                </label>
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                        
-                                        </div>
-                                        
-                                         <div class="col-md-3">
-                                        
-                                        <div class="form-group">
-                                            <label>Pre training</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3" checked />True
-                                                </label>
-                                            </div>
-                                            
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios2" id="optionsRadios4" value="option4"/>False
-                                                </label>
-                                            </div>
-                                            
-                                        </div>
-                                            
-                                        </div>
-                                        
-                                         <div class="col-md-3">
-                                        
-                                        <div class="form-group">
-                                            <label>Pre bulk</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios3" id="optionsRadios5" value="option5" checked />True
-                                                </label>
-                                            </div>
-                                            
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios3" id="optionsRadios6" value="option6"/>False
-                                                </label>
-                                            </div>
-                                            
-                                        </div>
-                                            
-                                        </div>
-                                        
-                                        <div class="col-md-3">
-                                        
-                                        <div class="form-group">
-                                            <label>Predictability</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios4" id="optionsRadios1" value="option7" checked />True
-                                                </label>
-                                            </div>
-                                            
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="optionsRadios4" id="optionsRadios2" value="option8"/>False
-                                                </label>
-                                            </div>
-                                            
-                                            
-                                        </div>
-                                        
-                                        </div>
-                                        
-                                        </div>
-                                        
-                                        
-                                        <div class="form-group">
-                                            <label>Feeding time</label>
-                                            <input class="form-control" placeholder="Please enter feeding time" name="" />
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>QCO time</label>
-                                            <input class="form-control" placeholder="Please enter QCO time" name="" />
-                                        </div>
-                                        
-                                        
-                                        <div class="form-group">
-                                            <label>Relative similarity rank</label>
-                                            <input class="form-control" placeholder="Please enter relative similarity rank" name="" />
-                                        </div>
 	                 					
 	                 					<div class="form-group">
                                             
-                                            <input type="submit" class="btn btn-danger" value="Submit"  />
+                                            <input type="submit" class="btn btn-danger" value="Save"  />
                                             <input type="button" class="btn btn-danger" value="Update"  />
                                             <input type="reset" class="btn btn-danger" value="Reset"  />
                                         </div>
 	                 					
+	                 				
 	                 				</form>
 	                 				
 	                 			
@@ -214,22 +136,13 @@
 	                 			</div>
 	                 		
 	                 		</div>
-	                 	
-	                 	
-	                 	</div>
-	                 	
-	                 
-	                 </div>
-	                  
-	            </div>
-		    	
-	    	<!-- /. row  -->	
-	    	</div>
-	    	
-			<!-- Begining of tabs-->
+	                 		
+	                 		
+	                 		
+	                 		<!-- Begining of tabs-->
 			<div class="row">
 	    		
-	    		<div class="col-md-9">
+	    		<div class="col-md-12">
 	                 
 	                 <div class="panel panel-default">
 	                 	
@@ -478,11 +391,21 @@
 	        
 	        </div>
 	        <!-- End of tabs-->
-	        
-	        
-	        
-	               
-		<!-- End of page inner-->
+	                 		
+	                 	
+	                 	
+	                 	</div>
+	                 	
+	                 
+	                 </div>
+	                  
+	            </div>
+		    	
+	    	<!-- /. row  -->	
+	    	</div>
+			
+			
+		
 		</div>
 	
 	
