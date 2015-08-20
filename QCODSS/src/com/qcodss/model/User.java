@@ -17,7 +17,7 @@ public class User {
 	@Column(name = "user_name")
 	private String name;
 	
-	@Column(name = "user_email", unique = true)
+	@Column(name = "user_email", unique = true, nullable = false)
 	private String email;
 	
 	@Column(name = "user_password")
@@ -30,6 +30,7 @@ public class User {
 	private String role;
 	
 	@OneToOne
+	//@Column(name = "user_plantid")
 	private Plant  plantid;
 	
 	public int getId() {
