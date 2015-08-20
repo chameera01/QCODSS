@@ -9,18 +9,17 @@ import com.qcodss.model.Plant;
 
 public class PlantDAO {
 
-	   public Integer addPlant(String name){
+	   public Integer addPlant(Plant p){
 		   
 		   Session session = DB.getSession();
 		   Transaction tx = null;
-		   Integer plantID = null;
+		   Plant plant = new Plant();
 		   try{
 			   tx = session.beginTransaction();
-			   Plant plant = new Plant();
-			   
-			   plant.setName(name);
+			   plant.setName(p.getName());
 			 
-			   plantID = (Integer) session.save(plant); 
+			   //plantID = (Integer) session.save(plant); 
+			   session.save(plant);
 			   tx.commit();
 		  }catch (HibernateException e) {
 			  if (tx!=null) tx.rollback();
@@ -28,6 +27,6 @@ public class PlantDAO {
 		  }finally {
 			  session.close(); 
 		  }
-		  return plantID;
+		  return 1;
 	   }	
 }
