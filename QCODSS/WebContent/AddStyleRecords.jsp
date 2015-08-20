@@ -38,7 +38,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Add Style Record</h3>   
+	                 <h3>Add style record</h3>   
 	                  
 	            </div>
 	    	<!-- /. row  -->	
@@ -69,7 +69,126 @@
                                         </div>
 	                 					
 	                 					
-	                 				
+                                        
+                                        <div class="form-group">
+                                            <label>Style new/repeat</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />New
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>Repeat
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Style started date</label>
+                                            <input class="form-control" placeholder="Please style started date" name="" />
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Module no</label>
+                                            <input class="form-control" placeholder="Please enter module no" name="" />
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group">
+                                            <label>Pre machine setting</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked />True
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2"/>False
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Pre training</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3" checked />True
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios2" id="optionsRadios4" value="option4"/>False
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Pre bulk</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios3" id="optionsRadios5" value="option5" checked />True
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios3" id="optionsRadios6" value="option6"/>False
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Predictability</label>
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios4" id="optionsRadios1" value="option7" checked />True
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="radio">
+                                                <label>
+                                                    <input type="radio" name="optionsRadios4" id="optionsRadios2" value="option8"/>False
+                                                </label>
+                                            </div>
+                                            
+                                            
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group">
+                                            <label>Feeding time</label>
+                                            <input class="form-control" placeholder="Please enter feeding time" name="" />
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>QCO time</label>
+                                            <input class="form-control" placeholder="Please enter QCO time" name="" />
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group">
+                                            <label>Relative similarity rank</label>
+                                            <input class="form-control" placeholder="Please enter relative similarity rank" name="" />
+                                        </div>
+	                 					
+	                 					<div class="form-group">
+                                            
+                                            <input type="submit" class="btn btn-danger" value="Submit"  />
+                                            <input type="reset" class="btn btn-danger" value="Reset"  />
+                                        </div>
+	                 					
 	                 				</form>
 	                 				
 	                 			
@@ -89,8 +208,318 @@
 	    	<!-- /. row  -->	
 	    	</div>
 			
-			
-		
+			<div class="row">
+	    		
+	    		<div class="col-md-8">
+	                 
+	                 <div class="panel panel-default">
+	                 	
+	                 	<div class="panel-heading">
+	                 	
+	                 		Day 01 
+	                 		
+	                 	</div>
+	                 	
+	                 	<div class="panel-body">
+	                 	
+	                 		<div class="row">
+	                 	
+	                 		<div class="col-md-6">
+	                 	
+	                 		<form> 
+	                 	
+	                 		<div class="form-group">
+                                   <label>Clocked hours</label>
+                                   <input class="form-control" placeholder="Please enter day 1 clocked hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Produced hours</label>
+                                   <input class="form-control" placeholder="Please enter day 1 produced hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total inspected garments</label>
+                                   <input class="form-control" placeholder="Please enter day 1 total inspected garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total first time passed garments</label>
+                                   <input class="form-control" placeholder="Please enter day 1 total first time passed garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                            
+                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+                            </div>
+                            
+	                 		
+	                 		</form>
+	                 		
+	                 		</div>
+	                 		
+	                 		
+	                 	</div>
+	                 	
+	                 </div>	
+	                 
+	            </div>
+	            
+	        </div>  
+	        
+	        </div>
+	        
+	        
+	        <div class="row">
+	    		
+	    		<div class="col-md-8">
+	                 
+	                 <div class="panel panel-default">
+	                 	
+	                 	<div class="panel-heading">
+	                 	
+	                 		Day 02 
+	                 		
+	                 	</div>
+	                 	
+	                 	<div class="panel-body">
+	                 	
+	                 		<div class="row">
+	                 	
+	                 		<div class="col-md-6">
+	                 	
+	                 		<form> 
+	                 	
+	                 		<div class="form-group">
+                                   <label>Clocked hours</label>
+                                   <input class="form-control" placeholder="Please enter day 2 clocked hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Produced hours</label>
+                                   <input class="form-control" placeholder="Please enter day 2 produced hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total inspected garments</label>
+                                   <input class="form-control" placeholder="Please enter day 2 total inspected garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total first time passed garments</label>
+                                   <input class="form-control" placeholder="Please enter day 2 total first time passed garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                            
+                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+                            </div>
+                            
+	                 		
+	                 		</form>
+	                 		
+	                 		</div>
+	                 		
+	                 		</div>
+	                 		
+	                 	</div>
+	                 	
+	                 </div>	
+	                 
+	            </div>
+	            
+	        </div>
+	        
+	        <div class="row">
+	    		
+	    		<div class="col-md-8">
+	                 
+	                 <div class="panel panel-default">
+	                 	
+	                 	<div class="panel-heading">
+	                 	
+	                 		Day 03 
+	                 		
+	                 	</div>
+	                 	
+	                 	<div class="panel-body">
+	                 		
+	                 		<div class="row">
+	                 		
+	                 		<div class="col-md-6">
+	                 		
+	                 		<form> 
+	                 	
+	                 		<div class="form-group">
+                                   <label>Clocked hours</label>
+                                   <input class="form-control" placeholder="Please enter day 3 clocked hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Produced hours</label>
+                                   <input class="form-control" placeholder="Please enter day 3 produced hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total inspected garments</label>
+                                   <input class="form-control" placeholder="Please enter day 3 total inspected garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total first time passed garments</label>
+                                   <input class="form-control" placeholder="Please enter day 3 total first time passed garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                            
+                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+                            </div>
+                            
+	                 		
+	                 		</form>
+	                 		
+	                 		</div>
+	                 		
+	                 		</div>
+	                 		
+	                 		
+	                 	</div>
+	                 	
+	                 </div>	
+	                 
+	            </div>
+	            
+	        </div>
+	        
+	        <div class="row">
+	    		
+	    		<div class="col-md-8">
+	                 
+	                 <div class="panel panel-default">
+	                 	
+	                 	<div class="panel-heading">
+	                 	
+	                 		Day 04 
+	                 		
+	                 	</div>
+	                 	
+	                 	<div class="panel-body">
+	                 	
+	                 		<div class="row">
+	                 		
+	                 		<div class="col-md-6">
+	                 	
+	                 		<form> 
+	                 	
+	                 		<div class="form-group">
+                                   <label>Clocked hours</label>
+                                   <input class="form-control" placeholder="Please enter day 4 clocked hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Produced hours</label>
+                                   <input class="form-control" placeholder="Please enter day 4 produced hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total inspected garments</label>
+                                   <input class="form-control" placeholder="Please enter day 4 total inspected garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total first time passed garments</label>
+                                   <input class="form-control" placeholder="Please enter day 4 total first time passed garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                            
+                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+                            </div>
+                            
+	                 		
+	                 		</form>
+	                 		
+	                 		</div>
+	                 		
+	                 		</div>
+	                 		
+	                 	</div>
+	                 	
+	                 </div>	
+	                 
+	            </div>
+	            
+	        </div>
+	        
+	        
+	        <div class="row">
+	    		
+	    		<div class="col-md-8">
+	                 
+	                 <div class="panel panel-default">
+	                 	
+	                 	<div class="panel-heading">
+	                 	
+	                 		Day 05 
+	                 		
+	                 	</div>
+	                 	
+	                 	<div class="panel-body">
+	                 	
+	                 		<div class="row">
+	                 	
+	                 		<div class="col-md-6">
+	                 	
+	                 		<form> 
+	                 	
+	                 		<div class="form-group">
+                                   <label>Clocked hours</label>
+                                   <input class="form-control" placeholder="Please enter day 5 clocked hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Produced hours</label>
+                                   <input class="form-control" placeholder="Please enter day 5 produced hours" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total inspected garments</label>
+                                   <input class="form-control" placeholder="Please enter day 5 total inspected garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                   <label>Total first time passed garments</label>
+                                   <input class="form-control" placeholder="Please enter day 5 total first time passed garments" name="" />
+                            </div>
+                            
+                            <div class="form-group">
+                                            
+                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+                            </div>
+                            
+	                 		
+	                 		</form>
+	                 		
+	                 		</div>
+	                 		
+	                 		</div>
+	                 		
+	                 		
+	                 	</div>
+	                 	
+	                 </div>	
+	                 
+	            </div>
+	            
+	        </div>
+	        
+	               
+		<!-- End of page inner-->
 		</div>
 	
 	
