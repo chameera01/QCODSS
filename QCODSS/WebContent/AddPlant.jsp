@@ -58,11 +58,11 @@
 	                 		<div class="row">
 	                 			<div class="col-md-6">
 	                 				
-	                 				<form> 
+	                 				<form action="addplant" method = "post"> 
 	                 					
 	                 					<div class="form-group">
                                             <label>Plant name</label>
-                                            <input class="form-control" placeholder="Please enter plant name" name="" />
+                                            <input class="form-control" placeholder="Please enter plant name" name="name" />
                                         </div>
 	                 					
 	                 					

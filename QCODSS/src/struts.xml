@@ -4,7 +4,12 @@
 	<package name="default" extends="struts-default">
 		
 		
+		<action name="addplant" class="com.qcodss.struts.AddPlantsAction">
 		
+			<result name="success">/index.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
 		
 		
 		
