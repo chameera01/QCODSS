@@ -17,7 +17,9 @@
 		<property name="hbm2ddl.auto">create</property>
 		
 		
-		
+		<mapping class="com.qcodss.model.User"/>
+		<mapping class="com.qcodss.model.Plant"/>
+		<mapping class="com.qcodss.model.Style"/>
 		
 		
 		
