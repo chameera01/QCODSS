@@ -44,6 +44,10 @@
 	    	<hr>
 			
 			<div class="row">
+			
+				
+			
+			
 	    		
 	    		<div class="col-md-8">
 	                 
@@ -57,33 +61,88 @@
 	                 	
 	                 		<div class="row">
 	                 			<div class="col-md-6">
+	                 			
+	                 				<ul class="nav nav-tabs">
+		                                <li class="active"><a href="#home" data-toggle="tab">Active baselines</a>
+		                                </li>
+		                                <li class=""><a href="#profile" data-toggle="tab">Plant baselines</a>
+		                                </li>
+		                               
+		                            </ul>
+		                            
+		                            <div class="tab-content">
+		                                <div class="tab-pane fade active in" id="home">
+		                                	
+		                                	<form> 
+	                 					
+			                 					<div class="form-group">
+		                                            <label>Name</label>
+		                                            <input class="form-control" placeholder="Enter  name" name="" />
+		                                        </div>
+		                                        
+		                                        <div class="form-group">
+		                                            <label>email</label>
+		                                            <input class="form-control" placeholder="Enter  MAS email" name="" />
+		                                        </div>
+		                                        
+		                                        <div class="form-group">
+		                                            <label>User level</label>
+		                                            <input class="form-control" placeholder="Enter user level  " name="" />
+		                                        </div>
+			                 					
+			                 					
+			                 					<div class="form-group">
+		                                            
+		                                            <input type="submit" class="btn btn-danger" value="Save"  />
+		                                            <input type="reset" class="btn btn-danger" value="Reset"  />
+		                                        </div>
+	                 					
 	                 				
-	                 				<form> 
-	                 					
-	                 					<div class="form-group">
-                                            <label>Name</label>
-                                            <input class="form-control" placeholder="Enter  name" name="" />
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>email</label>
-                                            <input class="form-control" placeholder="Enter  MAS email" name="" />
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>User level</label>
-                                            <input class="form-control" placeholder="Enter user level  " name="" />
-                                        </div>
-	                 					
-	                 					
-	                 					<div class="form-group">
-                                            
-                                            <input type="submit" class="btn btn-danger" value="Save"  />
-                                            <input type="reset" class="btn btn-danger" value="Reset"  />
-                                        </div>
-	                 					
+	                 						</form>
+		                                	
+		                                
+		                                
+		                                </div>
+		                                
+		                                
+		                                <div class="tab-pane fade" id="profile">
+		                                
+			                                <form> 
+		                 					
+				                 					<div class="form-group">
+			                                            <label>Name</label>
+			                                            <input class="form-control" placeholder="Enter  name" name="" />
+			                                        </div>
+			                                        
+			                                        <div class="form-group">
+			                                            <label>email</label>
+			                                            <input class="form-control" placeholder="Enter  MAS email" name="" />
+			                                        </div>
+			                                        
+			                                        <div class="form-group">
+			                                            <label>User level</label>
+			                                            <input class="form-control" placeholder="Enter user level  " name="" />
+			                                        </div>
+				                 					
+				                 					
+				                 					<div class="form-group">
+			                                            
+			                                            <input type="submit" class="btn btn-danger" value="Save"  />
+			                                            <input type="reset" class="btn btn-danger" value="Reset"  />
+			                                        </div>
+		                 					
+		                 				
+		                 					</form>
+		                                
+		                                
+		                                </div>
+		                                
+		                            </div>
 	                 				
-	                 				</form>
+	                 				
+	                 				
+	                 				
+	                 				
 	                 				
 	                 			
 	                 			

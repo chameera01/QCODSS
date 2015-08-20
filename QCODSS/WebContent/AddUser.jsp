@@ -72,14 +72,30 @@
                                         </div>
                                         
                                         <div class="form-group">
+                                            <label>Password</label>
+                                            <input class="form-control" type="password" placeholder="Enter  password" name="" />
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label>Re enter password</label>
+                                            <input class="form-control" type="password" placeholder="Re enter  password" name="" />
+                                        </div>
+                                        
+                                        <div class="form-group">
                                             <label>User level</label>
-                                            <input class="form-control" placeholder="Enter user level  " name="" />
+                                            <select class="form-control">
+                                                <option>Recorder</option>
+                                                <option>Viewer</option>
+                                                
+                                            </select>
                                         </div>
 	                 					
 	                 					
 	                 					<div class="form-group">
                                             
+                                            
                                             <input type="submit" class="btn btn-danger" value="Save"  />
+                                            <input type="button" disabled="disabled" class="btn btn-danger" value="Inform user"  />
                                             <input type="reset" class="btn btn-danger" value="Reset"  />
                                         </div>
 	                 					

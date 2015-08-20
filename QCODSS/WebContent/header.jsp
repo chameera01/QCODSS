@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title> pala do yanda..:P :P</title>
+<title> header</title>
 
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,22 +54,39 @@
                     <li>
                         <a class="active-menu"  href="index.jsp"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
+                    
+                    <li>
+                        <a   href="#"><i class="fa fa-check fa-3x"></i>  Full presetting dashboard</a>
+                    </li>
+                    
+                    
                      <li>
-                        <a  href="AddStyleRecords.jsp"><i class="fa fa-plus-square fa-3x"></i> Add Records</a>
+                        <a  href="#"><i class="fa fa-plus-square fa-3x"></i> Add records</a>
+                        
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="AddStyleRecords.jsp">Add style records</a>
+                            </li>
+                            <li>
+                                <a href="#">Add weekly records</a>
+                            </li>
+                            
+                        </ul>
+                        
                     </li>
                     
                     
                     
                     
                     <li>
-                        <a  href="#"><i class="fa fa-user fa-3x"></i> Authenticate Users</a>
+                        <a  href="AddUser.jsp"><i class="fa fa-user fa-3x"></i> Authenticate Users</a>
                     </li>
 						   <li  >
                         <a   href="AddPlant.jsp"><i class="fa fa-home fa-3x"></i> Authenticate Plants</a>
                     </li>	
                     
                     <li  >
-                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
+                        <a  href="SetBaselines.jsp"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
                     </li>
                       
                     	
