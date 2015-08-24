@@ -19,14 +19,14 @@ public class PlantDAO {
 		   Plant plant = new Plant();
 		   try{
 			   tx = session.beginTransaction();
-			   plant.setName(p.getName());
-			 
-			   //plantID = (Integer) session.save(plant); 
+			   plant.setName(p.getName());			 
 			   session.save(plant);
 			   tx.commit();
 		  }catch (HibernateException e) {
 			  if (tx!=null) tx.rollback();
-			  e.printStackTrace(); 
+			  e.printStackTrace();
+			  
+			  return 0;
 		  }finally {
 			  session.close();
 		  }
