@@ -243,7 +243,7 @@
 	                 	
 	                 		<div class="row">
 	                 	
-	                 		<div class="col-md-6">
+	                 		<div class="col-md-7">
 	                 		
 	                 		<ul class="nav nav-tabs">
 		                                <li class="active"><a href="#day1" data-toggle="tab">Day 01</a>

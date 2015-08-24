@@ -59,21 +59,21 @@
 	                 		<div class="row">
 	                 			<div class="col-md-6">
 	                 				
-	                 				<form> 
+	                 				<form action="adduser" method = "post"> 
 	                 					
 	                 					<div class="form-group">
                                             <label>Name</label>
-                                            <input class="form-control" placeholder="Enter  name" name="" />
+                                            <input class="form-control" placeholder="Enter  name" name="name" />
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>email</label>
-                                            <input class="form-control" placeholder="Enter  MAS email" name="" />
+                                            <input class="form-control" placeholder="Enter  MAS email" name="email" />
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>Password</label>
-                                            <input class="form-control" type="password" placeholder="Enter  password" name="" />
+                                            <input class="form-control" type="password" placeholder="Enter  password" name="password" />
                                         </div>
                                         
                                         <div class="form-group">
@@ -83,7 +83,7 @@
                                         
                                         <div class="form-group">
                                             <label>User level</label>
-                                            <select class="form-control">
+                                            <select class="form-control" name="userlevel">
                                                 <option>Recorder</option>
                                                 <option>Viewer</option>
                                                 <option>Top</option>
@@ -93,7 +93,7 @@
                                         
                                         <div class="form-group">
                                             <label>Select plant</label>
-                                            <select class="form-control">
+                                            <select class="form-control" name="plant">
                                                 <option>Shadowline</option>
                                                 <option>Leisureline</option>
                                                 <option>Contourline</option>

@@ -6,20 +6,15 @@ import org.hibernate.cfg.Configuration;
 
 public class DB {
 	
-	static Session session = null;
+	public static SessionFactory sf = buildSessionFactory();
 	
-	public static Session getSession(){
-        if(session==null){
-            
-        	Configuration config = new Configuration();
-			SessionFactory sf = config.configure().buildSessionFactory();
-			session = sf.openSession();
-        	
-        }
-        
-        return session;
-    }
-	
-	
+	public static SessionFactory buildSessionFactory(){
+		return new Configuration().configure().buildSessionFactory();
+	}
+
+	public static SessionFactory getSessionFactory(){
+		return sf;
+	}
+
 	
 }
