@@ -35,7 +35,7 @@ public class PlantDAO {
 	   }	
 	   
 	   /* Method to  GET all Plants (return list of all plants) */
-	   public List<Plant> getAllPlants( ) {
+	   public static List<Plant> getAllPlants( ) {
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<Plant> allPlants = null;

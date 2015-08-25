@@ -36,7 +36,7 @@ public class UserDAO {
 	   }
 	   
 	   /* Method to  GET all the Users (return list of all users) */
-	   public List<User> getAllUsers( ){
+	   public static List<User> getAllUsers( ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<User> allUsers = null;
@@ -55,7 +55,7 @@ public class UserDAO {
 		   return allUsers;
 	   }
 	   
-	   public User findUserByID(int id){
+	   public static User findUserByID(int id){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<User> userList = null;
