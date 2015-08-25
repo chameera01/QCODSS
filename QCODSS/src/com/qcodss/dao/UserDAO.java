@@ -14,25 +14,27 @@ import com.qcodss.model.User;
 
 public class UserDAO {
 	   
-	   /* Method to CREATE an User in the database (return the generated user id) */
-	   public static Integer addUser(User user){
+	   /* Method to CREATE an User in the database 
+	    * (return boolean true or false)
+	    */
+	   public static boolean addUser(User user) {
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
-		   Integer userID = null;
-		   try{
+		   try {
 			   tx = session.beginTransaction();
-			  
-			 
-			   userID = (Integer) session.save(user); 
+			   session.save(user); 
 			   tx.commit();
-		  }catch (HibernateException e) {
+		  } catch (HibernateException e) {
 			  if (tx!=null) tx.rollback();
-			  e.printStackTrace(); 
-		  }finally {
+			  e.printStackTrace();
+			  
+			  return false;
+		  } finally {
 			  session.close();
 		  }
-		  return userID;
+		   
+		  return true;
 	   }
 	   
 	   /* Method to  GET all the Users (return list of all users) */
@@ -67,7 +69,9 @@ public class UserDAO {
 			   tx.commit();
 			   
 			   for(User u:userList){
-				   user = u;
+				   if(u != null) {
+					   user = u;
+				   }
 				}
 			   
 		   }catch (HibernateException e) {

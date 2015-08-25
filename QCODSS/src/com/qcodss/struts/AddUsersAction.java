@@ -29,9 +29,9 @@ public class AddUsersAction {
 		user.setPlantid(p);
 		user.setRole(userlevel);
 		
-		int ret = UserDAO.addUser(user);
+		boolean ret = UserDAO.addUser(user);
 		
-		if(ret>0){
+		if(ret){
 			returnVal = "success";
 		}
 		

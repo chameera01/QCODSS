@@ -18,8 +18,10 @@
 		
 		
 		<mapping class="com.qcodss.model.User"/>
-		<mapping class="com.qcodss.model.Plant"/>
 		<mapping class="com.qcodss.model.Style"/>
+		<mapping class="com.qcodss.model.Plant"/>
+		<mapping class="com.qcodss.model.PlantWR"/>
+		
 		
 		
 		
