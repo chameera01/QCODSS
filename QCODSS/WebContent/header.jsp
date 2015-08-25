@@ -23,7 +23,14 @@
 </head>
 
 <body>
-
+		<%  
+	
+			if(session.getAttribute("id") == null){
+				String redirectURL = "login.jsp";
+				response.sendRedirect(redirectURL);
+			}
+			
+		%>
 	
 		
 		<nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">

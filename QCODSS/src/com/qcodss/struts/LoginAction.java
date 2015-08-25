@@ -6,7 +6,7 @@ import org.apache.struts2.interceptor.SessionAware;
 
 
 import com.qcodss.dao.UserDAO;
-import com.qcodss.model.Plant;
+
 import com.qcodss.model.User;
 
 
@@ -28,7 +28,7 @@ public class LoginAction implements SessionAware {
 		receivedUser.setPassword(password);
 		
 		User authenticatedUser = UserDAO.login(receivedUser);
-		System.out.println(authenticatedUser.getName());
+		
 		
 		
 		
@@ -47,9 +47,7 @@ public class LoginAction implements SessionAware {
 		System.out.println(userSession.get("id"));
 		System.out.println(userSession.get("name"));
 		
-		Plant plant = (Plant) userSession.get("plantID");
-		System.out.println(plant.getId());
-		System.out.println(userSession.get("role"));
+		
 		
 	
 		

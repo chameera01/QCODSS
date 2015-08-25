@@ -248,13 +248,13 @@
 	                 		<ul class="nav nav-tabs">
 		                                <li class="active"><a href="#day1" data-toggle="tab">Day 01</a>
 		                                </li>
-		                                <li class=""><a href="#day2" data-toggle="tab">Day 02</a>
+		                                <li ><a href="#day2" data-toggle="tab">Day 02</a>
 		                                </li>
-		                                <li class="active"><a href="#day3" data-toggle="tab">Day 03</a>
+		                                <li ><a href="#day3" data-toggle="tab">Day 03</a>
 		                                </li>
-		                                <li class="active"><a href="#day4" data-toggle="tab">Day 04</a>
+		                                <li ><a href="#day4" data-toggle="tab">Day 04</a>
 		                                </li>
-		                                <li class="active"><a href="#day5" data-toggle="tab">Day 05</a>
+		                                <li ><a href="#day5" data-toggle="tab">Day 05</a>
 		                                </li>
 		                               
 		                    </ul>
