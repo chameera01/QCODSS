@@ -1,234 +1,205 @@
 package com.qcodss.model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Style {
-
+@Table(name = "plantWR")
+public class PlantWR {
+	
 	@Id
-	@GeneratedValue
-	@Column(name = "style_no")
-	private int style_no;
+	@Column(name = "plantWR_week")
+	private int week;
 	
-	/* 'n' for new, 'r' for repeat */
-	@Column(name = "style_newRepeat")
-	private String newRepeat;
+	/* no of new styles */
+	@Column(name = "plantWR_newStyles")
+	private int newStyles;
 	
-	@Column(name = "style_finishDate")
-	private Date finishDate;
+	/* no of repeat styles */
+	@Column(name = "plantWR_repeatStyles")
+	private int repeatStyles;
 	
-	/* 1 for done, 0 for not */
-	@Column(name = "style_preSetting")
-	private int preSetting;
+	/* full pre setting hit rate */
+	@Column(name = "plantWR_preSettingHR")
+	private int preSettingHR;
 	
-	/* 1 for done, 0 for not */
-	@Column(name = "style_preTraining")
-	private int preTraining;
+	/* silhouette based hit rate */
+	@Column(name = "plantWR_silhouetteBasedHR")
+	private int silhouetteBasedHR;
 	
-	/* 1 for done, 0 for not */
-	@Column(name = "style_preBulk")
-	private int preBulk;
+	/* average feeding time */
+	@Column(name = "plantWR_avgFeedingTime")
+	private int avgFeedingTime;
 	
-	/* 1 for done, 0 for not */
-	@Column(name = "style_predictability")
-	private int predictability;
+	/* QCO time average of all new styles */
+	@Column(name = "plantWR_QCOTimeAvgNew")
+	private int QCOTimeAvgNew;
 	
-	/* 1 if all four facts done otherwise 0 */
-	@Column(name = "style_fullPresetting")
-	private int fullPresetting;
-	
-	@Column(name = "style_rsr")
-	private int rsr;
-	
-	@Column(name = "style_moduleNo")
-	private int moduleNo;
-	
-	@Column(name = "style_feedingTime")
-	private int feedingTime;
-	
-	@Column(name = "style_QCOTime")
-	private int QCOTime;
+	/* QCO time average of all repeat styles */
+	@Column(name = "plantWR_QCOTimeAvgRepeat")
+	private int QCOTimeAvgRepeat;
 	
 	/* 
 	 * 1st day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_1")
+	@Column(name = "plantWR_clockedHrs_1")
 	private double clockedHrs_1;
 	
-	@Column(name = "style_producedHrs_1")
+	@Column(name = "plantWR_producedHrs_1")
 	private double producedHrs_1;
 	
-	@Column(name = "style_totalInspected_1")
+	@Column(name = "plantWR_totalInspected_1")
 	private double totalInspected_1;
 	
-	@Column(name = "style_totalFTT_1")
+	@Column(name = "plantWR_totalFTT_1")
 	private double totalFTT_1;
 	
 	/* 
 	 * 2nd day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_2")
+	@Column(name = "plantWR_clockedHrs_2")
 	private double clockedHrs_2;
 	
-	@Column(name = "style_producedHrs_2")
+	@Column(name = "plantWR_producedHrs_2")
 	private double producedHrs_2;
 	
-	@Column(name = "style_totalInspected_2")
+	@Column(name = "plantWR_totalInspected_2")
 	private double totalInspected_2;
 	
-	@Column(name = "style_totalFTT_2")
+	@Column(name = "plantWR_totalFTT_2")
 	private double totalFTT_2;
 	
 	/* 
 	 * 3rd day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_3")
+	@Column(name = "plantWR_clockedHrs_3")
 	private double clockedHrs_3;
 	
-	@Column(name = "style_producedHrs_3")
+	@Column(name = "plantWR_producedHrs_3")
 	private double producedHrs_3;
 	
-	@Column(name = "style_totalInspected_3")
+	@Column(name = "plantWR_totalInspected_3")
 	private double totalInspected_3;
 	
-	@Column(name = "style_totalFTT_3")
+	@Column(name = "plantWR_totalFTT_3")
 	private double totalFTT_3;
 
 	/* 
 	 * 4th day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_4")
+	@Column(name = "plantWR_clockedHrs_4")
 	private double clockedHrs_4;
 	
-	@Column(name = "style_producedHrs_4")
+	@Column(name = "plantWR_producedHrs_4")
 	private double producedHrs_4;
 	
-	@Column(name = "style_totalInspected_4")
+	@Column(name = "plantWR_totalInspected_4")
 	private double totalInspected_4;
 	
-	@Column(name = "style_totalFTT_4")
+	@Column(name = "plantWR_totalFTT_4")
 	private double totalFTT_4;
 	
 	/* 
 	 * 5th day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_5")
+	@Column(name = "plantWR_clockedHrs_5")
 	private double clockedHrs_5;
 	
-	@Column(name = "style_producedHrs_5")
+	@Column(name = "plantWR_producedHrs_5")
 	private double producedHrs_5;
 	
-	@Column(name = "style_totalInspected_5")
+	@Column(name = "plantWR_totalInspected_5")
 	private double totalInspected_5;
 	
-	@Column(name = "style_totalFTT_5")
+	@Column(name = "plantWR_totalFTT_5")
 	private double totalFTT_5;
 	
 	/* 
 	 * previous day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_1d")
+	@Column(name = "plantWR_clockedHrs_1d")
 	private double clockedHrs_1d;
 	
-	@Column(name = "style_producedHrs_1d")
+	@Column(name = "plantWR_producedHrs_1d")
 	private double producedHrs_1d;
 	
-	@Column(name = "style_totalInspected_1d")
+	@Column(name = "plantWR_totalInspected_1d")
 	private double totalInspected_1d;
 	
-	@Column(name = "style_totalFTT_1d")
+	@Column(name = "plantWR_totalFTT_1d")
 	private double totalFTT_1d;
 	
 	/* 
 	 * day before previous day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_2d")
+	@Column(name = "plantWR_clockedHrs_2d")
 	private double clockedHrs_2d;
 	
-	@Column(name = "style_producedHrs_2d")
+	@Column(name = "plantWR_producedHrs_2d")
 	private double producedHrs_2d;
 	
-	@Column(name = "style_totalInspected_2d")
+	@Column(name = "plantWR_totalInspected_2d")
 	private double totalInspected_2d;
 	
-	@Column(name = "style_totalFTT_2d")
+	@Column(name = "plantWR_totalFTT_2d")
 	private double totalFTT_2d;
 	
 	/* 
 	 * two days before previous day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "style_clockedHrs_3d")
+	@Column(name = "plantWR_clockedHrs_3d")
 	private double clockedHrs_3d;
 	
-	@Column(name = "style_producedHrs_3d")
+	@Column(name = "plantWR_producedHrs_3d")
 	private double producedHrs_3d;
 	
-	@Column(name = "style_totalInspected_3d")
+	@Column(name = "plantWR_totalInspected_3d")
 	private double totalInspected_3d;
 	
-	@Column(name = "style_totalFTT_3d")
+	@Column(name = "plantWR_totalFTT_3d")
 	private double totalFTT_3d;
 
 	
-	public int getStyle_no() {
-		return style_no;
+	public int getWeek() {
+		return week;
 	}
 
-	public String getNewRepeat() {
-		return newRepeat;
+	public int getNewStyles() {
+		return newStyles;
 	}
 
-	public Date getFinishDate() {
-		return finishDate;
+	public int getRepeatStyles() {
+		return repeatStyles;
 	}
 
-	public int getPreSetting() {
-		return preSetting;
+	public int getPreSettingHR() {
+		return preSettingHR;
 	}
 
-	public int getPreTraining() {
-		return preTraining;
+	public int getSilhouetteBasedHR() {
+		return silhouetteBasedHR;
 	}
 
-	public int getPreBulk() {
-		return preBulk;
+	public int getAvgFeedingTime() {
+		return avgFeedingTime;
 	}
 
-	public int getPredictability() {
-		return predictability;
+	public int getQCOTimeAvgNew() {
+		return QCOTimeAvgNew;
 	}
 
-	public int getFullPresetting() {
-		return fullPresetting;
-	}
-
-	public int getRsr() {
-		return rsr;
-	}
-
-	public int getModuleNo() {
-		return moduleNo;
-	}
-
-	public int getFeedingTime() {
-		return feedingTime;
-	}
-
-	public int getQCOTime() {
-		return QCOTime;
+	public int getQCOTimeAvgRepeat() {
+		return QCOTimeAvgRepeat;
 	}
 
 	public double getClockedHrs_1() {
@@ -359,52 +330,36 @@ public class Style {
 		return totalFTT_3d;
 	}
 
-	public void setStyle_no(int style_no) {
-		this.style_no = style_no;
+	public void setWeek(int week) {
+		this.week = week;
 	}
 
-	public void setNewRepeat(String newRepeat) {
-		this.newRepeat = newRepeat;
+	public void setNewStyles(int newStyles) {
+		this.newStyles = newStyles;
 	}
 
-	public void setStartDate(Date finishDate) {
-		this.finishDate = finishDate;
+	public void setRepeatStyles(int repeatStyles) {
+		this.repeatStyles = repeatStyles;
 	}
 
-	public void setPreSetting(int preSetting) {
-		this.preSetting = preSetting;
+	public void setPreSettingHR(int preSettingHR) {
+		this.preSettingHR = preSettingHR;
 	}
 
-	public void setPreTraining(int preTraining) {
-		this.preTraining = preTraining;
+	public void setSilhouetteBasedHR(int silhouetteBasedHR) {
+		this.silhouetteBasedHR = silhouetteBasedHR;
 	}
 
-	public void setPreBulk(int preBulk) {
-		this.preBulk = preBulk;
+	public void setAvgFeedingTime(int avgFeedingTime) {
+		this.avgFeedingTime = avgFeedingTime;
 	}
 
-	public void setPredictability(int predictability) {
-		this.predictability = predictability;
+	public void setQCOTimeAvgNew(int qCOTimeAvgNew) {
+		QCOTimeAvgNew = qCOTimeAvgNew;
 	}
 
-	public void setFullPresetting(int fullPresetting) {
-		this.fullPresetting = fullPresetting;
-	}
-
-	public void setRsr(int rsr) {
-		this.rsr = rsr;
-	}
-
-	public void setModuleNo(int moduleNo) {
-		this.moduleNo = moduleNo;
-	}
-
-	public void setFeedingTime(int feedingTime) {
-		this.feedingTime = feedingTime;
-	}
-
-	public void setQCOTime(int qCOTime) {
-		QCOTime = qCOTime;
+	public void setQCOTimeAvgRepeat(int qCOTimeAvgRepeat) {
+		QCOTimeAvgRepeat = qCOTimeAvgRepeat;
 	}
 
 	public void setClockedHrs_1(double clockedHrs_1) {
