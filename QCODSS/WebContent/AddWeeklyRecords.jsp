@@ -1,3 +1,6 @@
+<%@page import="com.qcodss.model.Plant"%>
+<%@page import="java.util.List"%>
+<%@page import="com.qcodss.dao.PlantDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html >
@@ -59,6 +62,31 @@
 	                 			<div class="col-md-6">
 	                 				
 	                 				<form> 
+	                 				
+	                 					<div class="form-group">
+			                                            <label>Select plant</label>
+			                                            <select class="form-control">
+			                                            	
+			                                                <%
+			                                                //Loading plant list to the drop down
+			                                                Plant plant = new Plant(); 
+			                                                
+			                                                 List<Plant> allPlants =   PlantDAO.getAllPlants();
+			                                                 for(Plant p:allPlants){
+			                                 				   plant = p;
+			                                 				%>
+			                                 				   <option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+			                                 				<%   
+			                                 				}	
+			                                                
+			                                                %>
+			                                            
+			                                               
+			                                                
+			                                                
+			                                                
+			                                            </select>
+			                              </div>
 	                 				
 	                 				
 	                 					<div class="form-group">
