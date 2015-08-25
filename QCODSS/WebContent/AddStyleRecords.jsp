@@ -1,3 +1,6 @@
+<%@page import="com.qcodss.model.Plant"%>
+<%@page import="java.util.List"%>
+<%@page import="com.qcodss.dao.PlantDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html >
@@ -62,6 +65,32 @@
 	                 			<div class="col-md-8">
 	                 				
 	                 				<form> 
+	                 				
+	                 					<div class="form-group">
+			                                            <label>Select plant</label>
+			                                            <select class="form-control">
+			                                            	
+			                                                <%
+			                                                //Loading plant list to the drop down
+			                                                Plant plant = new Plant(); 
+			                                                
+			                                                 List<Plant> allPlants =   PlantDAO.getAllPlants();
+			                                                 for(Plant p:allPlants){
+			                                 				   plant = p;
+			                                 				%>
+			                                 				   <option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+			                                 				<%   
+			                                 				}	
+			                                                
+			                                                %>
+			                                            
+			                                               
+			                                                
+			                                                
+			                                                
+			                                            </select>
+			                              </div>
+	                 				
 	                 					
 	                 					<div class="form-group">
                                             <label>Style no</label>
@@ -480,7 +509,182 @@
 	        <!-- End of tabs-->
 	        
 	        
+	        <!-- Begining of tabs-->
+			<div class="row">
+	    		
+	    		<div class="col-md-9">
+	                 
+	                 <div class="panel panel-default">
+	                 	
+	                 	<div class="panel-heading">
+	                 	
+	                 		Previous style last three days details
+	                 		
+	                 	</div>
+	                 	
+	                 	<div class="panel-body">
+	                 	
+	                 		<div class="row">
+	                 	
+	                 		<div class="col-md-7">
+	                 		
+	                 		<ul class="nav nav-tabs">
+		                                <li class="active"><a href="#lastday" data-toggle="tab">Lastday</a>
+		                                </li>
+		                                <li ><a href="#lastday-1" data-toggle="tab">Lastday-1</a>
+		                                </li>
+		                                <li ><a href="#lastday-2" data-toggle="tab">Lastday-2</a>
+		                                </li>
+		                                
+		                               
+		                    </ul>
+		                    
+			                    <div class="tab-content">
+			                                <div class="tab-pane fade active in" id="lastday">
+			                                	
+							                <form> 
+					                 	
+							                 		<div class="form-group">
+						                                   <label>Clocked hours</label>
+						                                   <input class="form-control" placeholder="Please enter last day clocked hours" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Produced hours</label>
+						                                   <input class="form-control" placeholder="Please enter day 1 produced hours" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Total inspected garments</label>
+						                                   <input class="form-control" placeholder="Please enter day 1 total inspected garments" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Total first time passed garments</label>
+						                                   <input class="form-control" placeholder="Please enter day 1 total first time passed garments" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                            
+						                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+						                                   <input type="button" class="btn btn-danger" value="Update"  />
+						                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+						                            </div>
+				                            
+					                 		
+					                 		</form>
+			                                	
+			                                
+			                                
+			                </div>
+			                                
+			                                
+			                                <div class="tab-pane fade" id="lastday-1">
+			                                	
+			                                	
+			                                	<form> 
+					                 	
+							                 		<div class="form-group">
+						                                   <label>Clocked hours</label>
+						                                   <input class="form-control" placeholder="Please enter day 2 clocked hours" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Produced hours</label>
+						                                   <input class="form-control" placeholder="Please enter day 2 produced hours" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Total inspected garments</label>
+						                                   <input class="form-control" placeholder="Please enter day 2 total inspected garments" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Total first time passed garments</label>
+						                                   <input class="form-control" placeholder="Please enter day 2 total first time passed garments" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                            
+						                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+						                                   <input type="button" class="btn btn-danger" value="Update"  />
+						                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+						                            </div>
+				                            
+					                 		
+					                 			</form>
+				                                	
+				                                	
+				                                	
+	
+			                                </div>
+			                                
+			                                
+			                                <div class="tab-pane fade" id="lastday-2">
+			                                
+				                                	<form> 
+					                 	
+							                 		<div class="form-group">
+						                                   <label>Clocked hours</label>
+						                                   <input class="form-control" placeholder="Please enter day 3 clocked hours" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Produced hours</label>
+						                                   <input class="form-control" placeholder="Please enter day 3 produced hours" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Total inspected garments</label>
+						                                   <input class="form-control" placeholder="Please enter day 3 total inspected garments" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                   <label>Total first time passed garments</label>
+						                                   <input class="form-control" placeholder="Please enter day 3 total first time passed garments" name="" />
+						                            </div>
+						                            
+						                            <div class="form-group">
+						                                            
+						                                   <input type="submit" class="btn btn-danger" value="Submit"  />
+						                                   <input type="button" class="btn btn-danger" value="Update"  />
+						                                   <input type="reset" class="btn btn-danger" value="Reset"  />
+						                            </div>
+				                            
+					                 		
+					                 				</form>
+				                                	
+				                                	
+	
+			                                </div>
+			                                
+			                               
+			                                
+			                                
+			                                
+			                                
+			                                
+			                                
+			                                
+			                                
+			                            </div>
+	                 		
+	                 	
+	                 		
+	                 		
+	                 		</div>
+	                 		
+	                 		
+	                 	</div>
+	                 	
+	                 </div>	
+	                 
+	            </div>
+	            
+	        </div>  
 	        
+	        </div>
+	        <!-- End of tabs-->
 	               
 		<!-- End of page inner-->
 		</div>

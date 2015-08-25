@@ -7,8 +7,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>QCODSS | Add weekly records</title>
-
+<title>QCODSS | Add monthly records</title>
+	
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -21,12 +21,13 @@
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
 
 </head>
 <body>
-
-<div id="wrapper">
+	
+	<div id="wrapper">
 
 	<%@ include file="header.jsp" %> 
 
@@ -38,7 +39,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Add weekly consolidated style records</h3>   
+	                 <h3>Add monthly consolidated style records</h3>   
 	                  
 	            </div>
 	    	<!-- /. row  -->	
@@ -53,7 +54,7 @@
 	                 <div class="panel panel-default">
 	                 	
 	                 	<div class="panel-heading">
-                            Fill  weekly consolidated style records only
+                            Fill monthly consolidated style records only
                         </div>
 	                 	
 	                 	<div class="panel-body">
@@ -134,10 +135,7 @@
 			                                            </select>
 			                              </div>
 			                              
-			                              <div class="form-group">
-                                            <label>Enter week number</label>
-                                            <input class="form-control" placeholder="Please enter week no" name="" />
-                                          </div>
+			                              
                                           
                                           <div class="form-group">
                                             <label>Enter number of new styles</label>
@@ -483,7 +481,6 @@
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
-
-
+	
 </body>
 </html>

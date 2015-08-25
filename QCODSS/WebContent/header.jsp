@@ -78,6 +78,10 @@
                                 <a href="AddWeeklyRecords.jsp">Add weekly records</a>
                             </li>
                             
+                            <li>
+                                <a href="AddMonthlyRecords.jsp">Add monthly records</a>
+                            </li>
+                            
                         </ul>
                         
                     </li>
