@@ -18,10 +18,19 @@
 		
 		</action>
 		
+		<action name="login" class="com.qcodss.struts.LoginAction">
 		
+			<result name="success">/index.jsp</result>
+			<result name="error">/login.jsp</result>
 		
+		</action>
 		
+		<action name="logout" class="com.qcodss.struts.LogoutAction">
 		
+			<result name="success">/login.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
 		
 		
 		

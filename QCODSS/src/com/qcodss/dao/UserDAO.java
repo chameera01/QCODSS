@@ -1,15 +1,16 @@
 package com.qcodss.dao;
 
-import java.util.Iterator;
+
 import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+
 import com.qcodss.db.DB;
 import com.qcodss.model.User;
-import com.qcodss.model.Plant;
+
 
 public class UserDAO {
 	   
@@ -77,6 +78,43 @@ public class UserDAO {
 		   }
 		   
 		   return user;
+	   }
+	   
+	   
+	   public static User login (User receivedUser){
+		   
+		   User returnUser = new User();
+		   
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<User> list = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   list = session.createQuery("from User u Where u.email='" + receivedUser.getEmail() + "' AND u.password= '"+ receivedUser.getPassword()+"' ").list();	 
+			   
+			   tx.commit();
+		  }catch (HibernateException e) {
+			  if (tx!=null) tx.rollback();
+			  e.printStackTrace();
+			  
+			  
+		  }finally {
+			  session.close();
+		  }
+		   
+		   if(list.isEmpty()==false){
+			   for(User usr:list){
+					returnUser.setId(usr.getId());	
+					returnUser.setName(usr.getName());
+					returnUser.setEmail(usr.getEmail());
+					returnUser.setPlantid(usr.getPlantid());
+					returnUser.setRole(usr.getRole());
+				}
+		   }
+		   
+		   
+		   return returnUser;
 	   }
 	   
 }

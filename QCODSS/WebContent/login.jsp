@@ -112,9 +112,9 @@
 		            <div class="account-wall">
 		                <img class="profile-img" src="assets/img/MAS.png"
 		                    alt="">
-		                <form class="form-signin">
-		                <input type="text" class="form-control" placeholder="Email" required autofocus>
-		                <input type="password" class="form-control" placeholder="Password" required>
+		                <form class="form-signin" action="login" method="post">
+		                <input type="text" class="form-control" placeholder="Email" required autofocus name="email">
+		                <input type="password" class="form-control" placeholder="Password" required name="password">
 		                <button class="btn btn-lg btn-danger btn-block" type="submit">
 		                    Sign in</button>
 		                <label class="checkbox pull-left">

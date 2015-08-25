@@ -8,7 +8,7 @@ import org.hibernate.Transaction;
 
 import com.qcodss.db.DB;
 import com.qcodss.model.Plant;
-import com.qcodss.model.User;
+
 
 public class PlantDAO {
 
@@ -54,7 +54,7 @@ public class PlantDAO {
 				e.printStackTrace(); 
 		   }
 		   finally {
-				  //session.close();
+				  session.close();
 		   }
 		   
 		   
