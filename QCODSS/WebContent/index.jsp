@@ -38,7 +38,7 @@
 	    	
 		    	<div class="col-md-12">
 	                 <h1>MAS Active QCO Dashboard</h1>   
-	                  <h5>Welcome Nipuna Cooray  </h5>
+	                  <h5>Welcome <%= session.getAttribute("name") %></h5>
 	            </div>
 	    	<!-- /. row  -->	
 	    	</div>
