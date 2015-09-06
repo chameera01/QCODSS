@@ -95,28 +95,7 @@
 	                                            %>	                                            	                                            
 	                                        </select>
 			                              </div>	                 				
-			                                            <label>Select plant</label>
-			                                            <select class="form-control" name="plantName">
-			                                            	
-			                                                <%
-			                                                //Loading plant list to the drop down
-			                                                Plant plant = new Plant(); 
-			                                                
-			                                                 List<Plant> allPlants =   PlantDAO.getAllPlants();
-			                                                 for(Plant p:allPlants){
-			                                 				   plant = p;
-			                                 				%>
-			                                 				   <option value="<%= plant.getId()%>" > <%= plant.getName()  %></option>
-			                                 				<%   
-			                                 				}	
-			                                                
-			                                                %>
-			                                            
-			                                               
-			                                                
-			                                                
-			                                                
-			                                            </select>
+
 			                              </div>
 	                 				
 	                 					
