@@ -25,7 +25,18 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+	<style>
+	#myform input.error {
+	border:1px solid red;
+	}
+	</style>
 
+   		<!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+
+		<!-- Validators -->    
+    <script src="assets/js/validators/styleRecValidator.js"></script>
+    
 </head>
 <body>
 
@@ -64,31 +75,27 @@
 	                 		<div class="row">
 	                 			<div class="col-md-12">
 	                 				
-	                 				<form action="addStyleRecordMain" method="post"> 
+	                 				<form id="myform" action="addStyleRecordMain" method="post" onsubmit="validateStyleRec()">
+	                 				<form > 
 	                 				
 	                 					<div class="form-group">
-			                                            <label>Select plant</label>
-			                                            <select class="form-control" name="plantName">
-			                                            	
-			                                                <%
-			                                                //Loading plant list to the drop down
-			                                                Plant plant = new Plant(); 
-			                                                
-			                                                 List<Plant> allPlants =   PlantDAO.getAllPlants();
-			                                                 for(Plant p:allPlants){
-			                                 				   plant = p;
-			                                 				%>
-			                                 				   <option value="<%= plant.getId()%>" > <%= plant.getName()  %></option>
-			                                 				<%   
-			                                 				}	
-			                                                
-			                                                %>
-			                                            
-			                                               
-			                                                
-			                                                
-			                                                
-			                                            </select>
+	                                        <label>Select plant</label>
+	                                        <select class="form-control">	                                        	
+	                                            <%
+	                                            //Loading plant list to the drop down
+	                                            Plant plant = new Plant(); 
+	                                            
+	                                             List<Plant> allPlants =   PlantDAO.getAllPlants();
+	                                             for(Plant p:allPlants){
+	                             				   plant = p;
+	                             				%>
+	                             				   <option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+	                             				<%   
+	                             				}		                                            
+	                                            %>	                                            	                                            
+	                                        </select>
+			                              </div>	                 				
+
 			                              </div>
 	                 				
 	                 					
@@ -96,8 +103,7 @@
                                             <label>Style no</label>
                                             <input class="form-control" placeholder="Please enter style no" name="styleNo" />
                                         </div>
-	                 					
-	                 					
+	                 				                 					
                                         
                                         <div class="form-group">
                                             <label>Style new/repeat</label>
@@ -695,16 +701,16 @@
 </div>
 
 	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
+   		<!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery.validate.js"></script>
+   		<!-- BOOTSTRAP SCRIPTS -->
     <script src="assets/js/bootstrap.min.js"></script>
-    <!-- METISMENU SCRIPTS -->
+   		<!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
-     <!-- MORRIS CHART SCRIPTS -->
+    	<!-- MORRIS CHART SCRIPTS -->
      <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
     <script src="assets/js/morris/morris.js"></script>
-      <!-- CUSTOM SCRIPTS -->
+     	<!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
 
 
