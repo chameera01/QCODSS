@@ -288,26 +288,26 @@
 			                    <div class="tab-content">
 			                                <div class="tab-pane fade active in" id="day1">
 			                                	
-							                <form> 
+							                <form action="styleDayOne" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 1 clocked hours" name="dayOneClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 1 produced hours" name="dayOneProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 1 total inspected garments" name="dayOneTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 1 total first time passed garments" name="dayOneTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -328,26 +328,26 @@
 			                                <div class="tab-pane fade" id="day2">
 			                                	
 			                                	
-			                                	<form> 
+			                                	<form action="styleDayTwo" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 2 clocked hours" name="dayTwoClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 2 produced hours" name="dayTwoProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 2 total inspected garments" name="dayTwoTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 2 total first time passed garments" name="dayTwoTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -368,26 +368,26 @@
 			                                
 			                                <div class="tab-pane fade" id="day3">
 			                                
-				                                	<form> 
+				                                	<form action="styleDayThree" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 3 clocked hours" name="dayThreeClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 3 produced hours" name="dayThreeProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 3 total inspected garments" name="dayThreeTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 3 total first time passed garments" name="dayThreeTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -406,26 +406,26 @@
 			                                
 			                                <div class="tab-pane fade" id="day4">
 			                                
-				                                	<form> 
+				                                	<form action="styleDayFour" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 4 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 4 clocked hours" name="dayFourClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 4 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 4 produced hours" name="dayFourProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 4 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 4 total inspected garments" name="dayFourTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 4 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 4 total first time passed garments" name="dayFourTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -445,26 +445,26 @@
 			                                
 			                                <div class="tab-pane fade" id="day5">
 			                                
-			                                		<form> 
+			                                		<form action="styleDayFive" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 5 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 5 clocked hours" name="dayFiveClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 5 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 5 produced hours" name="dayFiveProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 5 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 5 total inspected garments" name="dayFiveTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 5 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter day 5 total first time passed garments" name="dayFiveTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -539,26 +539,26 @@
 			                    <div class="tab-content">
 			                                <div class="tab-pane fade active in" id="lastday">
 			                                	
-							                <form> 
+							                <form action="styleLastDay" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter last day clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day clocked hours" name="dayLastClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter last day produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day produced hours" name="dayLastProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter last day total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day total inspected garments" name="dayLastTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter last day total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day total first time passed garments" name="dayLastTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -579,26 +579,26 @@
 			                                <div class="tab-pane fade" id="lastday-1">
 			                                	
 			                                	
-			                                	<form> 
+			                                	<form action="styleLastDayTwo" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-1 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 clocked hours" name="dayLastTwoClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-1 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 produced hours" name="dayLastTwoProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-1 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 total inspected garments" name="dayLastTwoTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-1 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 total first time passed garments" name="dayLastTwoTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -619,26 +619,26 @@
 			                                
 			                                <div class="tab-pane fade" id="lastday-2">
 			                                
-				                                	<form> 
+				                                	<form action="styleLastDayThree" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-2 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 clocked hours" name="dayLastThreeClocked" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-2 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 produced hours" name="dayLastThreeProduced" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-2 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 total inspected garments" name="dayLastThreeTotalInspected" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter lastday-2 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 total first time passed garments" name="dayLastThreeTotalPassed" />
 						                            </div>
 						                            
 						                            <div class="form-group">

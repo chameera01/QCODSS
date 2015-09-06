@@ -1,5 +1,7 @@
 package com.qcodss.struts;
 
+
+
 public class AddStyleRecordAction {
 	
 	public String plantName;
@@ -18,9 +20,9 @@ public class AddStyleRecordAction {
 	public String execute(){
 		String returnVal = "success";
 		
-		System.out.println(plantName);
-		System.out.println(styleNo);
-		System.out.println(styleType);
+		
+		
+		
 		
 		return returnVal;
 	}

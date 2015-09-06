@@ -11,9 +11,8 @@ import javax.persistence.Id;
 public class Style {
 
 	@Id
-	@GeneratedValue
 	@Column(name = "style_no")
-	private int style_no;
+	private String style_no;
 	
 	/* 'n' for new, 'r' for repeat */
 	@Column(name = "style_newRepeat")
@@ -183,7 +182,7 @@ public class Style {
 	private double totalFTT_3d;
 
 	
-	public int getStyle_no() {
+	public String getStyle_no() {
 		return style_no;
 	}
 
@@ -359,7 +358,7 @@ public class Style {
 		return totalFTT_3d;
 	}
 
-	public void setStyle_no(int style_no) {
+	public void setStyle_no(String style_no) {
 		this.style_no = style_no;
 	}
 
