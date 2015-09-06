@@ -38,4 +38,35 @@ $(document).ready(function(){
 		    similarityRank: ""
 		}
 	});
+	
+	/* day 01 style record form validated here. */
+	$("#styleDayOneForm").validate({
+		rules: {
+			dayOneClocked: { 	 
+				 required: true,
+				 number: true,
+				 max: 24
+			},
+			dayOneProduced: {   	 
+				required: true,
+				number: true,
+				max: 24
+			},
+			dayOneTotalInspected: {   	 
+				required: true,
+				digits: true
+			},
+			dayOneTotalPassed: {   	 
+				required: true,
+				digits: true
+			}
+		},
+		messages: {
+			dayOneClocked: "",
+			dayOneProduced: "",
+			dayOneTotalInspected: "",
+			dayOneTotalPassed: ""
+		}
+	});
+	
 });

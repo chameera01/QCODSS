@@ -29,6 +29,9 @@
 		#styleRecMainForm input.error {
 			border:1px solid red;
 		}
+		#styleDayOneForm input.error {
+			border:1px solid red;
+		}
 	</style>
 
    		<!-- JQUERY SCRIPTS -->
@@ -292,7 +295,7 @@
 			                    <div class="tab-content">
 			                                <div class="tab-pane fade active in" id="day1">
 			                                	
-							                <form action="styleDayOne" method="post"> 
+							                <form id="styleDayOneForm" action="styleDayOne" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
