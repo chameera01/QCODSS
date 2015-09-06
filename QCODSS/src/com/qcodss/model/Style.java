@@ -11,7 +11,6 @@ import javax.persistence.Id;
 public class Style {
 
 	@Id
-	@GeneratedValue
 	@Column(name = "style_no")
 	private int style_no;
 	
