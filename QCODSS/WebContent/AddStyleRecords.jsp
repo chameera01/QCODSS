@@ -26,9 +26,9 @@
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
 	<style>
-	#myform input.error {
-	border:1px solid red;
-	}
+		#styleRecMainForm input.error {
+			border:1px solid red;
+		}
 	</style>
 
    		<!-- JQUERY SCRIPTS -->
@@ -75,8 +75,7 @@
 	                 		<div class="row">
 	                 			<div class="col-md-12">
 	                 				
-	                 				<form id="myform" action="addStyleRecordMain" method="post" onsubmit="validateStyleRec()">
-	                 				<form > 
+	                 				<form id="styleRecMainForm" action="addStyleRecordMain" method="post">
 	                 				
 	                 					<div class="form-group">
 	                                        <label>Select plant</label>
@@ -96,7 +95,6 @@
 	                                        </select>
 			                              </div>	                 				
 
-			                              </div>
 	                 				
 	                 					
 	                 					<div class="form-group">
