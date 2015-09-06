@@ -76,11 +76,11 @@
 	                 			<div class="col-md-12">
 	                 				
 	                 				<form id="myform" action="addStyleRecordMain" method="post" onsubmit="validateStyleRec()">
-	                 				<form > 
+	                 			
 	                 				
 	                 					<div class="form-group">
 	                                        <label>Select plant</label>
-	                                        <select class="form-control">	                                        	
+	                                        <select class="form-control" name="plantName">	                                        	
 	                                            <%
 	                                            //Loading plant list to the drop down
 	                                            Plant plant = new Plant(); 
@@ -96,7 +96,7 @@
 	                                        </select>
 			                              </div>	                 				
 
-			                              </div>
+
 	                 				
 	                 					
 	                 					<div class="form-group">

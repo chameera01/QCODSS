@@ -4,8 +4,10 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+
 
 @Entity
 public class Style {
@@ -14,6 +16,18 @@ public class Style {
 	@Column(name = "style_no")
 	private String style_no;
 	
+	@OneToOne
+	private Plant  plant;
+	
+	
+	public Plant getPlant() {
+		return plant;
+	}
+
+	public void setPlant(Plant plant) {
+		this.plant = plant;
+	}
+
 	/* 'n' for new, 'r' for repeat */
 	@Column(name = "style_newRepeat")
 	private String newRepeat;
