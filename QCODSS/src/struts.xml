@@ -39,7 +39,61 @@
 		
 		</action>
 		
+		<action name="styleDayOne" class="com.qcodss.struts.StyleDayOneAction">
 		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleDayTwo" class="com.qcodss.struts.StyleDayTwoAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleDayThree" class="com.qcodss.struts.StyleDayThreeAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleDayFour" class="com.qcodss.struts.StyleDayFourAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleDayFive" class="com.qcodss.struts.StyleDayFiveAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleLastDay" class="com.qcodss.struts.StyleLastDayAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleLastDayTwo" class="com.qcodss.struts.StyleDayLastTwoAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="styleLastDayThree" class="com.qcodss.struts.StyleDayLastThreeAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
 
 	</package>
 	
