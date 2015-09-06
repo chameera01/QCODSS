@@ -32,7 +32,12 @@
 		
 		</action>
 		
+		<action name="addStyleRecordMain" class="com.qcodss.struts.AddStyleRecordAction">
 		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
 		
 		
 

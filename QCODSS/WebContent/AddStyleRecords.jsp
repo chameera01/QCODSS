@@ -62,13 +62,13 @@
 	                 	<div class="panel-body">
 	                 	
 	                 		<div class="row">
-	                 			<div class="col-md-8">
+	                 			<div class="col-md-12">
 	                 				
-	                 				<form> 
+	                 				<form action="addStyleRecordMain" method="post"> 
 	                 				
 	                 					<div class="form-group">
 			                                            <label>Select plant</label>
-			                                            <select class="form-control">
+			                                            <select class="form-control" name="plantName">
 			                                            	
 			                                                <%
 			                                                //Loading plant list to the drop down
@@ -78,7 +78,7 @@
 			                                                 for(Plant p:allPlants){
 			                                 				   plant = p;
 			                                 				%>
-			                                 				   <option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+			                                 				   <option value="<%= plant.getId()%>" > <%= plant.getName()  %></option>
 			                                 				<%   
 			                                 				}	
 			                                                
@@ -94,7 +94,7 @@
 	                 					
 	                 					<div class="form-group">
                                             <label>Style no</label>
-                                            <input class="form-control" placeholder="Please enter style no" name="" />
+                                            <input class="form-control" placeholder="Please enter style no" name="styleNo" />
                                         </div>
 	                 					
 	                 					
@@ -103,27 +103,24 @@
                                             <label>Style new/repeat</label>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked />New
+                                                    <input type="radio" name="styleType" id="optionsRadios1" value="n" checked />New
                                                 </label>
                                             </div>
                                             
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"/>Repeat
+                                                    <input type="radio" name="styleType" id="optionsRadios2" value="r"/>Repeat
                                                 </label>
                                             </div>
                                             
                                             
                                         </div>
                                         
-                                        <div class="form-group">
-                                            <label>Style started date</label>
-                                            <input class="form-control" placeholder="Please style started date" name="" />
-                                        </div>
+                                        
                                         
                                         <div class="form-group">
                                             <label>Module no</label>
-                                            <input class="form-control" placeholder="Please enter module no" name="" />
+                                            <input class="form-control" placeholder="Please enter module no" name="moduleNo" />
                                         </div>
                                         
                                         <div class = "row">
@@ -134,13 +131,13 @@
                                             <label>Pre machine setting</label>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios1" id="optionsRadios1" value="option1" checked />True
+                                                    <input type="radio" name="machineSetting" id="optionsRadios1" value="1" checked />True
                                                 </label>
                                             </div>
                                             
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios1" id="optionsRadios2" value="option2"/>False
+                                                    <input type="radio" name="machineSetting" id="optionsRadios2" value="0"/>False
                                                 </label>
                                             </div>
                                             
@@ -155,13 +152,13 @@
                                             <label>Pre training</label>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios2" id="optionsRadios3" value="option3" checked />True
+                                                    <input type="radio" name="preTraining" id="optionsRadios3" value="1" checked />True
                                                 </label>
                                             </div>
                                             
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios2" id="optionsRadios4" value="option4"/>False
+                                                    <input type="radio" name="preTraining" id="optionsRadios4" value="0"/>False
                                                 </label>
                                             </div>
                                             
@@ -175,13 +172,13 @@
                                             <label>Pre bulk</label>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios3" id="optionsRadios5" value="option5" checked />True
+                                                    <input type="radio" name="preBulk" id="optionsRadios5" value="1" checked />True
                                                 </label>
                                             </div>
                                             
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios3" id="optionsRadios6" value="option6"/>False
+                                                    <input type="radio" name="preBulk" id="optionsRadios6" value="0"/>False
                                                 </label>
                                             </div>
                                             
@@ -195,13 +192,13 @@
                                             <label>Predictability</label>
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios4" id="optionsRadios1" value="option7" checked />True
+                                                    <input type="radio" name="predictability" id="optionsRadios1" value="1" checked />True
                                                 </label>
                                             </div>
                                             
                                             <div class="radio">
                                                 <label>
-                                                    <input type="radio" name="optionsRadios4" id="optionsRadios2" value="option8"/>False
+                                                    <input type="radio" name="predictability" id="optionsRadios2" value="0"/>False
                                                 </label>
                                             </div>
                                             
@@ -215,18 +212,18 @@
                                         
                                         <div class="form-group">
                                             <label>Feeding time</label>
-                                            <input class="form-control" placeholder="Please enter feeding time" name="" />
+                                            <input class="form-control" placeholder="Please enter feeding time" name="feedingTime" />
                                         </div>
                                         
                                         <div class="form-group">
                                             <label>QCO time</label>
-                                            <input class="form-control" placeholder="Please enter QCO time" name="" />
+                                            <input class="form-control" placeholder="Please enter QCO time" name="QCOTime" />
                                         </div>
                                         
                                         
                                         <div class="form-group">
                                             <label>Relative similarity rank</label>
-                                            <input class="form-control" placeholder="Please enter relative similarity rank" name="" />
+                                            <input class="form-control" placeholder="Please enter relative similarity rank" name="similarityRank" />
                                         </div>
 	                 					
 	                 					<div class="form-group">
@@ -272,7 +269,7 @@
 	                 	
 	                 		<div class="row">
 	                 	
-	                 		<div class="col-md-7">
+	                 		<div class="col-md-8">
 	                 		
 	                 		<ul class="nav nav-tabs">
 		                                <li class="active"><a href="#day1" data-toggle="tab">Day 01</a>
@@ -551,17 +548,17 @@
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day produced hours" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day total inspected garments" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 1 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter last day total first time passed garments" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -586,22 +583,22 @@
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 clocked hours" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 produced hours" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 total inspected garments" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 2 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-1 total first time passed garments" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -626,22 +623,22 @@
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 clocked hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 clocked hours" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Produced hours</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 produced hours" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 produced hours" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total inspected garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 total inspected garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 total inspected garments" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
 						                                   <label>Total first time passed garments</label>
-						                                   <input class="form-control" placeholder="Please enter day 3 total first time passed garments" name="" />
+						                                   <input class="form-control" placeholder="Please enter lastday-2 total first time passed garments" name="" />
 						                            </div>
 						                            
 						                            <div class="form-group">
@@ -657,16 +654,7 @@
 				                                	
 	
 			                                </div>
-			                                
-			                               
-			                                
-			                                
-			                                
-			                                
-			                                
-			                                
-			                                
-			                                
+
 			                            </div>
 	                 		
 	                 	
@@ -685,12 +673,20 @@
 	        
 	        </div>
 	        <!-- End of tabs-->
+	        
+	        <div class="form-group">
+                       
+              
+              <input type="button" class="btn btn-danger" value="Finish style"  />
+              
+       		</div>
+	        
 	               
 		<!-- End of page inner-->
 		</div>
 	
-	
-	
+		
+
 	
 	</div>
 	
