@@ -26,9 +26,12 @@
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
 	<style>
-	#myform input.error {
-	border:1px solid red;
-	}
+		#styleRecMainForm input.error {
+			border:1px solid red;
+		}
+		#styleDayOneForm input.error {
+			border:1px solid red;
+		}
 	</style>
 
    		<!-- JQUERY SCRIPTS -->
@@ -75,8 +78,9 @@
 	                 		<div class="row">
 	                 			<div class="col-md-12">
 	                 				
-	                 				<form id="myform" action="addStyleRecordMain" method="post" onsubmit="validateStyleRec()">
+	                 				
 	                 			
+	                 				<form id="styleRecMainForm" action="addStyleRecordMain" method="post">
 	                 				
 	                 					<div class="form-group">
 	                                        <label>Select plant</label>
@@ -294,7 +298,7 @@
 			                    <div class="tab-content">
 			                                <div class="tab-pane fade active in" id="day1">
 			                                	
-							                <form action="styleDayOne" method="post"> 
+							                <form id="styleDayOneForm" action="styleDayOne" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
