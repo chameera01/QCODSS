@@ -39,7 +39,7 @@
 
 		<!-- Validators -->    
     <script src="assets/js/validators/styleRecValidator.js"></script>
-    
+   
 </head>
 <body>
 
@@ -55,7 +55,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Add style record</h3>   
+	                 <h3>Add style record</h3>
 	                  
 	            </div>
 	    	<!-- /. row  -->	
@@ -84,14 +84,20 @@
 	                                        <label>Select plant</label>
 	                                        <select class="form-control">	                                        	
 	                                            <%
-	                                            //Loading plant list to the drop down
+	                                            /* Loading plant list to the drop down and 
+	                                            	default plant is selected using plantid sotored in the session */
 	                                            Plant plant = new Plant(); 
-	                                            
-	                                             List<Plant> allPlants =   PlantDAO.getAllPlants();
-	                                             for(Plant p:allPlants){
-	                             				   plant = p;
-	                             				%>
-	                             				   <option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+	                                            List<Plant> allPlants = PlantDAO.getAllPlants();
+	                                            for(Plant p:allPlants){
+	                             				 	plant = p;
+	                             				 	if( plant.getId()==(Integer)session.getAttribute("plantID") ){ %>                           				
+	                             				   		<option value="<%= plant.getId()%>" selected> <%= plant.getName()  %></option>
+		                             				<%   
+		                             				} else{ %>
+		                             					<option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+		                             				<%	
+		                             				}
+		                                            %>
 	                             				<%   
 	                             				}		                                            
 	                                            %>	                                            	                                            
