@@ -78,11 +78,13 @@
 	                 		<div class="row">
 	                 			<div class="col-md-12">
 	                 				
+	                 				
+	                 			
 	                 				<form id="styleRecMainForm" action="addStyleRecordMain" method="post">
 	                 				
 	                 					<div class="form-group">
 	                                        <label>Select plant</label>
-	                                        <select class="form-control">	                                        	
+	                                        <select class="form-control" name="plantName">	                                        	
 	                                            <%
 	                                            /* Loading plant list to the drop down and 
 	                                            	default plant is selected using plantid sotored in the session */
@@ -104,12 +106,32 @@
 	                                        </select>
 			                              </div>	                 				
 
-	                 				
+
 	                 					
-	                 					<div class="form-group">
-                                            <label>Style no</label>
-                                            <input class="form-control" placeholder="Please enter style no" name="styleNo" />
-                                        </div>
+	                 					
+	                 						
+	                 					
+			                 					<div class="form-group" >
+		                                            <label>Style no</label>
+		                                            
+		                                            <div class="input-group">
+		                                            
+			                                            <input class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                                            <span class="form-group input-group-btn">
+															<button class="btn btn-danger" type="button">Load</button>
+												  		</span>
+		                                            
+		                                            </div>
+		                                            
+		                                            
+		                                        </div>
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				   
 	                 				                 					
                                         
                                         <div class="form-group">
