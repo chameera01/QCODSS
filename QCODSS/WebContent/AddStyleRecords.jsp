@@ -101,12 +101,31 @@
 			                              </div>	                 				
 
 
-	                 				
 	                 					
-	                 					<div class="form-group">
-                                            <label>Style no</label>
-                                            <input class="form-control" placeholder="Please enter style no" name="styleNo" />
-                                        </div>
+	                 					
+	                 						
+	                 					
+			                 					<div class="form-group" >
+		                                            <label>Style no</label>
+		                                            
+		                                            <div class="input-group">
+		                                            
+			                                            <input class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                                            <span class="form-group input-group-btn">
+															<button class="btn btn-danger" type="button">Load</button>
+												  		</span>
+		                                            
+		                                            </div>
+		                                            
+		                                            
+		                                        </div>
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				    	
+	                 				   
 	                 				                 					
                                         
                                         <div class="form-group">

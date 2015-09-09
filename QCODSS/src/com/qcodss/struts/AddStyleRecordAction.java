@@ -27,10 +27,8 @@ public class AddStyleRecordAction {
 	public String execute(){
 		String returnVal = "error";
 		
-		System.out.println(plantName);
-		
 		plant.setId(plantName);
-		
+	
 		Style style = new Style();
 		style.setStyle_no(styleNo);
 		style.setNewRepeat(styleType);
@@ -43,12 +41,14 @@ public class AddStyleRecordAction {
 		style.setQCOTime(QCOTime);
 		style.setRsr(similarityRank);
 		style.setPlant(plant);
-		
+	
 		Boolean value = StyleDAO.addStyle(style);
-		
+	
 		if(value){
 			returnVal = "success";
 		}
+	
+		
 		
 		return returnVal;
 	}
