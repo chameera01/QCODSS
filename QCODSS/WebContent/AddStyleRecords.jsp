@@ -9,8 +9,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>QCODSS | Style Record</title>
 
-
-
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
@@ -23,8 +21,9 @@
         <!-- CUSTOM STYLES-->
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+		<!-- this style is used for validations in each part of the form -->
 	<style>
 		#styleRecMainForm input.error {
 			border:1px solid red;
@@ -40,6 +39,14 @@
 		<!-- Validators -->    
     <script src="assets/js/validators/styleRecValidator.js"></script>
    
+   		<!-- this script will hide most parts of the form when page load -->
+    <script>
+    $(document).ready(function(){
+    	$("#styleRec_1_hide").hide();
+    	$("#styleRec_2_hide").hide();
+    });
+    </script>
+    
 </head>
 <body>
 
@@ -84,7 +91,7 @@
 	                 				
 	                 					<div class="form-group">
 	                                        <label>Select plant</label>
-	                                        <select class="form-control" name="plantName">	                                        	
+	                                        <select id="plantName" class="form-control" name="plantName">	                                        	
 	                                            <%
 	                                            /* Loading plant list to the drop down and 
 	                                            	default plant is selected using plantid sotored in the session */
@@ -94,7 +101,7 @@
 	                             				 	plant = p;
 	                             				 	if( plant.getId()==(Integer)session.getAttribute("plantID") ){ %>                           				
 	                             				   		<option value="<%= plant.getId()%>" selected> <%= plant.getName()  %></option>
-		                             				<%   
+		                             				<%  
 		                             				} else{ %>
 		                             					<option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
 		                             				<%	
@@ -116,9 +123,9 @@
 		                                            
 		                                            <div class="input-group">
 		                                            
-			                                            <input class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                                            <input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
 			                                            <span class="form-group input-group-btn">
-															<button class="btn btn-danger" type="button">Load</button>
+															<button class="btn btn-danger" type="button" onclick="loadForm()">Load</button>
 												  		</span>
 		                                            
 		                                            </div>
@@ -126,13 +133,9 @@
 		                                            
 		                                        </div>
 	                 				    	
+					<div id="styleRec_1_hide">                 				    	
 	                 				    	
-	                 				    	
-	                 				    	
-	                 				    	
-	                 				    	
-	                 				   
-	                 				                 					
+	                 				    	           					
                                         
                                         <div class="form-group">
                                             <label>Style new/repeat</label>
@@ -263,10 +266,11 @@
 	                 					
 	                 					<div class="form-group">
                                             
-                                            <input type="submit" class="btn btn-danger" value="Submit"  />
-                                            <input type="button" class="btn btn-danger" value="Update"  />
-                                            <input type="reset" class="btn btn-danger" value="Reset"  />
+                                            <input type="submit" class="btn btn-danger" value="Submit" />
+                                            <input type="button" class="btn btn-danger" value="Update" />
+                                            <input type="reset" class="btn btn-danger" value="Reset" />
                                         </div>
+          </div>         
 	                 					
 	                 				</form>
 	                 				
@@ -286,7 +290,7 @@
 		    	
 	    	<!-- /. row  -->	
 	    	</div>
-	    	
+	<div id="styleRec_2_hide">	    	
 			<!-- Begining of tabs-->
 			<div class="row">
 	    		
@@ -539,8 +543,7 @@
 	        
 	        </div>
 	        <!-- End of tabs-->
-	        
-	        
+       
 	        <!-- Begining of tabs-->
 			<div class="row">
 	    		
@@ -715,8 +718,7 @@
               <input type="button" class="btn btn-danger" value="Finish style"  />
               
        		</div>
-	        
-	               
+  </div>         
 		<!-- End of page inner-->
 		</div>
 	
@@ -741,6 +743,9 @@
     <script src="assets/js/morris/morris.js"></script>
      	<!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+    
+    	<!-- this page's SCRIPTS -->
+    <script src="assets/js/AddStyleRecords.js"></script>
 
 
 </body>

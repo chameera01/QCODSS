@@ -1,12 +1,18 @@
 package com.qcodss.struts;
 
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
 import com.qcodss.dao.StyleDAO;
 import com.qcodss.model.Plant;
 import com.qcodss.model.Style;
 
 
 
-public class AddStyleRecordAction {
+public class AddStyleRecordAction implements SessionAware {
+	
+	private Map<String, Object> userSession ;
 	
 	public Integer plantName;
 	public String styleNo;
@@ -23,8 +29,8 @@ public class AddStyleRecordAction {
 
 	Plant plant= new Plant();
 	
-	
-	public String execute(){
+	public String execute() {
+		
 		String returnVal = "error";
 		
 		plant.setId(plantName);
@@ -46,11 +52,16 @@ public class AddStyleRecordAction {
 	
 		if(value){
 			returnVal = "success";
-		}
-	
-		
+		}	
 		
 		return returnVal;
+		
+	}
+	
+	@Override
+	public void setSession(Map<String, Object> session) {
+		userSession = session ;
+		
 	}
 	
 }

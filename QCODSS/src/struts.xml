@@ -94,6 +94,14 @@
 			<result name="error">/Error.jsp</result>
 		
 		</action>
+		
+		<!-- this action is to receive styleNo and plantID and save in session -->
+		<action name="session" class="com.qcodss.struts.sessionAction">
+		
+			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
 
 	</package>
 	
