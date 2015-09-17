@@ -2,6 +2,7 @@ package com.qcodss.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +11,16 @@ import javax.persistence.Table;
 public class PlantWR {
 	
 	@Id
+	@GeneratedValue
+	@Column(name = "plantWR_id")
+	private int id;
+	
+	@Column(name = "plantWR_year")
+	private int year;
+	
+	@Column(name = "plantWR_month")
+	private int month;
+	
 	@Column(name = "plantWR_week")
 	private int week;
 	
@@ -170,6 +181,18 @@ public class PlantWR {
 	private double totalFTT_3d;
 
 	
+	public int getId() {
+		return id;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
 	public int getWeek() {
 		return week;
 	}
@@ -330,6 +353,18 @@ public class PlantWR {
 		return totalFTT_3d;
 	}
 
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	
 	public void setWeek(int week) {
 		this.week = week;
 	}

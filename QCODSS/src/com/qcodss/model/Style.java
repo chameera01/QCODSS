@@ -19,21 +19,15 @@ public class Style {
 	@OneToOne
 	private Plant  plant;
 	
+	@Column(name = "style_startDate")
+	private Date startDate;
 	
-	public Plant getPlant() {
-		return plant;
-	}
-
-	public void setPlant(Plant plant) {
-		this.plant = plant;
-	}
+	@Column(name = "style_finishDate")
+	private Date finishDate;
 
 	/* 'n' for new, 'r' for repeat */
 	@Column(name = "style_newRepeat")
 	private String newRepeat;
-	
-	@Column(name = "style_finishDate")
-	private Date finishDate;
 	
 	/* 1 for done, 0 for not */
 	@Column(name = "style_preSetting")
@@ -195,7 +189,22 @@ public class Style {
 	@Column(name = "style_totalFTT_3d")
 	private double totalFTT_3d;
 
+	public Plant getPlant() {
+		return plant;
+	}
+
+	public void setPlant(Plant plant) {
+		this.plant = plant;
+	}
 	
+	public Date getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
+	}
+
 	public String getStyle_no() {
 		return style_no;
 	}
@@ -380,7 +389,7 @@ public class Style {
 		this.newRepeat = newRepeat;
 	}
 
-	public void setStartDate(Date finishDate) {
+	public void setFinishDate(Date finishDate) {
 		this.finishDate = finishDate;
 	}
 
