@@ -4,8 +4,11 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.qcodss.dao.StyleDAO;
+import com.qcodss.model.Style;
+
 /* this class save styleNo and plantID in session */
-public class sessionAction implements SessionAware {
+public class SessionAction implements SessionAware {
 	
 	private Map<String, Object> styleRecSession ;
 	
@@ -25,11 +28,17 @@ public class sessionAction implements SessionAware {
 		if(styleRecSession.get("styleNo") != null || styleRecSession.get("stylePlantID") != null){
 			System.out.println("styleNo : "+styleRecSession.get("styleNo"));
 			System.out.println("stylePlantID : "+styleRecSession.get("stylePlantID"));
+
 			
 			return "success";
 		} else{
 			return "error";
 		}
+	}
+	
+	public void loadForm() {
+		Style style = new Style();	
+		style = StyleDAO.getStyle((String)styleRecSession.get("styleNo"));
 	}
 	
 	@Override
