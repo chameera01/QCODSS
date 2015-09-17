@@ -715,7 +715,7 @@
 	        <div class="form-group">
                        
               
-              <input type="button" class="btn btn-danger" value="Finish style"  />
+              <a href="finishStyle" class="btn btn-danger square-btn-adjust">Finish style</a>
               
        		</div>
   </div>         

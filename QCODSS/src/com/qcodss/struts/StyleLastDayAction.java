@@ -1,21 +1,51 @@
 package com.qcodss.struts;
 
-public class StyleLastDayAction {
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.qcodss.dao.StyleDAO;
+import com.qcodss.model.Style;
+
+public class StyleLastDayAction implements SessionAware{
 	
-	public String dayLastClocked;
-	public String dayLastProduced;
-	public String dayLastTotalInspected;
-	public String dayLastTotalPassed;
+	public Double dayLastClocked;
+	public Double dayLastProduced;
+	public Double dayLastTotalInspected;
+	public Double dayLastTotalPassed;
+	
+	public String styleNo;
+	
+	Style style;
+	private Map<String, Object> userSession ;
 	
 	public String execute(){
-		String returnVal = "success";
-		System.out.println(dayLastClocked);
-		System.out.println(dayLastProduced);
-		System.out.println(dayLastTotalInspected);
-		System.out.println(dayLastTotalPassed);
+		String returnVal = "error";
+		
+		styleNo = (String) userSession.get("styleNo");
+		
+		style = StyleDAO.getStyle(styleNo);
 		
 		
+		style.setClockedHrs_1d(dayLastClocked);
+		style.setProducedHrs_1d(dayLastProduced);
+		style.setTotalInspected_1d(dayLastTotalInspected);
+		style.setTotalFTT_1d(dayLastTotalPassed);
+		
+		
+		
+		boolean success = StyleDAO.addStyle(style);
+		
+		if(success){
+			returnVal = "success";
+		}
 		return returnVal;
+	}
+	
+	@Override
+	public void setSession(Map<String, Object> session) {
+		userSession = session ; 
+		
 	}
 	
 }
