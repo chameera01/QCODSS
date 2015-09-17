@@ -37,7 +37,7 @@ public class LoginAction implements SessionAware {
 			returnVal = "success";
 			userSession.put("id", authenticatedUser.getId());
 			userSession.put("name", authenticatedUser.getName());
-			userSession.put("plantID", authenticatedUser.getPlantid());
+			userSession.put("plantID", authenticatedUser.getPlantid().getId());
 			userSession.put("role", authenticatedUser.getRole());
 			
 		}
