@@ -41,10 +41,10 @@
    
    		<!-- this script will hide most parts of the form when page load -->
     <script>
-    $(document).ready(function(){
-    	$("#styleRec_1_hide").hide();
-    	$("#styleRec_2_hide").hide();
-    });
+	    $(document).ready(function(){
+	    	$("#styleRec_1_hide").hide();
+	    	$("#styleRec_2_hide").hide();
+	    });
     </script>
     
 </head>
@@ -87,7 +87,7 @@
 	                 				
 	                 				
 	                 			
-	                 				<form id="styleRecMainForm" action="addStyleRecordMain" method="post">
+									<form id="styleRecMainForm" action="addStyleRecordMain" method="post">
 	                 				
 	                 					<div class="form-group">
 	                                        <label>Select plant</label>
@@ -132,7 +132,7 @@
 		                                            
 		                                            
 		                                        </div>
-	                 				    	
+	                <!-- this div added purposely to hide this part of the form -->			    	
 					<div id="styleRec_1_hide">                 				    	
 	                 				    	
 	                 				    	           					
@@ -270,9 +270,9 @@
                                             <input type="button" class="btn btn-danger" value="Update" />
                                             <input type="reset" class="btn btn-danger" value="Reset" />
                                         </div>
-          </div>         
+					</div>         
 	                 					
-	                 				</form>
+									</form>
 	                 				
 	                 			
 	                 			
@@ -290,6 +290,8 @@
 		    	
 	    	<!-- /. row  -->	
 	    	</div>
+	    	
+	<!-- this div added purposely to hide this part of the form -->
 	<div id="styleRec_2_hide">	    	
 			<!-- Begining of tabs-->
 			<div class="row">
