@@ -1,228 +1,236 @@
-package com.qcodss.model;
+package com.qcodss.struts;
+
+import java.util.Map;
 
 import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity
-@Table(name = "plantWR")
-public class PlantWR {
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.qcodss.dao.StyleDAO;
+import com.qcodss.model.Style;
+
+
+/* this class save styleNo and plantID in session */
+public class SessionAction implements SessionAware {
 	
-	@Id
-	@GeneratedValue
-	@Column(name = "plantWR_id")
-	private int id;
+	private Map<String, Object> styleRecSession ;
 	
-	@Column(name = "plantWR_year")
-	private int year;
+	public String styleNo;
+	public String stylePlantID;
 	
-	@Column(name = "plantWR_month")
-	private int month;
-	
-	@Column(name = "plantWR_week")
-	private int week;
-	
-	/* no of new styles */
-	@Column(name = "plantWR_newStyles")
-	private int newStyles;
-	
-	/* no of repeat styles */
-	@Column(name = "plantWR_repeatStyles")
-	private int repeatStyles;
-	
-	/* full pre setting hit rate */
-	@Column(name = "plantWR_preSettingHR")
-	private int preSettingHR;
-	
-	/* silhouette based hit rate */
-	@Column(name = "plantWR_silhouetteBasedHR")
-	private int silhouetteBasedHR;
-	
-	/* average feeding time */
-	@Column(name = "plantWR_avgFeedingTime")
-	private double avgFeedingTime;
-	
-	/* QCO time average of all new styles */
-	@Column(name = "plantWR_QCOTimeAvgNew")
-	private double QCOTimeAvgNew;
-	
-	/* QCO time average of all repeat styles */
-	@Column(name = "plantWR_QCOTimeAvgRepeat")
-	private double QCOTimeAvgRepeat;
-	
+/* these style fields are sent as json object */	
+	private String newRepeat;
+	private int moduleNo;
+	private int preSetting;
+	private int preTraining;
+	private int preBulk;
+	private int predictability;
+	private int feedingTime;
+	private int QCOTime;
+	private int rsr;
 	/* 
 	 * 1st day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_1")
-	private double clockedHrs_1;
-	
-	@Column(name = "plantWR_producedHrs_1")
-	private double producedHrs_1;
-	
-	@Column(name = "plantWR_totalInspected_1")
-	private double totalInspected_1;
-	
-	@Column(name = "plantWR_totalFTT_1")
+	private double clockedHrs_1;	
+	private double producedHrs_1;	
+	private double totalInspected_1;	
 	private double totalFTT_1;
-	
 	/* 
 	 * 2nd day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_2")
-	private double clockedHrs_2;
-	
-	@Column(name = "plantWR_producedHrs_2")
-	private double producedHrs_2;
-	
-	@Column(name = "plantWR_totalInspected_2")
-	private double totalInspected_2;
-	
-	@Column(name = "plantWR_totalFTT_2")
+	private double clockedHrs_2;	
+	private double producedHrs_2;	
+	private double totalInspected_2;	
 	private double totalFTT_2;
-	
 	/* 
 	 * 3rd day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_3")
-	private double clockedHrs_3;
-	
-	@Column(name = "plantWR_producedHrs_3")
-	private double producedHrs_3;
-	
-	@Column(name = "plantWR_totalInspected_3")
-	private double totalInspected_3;
-	
-	@Column(name = "plantWR_totalFTT_3")
+	private double clockedHrs_3;	
+	private double producedHrs_3;	
+	private double totalInspected_3;	
 	private double totalFTT_3;
-
 	/* 
 	 * 4th day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_4")
-	private double clockedHrs_4;
-	
-	@Column(name = "plantWR_producedHrs_4")
-	private double producedHrs_4;
-	
-	@Column(name = "plantWR_totalInspected_4")
-	private double totalInspected_4;
-	
-	@Column(name = "plantWR_totalFTT_4")
+	private double clockedHrs_4;	
+	private double producedHrs_4;	
+	private double totalInspected_4;	
 	private double totalFTT_4;
-	
 	/* 
 	 * 5th day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_5")
-	private double clockedHrs_5;
-	
-	@Column(name = "plantWR_producedHrs_5")
-	private double producedHrs_5;
-	
-	@Column(name = "plantWR_totalInspected_5")
-	private double totalInspected_5;
-	
-	@Column(name = "plantWR_totalFTT_5")
+	private double clockedHrs_5;	
+	private double producedHrs_5;	
+	private double totalInspected_5;	
 	private double totalFTT_5;
-	
 	/* 
 	 * previous day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_1d")
 	private double clockedHrs_1d;
-	
-	@Column(name = "plantWR_producedHrs_1d")
 	private double producedHrs_1d;
-	
-	@Column(name = "plantWR_totalInspected_1d")
 	private double totalInspected_1d;
-	
-	@Column(name = "plantWR_totalFTT_1d")
 	private double totalFTT_1d;
-	
 	/* 
-	 * day before previous day clocked hours, produced hours, 
+	 * previous day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_2d")
 	private double clockedHrs_2d;
-	
-	@Column(name = "plantWR_producedHrs_2d")
 	private double producedHrs_2d;
-	
-	@Column(name = "plantWR_totalInspected_2d")
 	private double totalInspected_2d;
-	
-	@Column(name = "plantWR_totalFTT_2d")
 	private double totalFTT_2d;
-	
 	/* 
-	 * two days before previous day clocked hours, produced hours, 
+	 * previous day clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_3d")
 	private double clockedHrs_3d;
-	
-	@Column(name = "plantWR_producedHrs_3d")
 	private double producedHrs_3d;
-	
-	@Column(name = "plantWR_totalInspected_3d")
 	private double totalInspected_3d;
-	
-	@Column(name = "plantWR_totalFTT_3d")
 	private double totalFTT_3d;
-
+/* end of style fields */
 	
-	public int getId() {
-		return id;
+	
+	
+	
+	public String execute(){
+		
+		if(saveSession()){
+			
+			loadForm();
+			
+			return "success";
+		} else{
+			return "error";
+		}
+	}
+	
+	public boolean saveSession(){
+		/* previous sessions are removed */
+		styleRecSession.remove("styleNo");
+		styleRecSession.remove("stylePlantID");
+		
+		/* new data added to the session */
+		styleRecSession.put("styleNo",styleNo);
+		styleRecSession.put("stylePlantID",stylePlantID);
+		
+		/* verify whether new session values are stored */
+		if(styleRecSession.get("styleNo") != null || styleRecSession.get("stylePlantID") != null){
+			System.out.println("styleNo : "+styleRecSession.get("styleNo"));
+			System.out.println("stylePlantID : "+styleRecSession.get("stylePlantID"));
+
+			
+			return true;
+		} else{
+			return false;
+		}
+	}
+	
+	public void loadForm() {
+		Style style = new Style();	
+		style = StyleDAO.getStyle((String)styleRecSession.get("styleNo"));
+		
+		setNewRepeat(style.getNewRepeat());
+		setModuleNo(style.getModuleNo());
+		setPreSetting(style.getPreSetting());
+		setPreTraining(style.getPreTraining());
+		setPreBulk(style.getPreBulk());
+		setPredictability(style.getPredictability());
+		setFeedingTime(style.getFeedingTime());
+		setQCOTime(style.getQCOTime());
+		setRsr(style.getRsr());
+		
+		/* day 01 */
+		
+		setClockedHrs_1(style.getClockedHrs_1());
+		
+		System.out.println("@@"+style.getClockedHrs_1());
+		
+		setProducedHrs_1(style.getProducedHrs_1());
+		setTotalInspected_1(style.getTotalInspected_1());
+		setTotalFTT_1(style.getTotalFTT_1());
+		
+		/* day 02 */
+		setClockedHrs_2(style.getClockedHrs_2());
+		setProducedHrs_2(style.getProducedHrs_2());
+		setTotalInspected_2(style.getTotalInspected_2());
+		setTotalFTT_2(style.getTotalFTT_2());
+		
+		/* day 03 */
+		setClockedHrs_3(style.getClockedHrs_3());
+		setProducedHrs_3(style.getProducedHrs_3());
+		setTotalInspected_3(style.getTotalInspected_3());
+		setTotalFTT_3(style.getTotalFTT_3());
+		
+		/* day 04 */
+		setClockedHrs_4(style.getClockedHrs_4());
+		setProducedHrs_4(style.getProducedHrs_4());
+		setTotalInspected_4(style.getTotalInspected_4());
+		setTotalFTT_4(style.getTotalFTT_4());
+		
+		/* day 05 */
+		setClockedHrs_5(style.getClockedHrs_5());
+		setProducedHrs_5(style.getProducedHrs_5());
+		setTotalInspected_5(style.getTotalInspected_5());
+		setTotalFTT_5(style.getTotalFTT_5());
+		
+		/* day 1d */
+		setClockedHrs_1d(style.getClockedHrs_1d());
+		setProducedHrs_1d(style.getProducedHrs_1d());
+		setTotalInspected_1d(style.getTotalInspected_1d());
+		setTotalFTT_1d(style.getTotalFTT_1d());
+		
+		/* day 2d */
+		setClockedHrs_2d(style.getClockedHrs_2d());
+		setProducedHrs_2d(style.getProducedHrs_2d());
+		setTotalInspected_2d(style.getTotalInspected_2d());
+		setTotalFTT_2d(style.getTotalFTT_2d());
+		
+		/* day 3d */
+		setClockedHrs_3d(style.getClockedHrs_3d());
+		setProducedHrs_3d(style.getProducedHrs_3d());
+		setTotalInspected_3d(style.getTotalInspected_3d());
+		setTotalFTT_3d(style.getTotalFTT_3d());
+	}
+	
+	public String getNewRepeat() {
+		return newRepeat;
 	}
 
-	public int getYear() {
-		return year;
+	public int getModuleNo() {
+		return moduleNo;
 	}
 
-	public int getMonth() {
-		return month;
+	public int getPreSetting() {
+		return preSetting;
 	}
 
-	public int getWeek() {
-		return week;
+	public int getPreTraining() {
+		return preTraining;
 	}
 
-	public int getNewStyles() {
-		return newStyles;
+	public int getPreBulk() {
+		return preBulk;
 	}
 
-	public int getRepeatStyles() {
-		return repeatStyles;
+	public int getPredictability() {
+		return predictability;
 	}
 
-	public int getPreSettingHR() {
-		return preSettingHR;
+	public int getFeedingTime() {
+		return feedingTime;
 	}
 
-	public int getSilhouetteBasedHR() {
-		return silhouetteBasedHR;
+	public int getQCOTime() {
+		return QCOTime;
 	}
 
-	public double getAvgFeedingTime() {
-		return avgFeedingTime;
-	}
-
-	public double getQCOTimeAvgNew() {
-		return QCOTimeAvgNew;
-	}
-
-	public double getQCOTimeAvgRepeat() {
-		return QCOTimeAvgRepeat;
+	public int getRsr() {
+		return rsr;
 	}
 
 	public double getClockedHrs_1() {
@@ -353,48 +361,40 @@ public class PlantWR {
 		return totalFTT_3d;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setNewRepeat(String newRepeat) {
+		this.newRepeat = newRepeat;
 	}
 
-	public void setYear(int year) {
-		this.year = year;
+	public void setModuleNo(int moduleNo) {
+		this.moduleNo = moduleNo;
 	}
 
-	public void setMonth(int month) {
-		this.month = month;
-	}
-	
-	public void setWeek(int week) {
-		this.week = week;
+	public void setPreSetting(int preSetting) {
+		this.preSetting = preSetting;
 	}
 
-	public void setNewStyles(int newStyles) {
-		this.newStyles = newStyles;
+	public void setPreTraining(int preTraining) {
+		this.preTraining = preTraining;
 	}
 
-	public void setRepeatStyles(int repeatStyles) {
-		this.repeatStyles = repeatStyles;
+	public void setPreBulk(int preBulk) {
+		this.preBulk = preBulk;
 	}
 
-	public void setPreSettingHR(int preSettingHR) {
-		this.preSettingHR = preSettingHR;
+	public void setPredictability(int predictability) {
+		this.predictability = predictability;
 	}
 
-	public void setSilhouetteBasedHR(int silhouetteBasedHR) {
-		this.silhouetteBasedHR = silhouetteBasedHR;
+	public void setFeedingTime(int feedingTime) {
+		this.feedingTime = feedingTime;
 	}
 
-	public void setAvgFeedingTime(double avgFeedingTime) {
-		this.avgFeedingTime = avgFeedingTime;
+	public void setQCOTime(int qCOTime) {
+		QCOTime = qCOTime;
 	}
 
-	public void setQCOTimeAvgNew(double qCOTimeAvgNew) {
-		QCOTimeAvgNew = qCOTimeAvgNew;
-	}
-
-	public void setQCOTimeAvgRepeat(double qCOTimeAvgRepeat) {
-		QCOTimeAvgRepeat = qCOTimeAvgRepeat;
+	public void setRsr(int rsr) {
+		this.rsr = rsr;
 	}
 
 	public void setClockedHrs_1(double clockedHrs_1) {
@@ -523,6 +523,12 @@ public class PlantWR {
 
 	public void setTotalFTT_3d(double totalFTT_3d) {
 		this.totalFTT_3d = totalFTT_3d;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		styleRecSession = session ;
+		
 	}
 
 }
