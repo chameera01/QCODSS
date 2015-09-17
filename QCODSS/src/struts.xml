@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<package name="default" extends="struts-default">
+	<package name="default" extends="struts-default,json-default">
 		
 		
 		<action name="addplant" class="com.qcodss.struts.AddPlantsAction">
@@ -96,10 +96,9 @@
 		</action>
 		
 		<!-- this action is to receive styleNo and plantID and save in session -->
-		<action name="session" class="com.qcodss.struts.sessionAction">
+		<action name="session" class="com.qcodss.struts.SessionAction">
 		
-			<result name="success">/AddStyleRecords.jsp</result>
-			<result name="error">/Error.jsp</result>
+			<result type="json">/AddStyleRecords.jsp</result>
 		
 		</action>
 
