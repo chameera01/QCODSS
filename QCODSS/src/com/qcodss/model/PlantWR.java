@@ -31,15 +31,15 @@ public class PlantWR {
 	
 	/* average feeding time */
 	@Column(name = "plantWR_avgFeedingTime")
-	private int avgFeedingTime;
+	private double avgFeedingTime;
 	
 	/* QCO time average of all new styles */
 	@Column(name = "plantWR_QCOTimeAvgNew")
-	private int QCOTimeAvgNew;
+	private double QCOTimeAvgNew;
 	
 	/* QCO time average of all repeat styles */
 	@Column(name = "plantWR_QCOTimeAvgRepeat")
-	private int QCOTimeAvgRepeat;
+	private double QCOTimeAvgRepeat;
 	
 	/* 
 	 * 1st day clocked hours, produced hours, 
@@ -190,15 +190,15 @@ public class PlantWR {
 		return silhouetteBasedHR;
 	}
 
-	public int getAvgFeedingTime() {
+	public double getAvgFeedingTime() {
 		return avgFeedingTime;
 	}
 
-	public int getQCOTimeAvgNew() {
+	public double getQCOTimeAvgNew() {
 		return QCOTimeAvgNew;
 	}
 
-	public int getQCOTimeAvgRepeat() {
+	public double getQCOTimeAvgRepeat() {
 		return QCOTimeAvgRepeat;
 	}
 
@@ -350,15 +350,15 @@ public class PlantWR {
 		this.silhouetteBasedHR = silhouetteBasedHR;
 	}
 
-	public void setAvgFeedingTime(int avgFeedingTime) {
+	public void setAvgFeedingTime(double avgFeedingTime) {
 		this.avgFeedingTime = avgFeedingTime;
 	}
 
-	public void setQCOTimeAvgNew(int qCOTimeAvgNew) {
+	public void setQCOTimeAvgNew(double qCOTimeAvgNew) {
 		QCOTimeAvgNew = qCOTimeAvgNew;
 	}
 
-	public void setQCOTimeAvgRepeat(int qCOTimeAvgRepeat) {
+	public void setQCOTimeAvgRepeat(double qCOTimeAvgRepeat) {
 		QCOTimeAvgRepeat = qCOTimeAvgRepeat;
 	}
 
