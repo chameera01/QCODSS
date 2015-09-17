@@ -1,29 +1,29 @@
 package com.qcodss.struts;
 
-
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.qcodss.dao.StyleDAO;
 import com.qcodss.model.Style;
 
-public class StyleDayOneAction implements SessionAware {
+public class StyleLoadAction implements SessionAware{
 	
-	public String dayOneClocked;
-	public String dayOneProduced;
-	public String dayOneTotalInspected;
-	public String dayOneTotalPassed;
-	public String styleNo;
+	String styleNo; 
 	
-	Style style;
 	private Map<String, Object> userSession ;
 	
 	public String execute(){
-		String returnVal = "success";
 		
+			String returnVal ="error";
 		
-		//System.out.println(userSession.get("id"));
-		
+			Style style = StyleDAO.getStyle(styleNo);
+			
+			if(style != null){
+				userSession.put("styleNo", style.getStyle_no());
+				returnVal = "success";
+			}
+			
 		
 		return returnVal;
 	}
@@ -33,5 +33,6 @@ public class StyleDayOneAction implements SessionAware {
 		userSession = session ; 
 		
 	}
+	
 	
 }
