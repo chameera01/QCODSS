@@ -14,15 +14,15 @@
 		<property name="connection.pool.size">1</property>
 		<property name="connection.show.sql">true</property>
 		<property name="cache.provider.class">org.hibernate.cache.NoCacheProvider</property>
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
 		
 		
 		<mapping class="com.qcodss.model.User"/>
 		<mapping class="com.qcodss.model.Style"/>
 		<mapping class="com.qcodss.model.Plant"/>
 		<mapping class="com.qcodss.model.PlantWR"/>
-		
-		
+		<mapping class="com.qcodss.model.ActiveBaseline"/>
+		<mapping class="com.qcodss.model.PlantBaseline"/>
 		
 		
 	</session-factory>

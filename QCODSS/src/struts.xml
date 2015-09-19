@@ -116,7 +116,19 @@
 		
 		</action>
 		
+		<action name="addActiveBaseline" class="com.qcodss.struts.ActiveBaselineAction" >
 		
+			<result name="success">/SetBaselines.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="addPlantBaseline" class="com.qcodss.struts.PlantBaselineAction" >
+		
+			<result name="success">/SetBaselines.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
 		
 	</package>
 	

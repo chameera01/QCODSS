@@ -1,5 +1,7 @@
 package com.qcodss.struts;
 
+import com.qcodss.dao.PlantWRDAO;
+import com.qcodss.dao.StyleDAO;
 import com.qcodss.model.Plant;
 import com.qcodss.model.PlantWR;
 
@@ -7,12 +9,12 @@ public class AddWeekRecordsAction {
 	
 	public Integer plantName;
 	public int year;
-	public String month;
+	public int month;
 	public int weekNumber;
 	public int noOfNewStyles;
 	public int noOfRepeatStyles;
-	public int fullPresettingHR;
-	public Double shRate;
+	public double fullPresettingHR;
+	public double shRate;
 	public Double averageFeedingTime;
 	public Double QCOAverageNew;
 	public Double QCOAverageRepeat;
@@ -42,30 +44,58 @@ public class AddWeekRecordsAction {
 	public Double day5TotalInspected;
 	public Double day5FTT;
 	
-	String returnVal="success";
+	String returnVal="error";
 	Plant plant= new Plant();
 	
-	PlantWR plantWeek ;
+	PlantWR WR ;
 	
 	public String execute(){
+		WR = new PlantWR();
 		
-		System.out.println(plantName);
-		System.out.println(year);
-		System.out.println(month);
-		System.out.println(weekNumber);
-		System.out.println(noOfNewStyles);
-		System.out.println(noOfRepeatStyles);
-		System.out.println(fullPresettingHR);
-		System.out.println(shRate);
-		System.out.println(averageFeedingTime);
-		System.out.println(QCOAverageNew);
-		System.out.println(QCOAverageRepeat);
-		System.out.println(day1Clocked);
-		System.out.println(day2Clocked);
-		System.out.println(day3Clocked);
-		System.out.println(day4Clocked);
-		System.out.println(day5Clocked);
+		plant.setId(plantName);
 		
+		WR.setPlant(plant);
+		WR.setYear(year);
+		WR.setMonth(month);
+		WR.setWeek(weekNumber);
+		WR.setNewStyles(noOfNewStyles);
+		WR.setRepeatStyles(noOfRepeatStyles);
+		WR.setPreSettingHR(fullPresettingHR);
+		WR.setSilhouetteBasedHR(shRate);
+		WR.setAvgFeedingTime(averageFeedingTime);
+		WR.setQCOTimeAvgNew(QCOAverageNew);
+		WR.setQCOTimeAvgRepeat(QCOAverageRepeat);
+		
+		WR.setClockedHrs_1(day1Clocked);
+		WR.setProducedHrs_1(day1Produced);
+		WR.setTotalInspected_1(day1TotalInspected);
+		WR.setTotalFTT_1(day1FTT);
+		
+		WR.setClockedHrs_2(day2Clocked);
+		WR.setProducedHrs_2(day2Produced);
+		WR.setTotalInspected_2(day2TotalInspected);
+		WR.setTotalFTT_2(day2FTT);
+		
+		WR.setClockedHrs_3(day3Clocked);
+		WR.setProducedHrs_3(day3Produced);
+		WR.setTotalInspected_3(day3TotalInspected);
+		WR.setTotalFTT_3(day3FTT);
+		
+		WR.setClockedHrs_4(day4Clocked);
+		WR.setProducedHrs_4(day4Produced);
+		WR.setTotalInspected_4(day4TotalInspected);
+		WR.setTotalFTT_4(day4FTT);
+		
+		WR.setClockedHrs_5(day5Clocked);
+		WR.setProducedHrs_5(day5Produced);
+		WR.setTotalInspected_5(day5TotalInspected);
+		WR.setTotalFTT_5(day5FTT);
+		
+		Boolean value = PlantWRDAO.addPlantWR(WR);
+		
+		if(value){
+			returnVal = "success";
+		}
 		
 		return returnVal;
 	}

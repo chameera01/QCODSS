@@ -73,11 +73,11 @@
 		                            <div class="tab-content">
 		                                <div class="tab-pane fade active in" id="home">
 		                                	
-		                                	<form> 
+		                                	<form action="addActiveBaseline" method="post"> 
 	                 					
 			                 					<div class="form-group">
 			                                            <label>Select year</label>
-			                                            <select class="form-control">
+			                                            <select class="form-control" name="year">
 			                                                
 			                                          		<option>2014</option>
 			                                                <option>2015</option>
@@ -103,12 +103,12 @@
 		                                        
 		                                        <div class="form-group">
 		                                            <label>Enter yearly target efficiency for new styles</label>
-		                                            <input class="form-control" placeholder="Enter  new target" name="" />
+		                                            <input class="form-control" placeholder="Enter  new target" name="newTarget" />
 		                                        </div>
 		                                        
 		                                        <div class="form-group">
 		                                            <label>Enter yearly target efficiency for repeat styles</label>
-		                                            <input class="form-control" placeholder="Enter repeat target   " name="" />
+		                                            <input class="form-control" placeholder="Enter repeat target   " name="repeatTarget" />
 		                                        </div>
 			                 					
 			                 					
@@ -128,11 +128,11 @@
 		                                
 		                                <div class="tab-pane fade" id="profile">
 		                                
-			                                <form> 
+			                                <form action="addPlantBaseline" method="post" > 
 			                                
 			                                		<div class="form-group">
 			                                            <label>Select year</label>
-			                                            <select class="form-control">
+			                                            <select class="form-control" name="year">
 			                                                <option>2014</option>
 			                                                <option>2015</option>
 			                                                <option>2016</option>
@@ -158,19 +158,19 @@
 			                                		
 			                                		<div class="form-group">
 			                                            <label>Select month</label>
-			                                            <select class="form-control">
-			                                                <option>January</option>
-			                                                <option>February</option>
-			                                                <option>March</option>
-			                                                <option>April</option>
-			                                                <option>May</option>
-			                                                <option>June</option>
-			                                                <option>July</option>
-			                                                <option>August</option>
-			                                                <option>September</option>
-			                                                <option>October</option>
-			                                                <option>November</option>
-			                                                <option>December</option>
+			                                            <select class="form-control" name="month">
+			                                                <option value="1">January</option>
+			                                                <option value="2">February</option>
+			                                                <option value="3">March</option>
+			                                                <option value="4">April</option>
+			                                                <option value="5">May</option>
+			                                                <option value="6">June</option>
+			                                                <option value="7">July</option>
+			                                                <option value="8">August</option>
+			                                                <option value="9">September</option>
+			                                                <option value="10">October</option>
+			                                                <option value="11">November</option>
+			                                                <option value="12">December</option>
 			                                                
 			                                                
 			                                            </select>
@@ -179,7 +179,7 @@
 		                 					
 				                 					<div class="form-group">
 			                                            <label>Monthly budgeted efficiency</label>
-			                                            <input class="form-control" placeholder="Enter  name" name="" />
+			                                            <input class="form-control" placeholder="Enter monthly budgeted efficiency " name="budgetedEff" />
 			                                        </div>
 			                                        
 			                                        
