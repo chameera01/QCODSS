@@ -8,7 +8,6 @@ import org.hibernate.Transaction;
 
 import com.qcodss.db.DB;
 import com.qcodss.model.Style;
-import com.qcodss.model.User;
 
 public class StyleDAO {
 
@@ -53,8 +52,15 @@ public class StyleDAO {
 			   styleList = session.createQuery("FROM Style s WHERE s.style_no = '" + styleNo + "'   ").list();
 			   tx.commit();
 			   
+			   
+			   if(styleList.isEmpty()){
+				   style=null;
+				   return style;
+			   }
+			   
 			   for(Style s:styleList){
 				   style = s;
+				   System.out.println("style : "+style);
 				}
 			   
 		   }catch(HibernateException e){
@@ -68,6 +74,25 @@ public class StyleDAO {
 		   
 		   return style;
 	   }
+	   
+	   public static List<Style> getAllStyles( ){
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<Style> allStyles = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   allStyles = session.createQuery("FROM Style").list();
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   return allStyles;
+	   }   
 	   
 	   
 }

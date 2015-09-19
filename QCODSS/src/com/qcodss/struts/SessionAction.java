@@ -2,8 +2,6 @@ package com.qcodss.struts;
 
 import java.util.Map;
 
-import javax.persistence.Column;
-
 import org.apache.struts2.interceptor.SessionAware;
 
 import com.qcodss.dao.StyleDAO;
@@ -17,6 +15,8 @@ public class SessionAction implements SessionAware {
 	
 	public String styleNo;
 	public String stylePlantID;
+	
+	public int styleExist;
 	
 /* these style fields are sent as json object */	
 	private String newRepeat;
@@ -134,6 +134,12 @@ public class SessionAction implements SessionAware {
 		Style style = new Style();	
 		style = StyleDAO.getStyle((String)styleRecSession.get("styleNo"));
 		
+		if(style==null){
+			setStyleExist(0);
+			return;
+		}
+
+		setStyleExist(1);
 		setNewRepeat(style.getNewRepeat());
 		setModuleNo(style.getModuleNo());
 		setPreSetting(style.getPreSetting());
@@ -146,10 +152,7 @@ public class SessionAction implements SessionAware {
 		
 		/* day 01 */
 		
-		setClockedHrs_1(style.getClockedHrs_1());
-		
-		System.out.println("@@"+style.getClockedHrs_1());
-		
+		setClockedHrs_1(style.getClockedHrs_1());		
 		setProducedHrs_1(style.getProducedHrs_1());
 		setTotalInspected_1(style.getTotalInspected_1());
 		setTotalFTT_1(style.getTotalFTT_1());
@@ -195,6 +198,12 @@ public class SessionAction implements SessionAware {
 		setProducedHrs_3d(style.getProducedHrs_3d());
 		setTotalInspected_3d(style.getTotalInspected_3d());
 		setTotalFTT_3d(style.getTotalFTT_3d());
+	}
+	
+	/* getters and setters */
+	
+	public int getStyleExist() {
+		return styleExist;
 	}
 	
 	public String getNewRepeat() {
@@ -359,6 +368,10 @@ public class SessionAction implements SessionAware {
 
 	public double getTotalFTT_3d() {
 		return totalFTT_3d;
+	}
+
+	public void setStyleExist(int styleExist) {
+		this.styleExist = styleExist;
 	}
 
 	public void setNewRepeat(String newRepeat) {
