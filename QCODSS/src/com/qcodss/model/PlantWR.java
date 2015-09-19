@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +16,18 @@ public class PlantWR {
 	@Column(name = "plantWR_id")
 	private int id;
 	
+	@OneToOne
+	private Plant  plant;
+	
+	
+	public Plant getPlant() {
+		return plant;
+	}
+
+	public void setPlant(Plant plant) {
+		this.plant = plant;
+	}
+
 	@Column(name = "plantWR_year")
 	private int year;
 	
@@ -34,11 +47,11 @@ public class PlantWR {
 	
 	/* full pre setting hit rate */
 	@Column(name = "plantWR_preSettingHR")
-	private int preSettingHR;
+	private double preSettingHR;
 	
 	/* silhouette based hit rate */
 	@Column(name = "plantWR_silhouetteBasedHR")
-	private int silhouetteBasedHR;
+	private double silhouetteBasedHR;
 	
 	/* average feeding time */
 	@Column(name = "plantWR_avgFeedingTime")
@@ -205,12 +218,20 @@ public class PlantWR {
 		return repeatStyles;
 	}
 
-	public int getPreSettingHR() {
+	public double getPreSettingHR() {
 		return preSettingHR;
 	}
 
-	public int getSilhouetteBasedHR() {
+	public double getSilhouetteBasedHR() {
 		return silhouetteBasedHR;
+	}
+
+	public void setPreSettingHR(double preSettingHR) {
+		this.preSettingHR = preSettingHR;
+	}
+
+	public void setSilhouetteBasedHR(double silhouetteBasedHR) {
+		this.silhouetteBasedHR = silhouetteBasedHR;
 	}
 
 	public double getAvgFeedingTime() {
