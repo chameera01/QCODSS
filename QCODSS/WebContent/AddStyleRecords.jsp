@@ -23,6 +23,9 @@
      <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+    
+
+
 		<!-- this style is used for validations in each part of the form -->
 	<style>
 		#styleRecMainForm input.error {
@@ -46,6 +49,14 @@
 	    	$("#styleRec_2_hide").hide();
 	    });
     </script>
+
+
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>    
+
+<script type="text/javascript">
+  $('#styleNo').select2();
+</script>
     
 </head>
 <body>
@@ -123,7 +134,9 @@
 		                                            
 		                                            <div class="input-group">
 		                                            
-			                                            <input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                                 <input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                              
+			                                            
 			                                            <span class="form-group input-group-btn">
 															<button class="btn btn-danger" type="button" onclick="loadForm()">Load</button>
 												  		</span>
@@ -327,7 +340,7 @@
 		                    </ul>
 		                    
 			                    <div class="tab-content">
-			                                <div class="tab-pane fade active in" id="day1">
+			                         	<div class="tab-pane fade active in" id="day1">
 			                                	
 							                <form id="styleDayOneForm" action="styleDayOne" method="post"> 
 					                 	
@@ -359,17 +372,11 @@
 						                            </div>
 				                            
 					                 		
-					                 		</form>
-			                                	
-			                                
-			                                
-			                </div>
-			                                
-			                                
-			                                <div class="tab-pane fade" id="day2">
-			                                	
-			                                	
-			                                	<form action="styleDayTwo" method="post"> 
+					                 		</form>                    
+			              			 	</div>
+
+			                            <div class="tab-pane fade" id="day2">
+			                                	<form id="styleDayTwoForm" action="styleDayTwo" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -409,7 +416,7 @@
 			                                
 			                                <div class="tab-pane fade" id="day3">
 			                                
-				                                	<form action="styleDayThree" method="post"> 
+				                                	<form id="styleDayThreeForm" action="styleDayThree" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -447,7 +454,7 @@
 			                                
 			                                <div class="tab-pane fade" id="day4">
 			                                
-				                                	<form action="styleDayFour" method="post"> 
+				                                	<form id="styleDayFourForm" action="styleDayFour" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -486,7 +493,7 @@
 			                                
 			                                <div class="tab-pane fade" id="day5">
 			                                
-			                                		<form action="styleDayFive" method="post"> 
+			                                		<form id="styleDayFiveForm" action="styleDayFive" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -579,7 +586,7 @@
 			                    <div class="tab-content">
 			                                <div class="tab-pane fade active in" id="lastday">
 			                                	
-							                <form action="styleLastDay" method="post"> 
+							                <form id="styleLastDayForm" action="styleLastDay" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -619,7 +626,7 @@
 			                                <div class="tab-pane fade" id="lastday-1">
 			                                	
 			                                	
-			                                	<form action="styleLastDayTwo" method="post"> 
+			                                	<form id="styleLastDayTwoForm" action="styleLastDayTwo" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -659,7 +666,7 @@
 			                                
 			                                <div class="tab-pane fade" id="lastday-2">
 			                                
-				                                	<form action="styleLastDayThree" method="post"> 
+				                                	<form id="styleLastDayThreeForm" action="styleLastDayThree" method="post"> 
 					                 	
 							                 		<div class="form-group">
 						                                   <label>Clocked hours</label>
@@ -741,10 +748,12 @@
    		<!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
     	<!-- MORRIS CHART SCRIPTS -->
-     <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="assets/js/morris/raphael-2.1.0.min.js"></script>
     <script src="assets/js/morris/morris.js"></script>
      	<!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+    
+
     
     	<!-- this page's SCRIPTS -->
     <script src="assets/js/AddStyleRecords.js"></script>
