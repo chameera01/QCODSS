@@ -32,6 +32,28 @@ public class ActiveBaselineDAO {
 
 		return true;
 	}
+	
+	public static List<ActiveBaseline> getActiveBaseline(int year){
+		
+		List<ActiveBaseline> AB = null;
+		Session session = DB.getSessionFactory().openSession();
+		Transaction tx = null;
+		
+		try {
+			tx = session.beginTransaction();
+			AB = session.createQuery("FROM ActiveBaseline Where year= '" +year+ "' ").list();
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+		
+		
+		return AB;
+	}
 
 	public static List<ActiveBaseline> getAllActiveBaselines() {
 		Session session = DB.getSessionFactory().openSession();

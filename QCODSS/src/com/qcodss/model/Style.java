@@ -19,6 +19,10 @@ public class Style {
 	@OneToOne
 	private Plant  plant;
 	
+	
+	private int  weekNo;
+	
+	
 	@Column(name = "style_startDate")
 	private Date startDate;
 	
@@ -195,6 +199,14 @@ public class Style {
 
 	public void setPlant(Plant plant) {
 		this.plant = plant;
+	}
+	
+	public int getWeekNo() {
+		return weekNo;
+	}
+
+	public void setWeekNo(int weekNo) {
+		this.weekNo = weekNo;
 	}
 	
 	public Date getStartDate() {

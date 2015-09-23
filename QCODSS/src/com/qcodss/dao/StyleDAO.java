@@ -54,6 +54,8 @@ public class StyleDAO {
 			   
 			   
 			   if(styleList.isEmpty()){
+				   
+
 				   style=null;
 				   return style;
 			   }
@@ -92,7 +94,26 @@ public class StyleDAO {
 		   }
 		   
 		   return allStyles;
-	   }   
+	   }  
+	   
+	   public static List<Style> getAllStylesByWeek(int weekNo , int plantID, int year ){
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<Style> allStyles = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   allStyles = session.createQuery("FROM Style s WHERE s.weekNo = '" + weekNo + "' and s.plant= '" + plantID + "'  and year(s.startDate)= '" + year + "' ").list();
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   return allStyles;
+	   }  
 	   
 	   
 }

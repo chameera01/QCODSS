@@ -107,9 +107,12 @@
 			<result type="json">/AddStyleRecords.jsp</result>
 		</action>
 		
-		<action name="suggestStyles" class="com.qcodss.struts.SuggestStylesAction">
-			<result type="json">/AddStyleRecords.jsp</result>
-		</action>
+		
+		
+<!-- 		<action name="suggestStyles" class="com.qcodss.struts.SuggestStylesAction"> -->
+<!-- 			<result type="json">/AddStyleRecords.jsp</result> -->
+<!-- 		</action> -->
+		
 		
 		<action name="addWeeklyMain" class="com.qcodss.struts.AddWeekRecordsAction" method="execute">
 		
@@ -128,6 +131,13 @@
 		<action name="addPlantBaseline" class="com.qcodss.struts.PlantBaselineAction" >
 		
 			<result name="success">/SetBaselines.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="loadWeeklyReport" class="com.qcodss.struts.LoadWeeklyReportAction" >
+		
+			<result name="success">/index.jsp</result>
 			<result name="error">/Error.jsp</result>
 		
 		</action>
