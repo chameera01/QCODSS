@@ -111,8 +111,7 @@ function loadForm(){
 		    	$("#feedingTime").val("");
 		    	$("#QCOTime").val("");
 		    	$("#similarityRank").val("");
-		    	
-	    		document.getElementById("styleRecMainForm").reset();
+
 	    		document.getElementById("styleDayOneForm").reset();
 	    		document.getElementById("styleDayTwoForm").reset();
 	    		document.getElementById("styleDayThreeForm").reset();

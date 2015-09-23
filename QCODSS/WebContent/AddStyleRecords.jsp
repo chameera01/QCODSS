@@ -49,14 +49,15 @@
 	    	$("#styleRec_2_hide").hide();
 	    });
     </script>
-
-
-<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.css" rel="stylesheet" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>    
-
-<script type="text/javascript">
-  $('#styleNo').select2();
-</script>
+    
+    <!-- date picker (finish style) scripts -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		  $( "#datepicker" ).datepicker();
+		});
+	</script>
     
 </head>
 <body>
@@ -723,7 +724,7 @@
 	        
 	        <div class="form-group">
                        
-              
+              <p>Date: <input type="text" id="datepicker"></p>
               <a href="finishStyle" class="btn btn-danger square-btn-adjust">Finish style</a>
               
        		</div>
