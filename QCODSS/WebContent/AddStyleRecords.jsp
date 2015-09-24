@@ -23,7 +23,7 @@
      <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-    
+      
 
 
 		<!-- this style is used for validations in each part of the form -->
@@ -35,7 +35,10 @@
 			border:1px solid red;
 		}
 	</style>
-
+		
+		
+		
+		
    		<!-- JQUERY SCRIPTS -->
     <script src="assets/js/jquery-1.10.2.js"></script>
 
@@ -51,12 +54,16 @@
     </script>
 
 
-<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.css" rel="stylesheet" />
-<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>    
-
-<script type="text/javascript">
-  $('#styleNo').select2();
-</script>
+	
+	
+	
+	
+    
+     
+	  
+	 
+    
+    
     
 </head>
 <body>
@@ -125,7 +132,7 @@
 			                              </div>	                 				
 
 
-	                 					
+	                 							
 	                 					
 	                 						
 	                 					
@@ -134,7 +141,7 @@
 		                                            
 		                                            <div class="input-group">
 		                                            
-			                                 <input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                                 			<input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
 			                              
 			                                            
 			                                            <span class="form-group input-group-btn">
@@ -167,7 +174,11 @@
                                             
                                         </div>
                                         
-                                        
+                                        <div class="form-group" >
+		                                            <label>Week no</label>
+		                                            <input id="weeekNo" class="form-control" placeholder="Please enter week no most relevant to this style" name="weekNo" />
+			                             
+		                                 </div>
                                         
                                         <div class="form-group">
                                             <label>Module no</label>
@@ -724,6 +735,8 @@
 	        <div class="form-group">
                        
               
+				
+				
               <a href="finishStyle" class="btn btn-danger square-btn-adjust">Finish style</a>
               
        		</div>

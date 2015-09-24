@@ -1,5 +1,6 @@
 package com.qcodss.struts;
 
+import java.util.Date;
 import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
@@ -25,7 +26,8 @@ public class AddStyleRecordAction implements SessionAware {
 	public Integer feedingTime;
 	public Integer QCOTime;
 	public Integer similarityRank;
-	
+	public Integer weekNo;
+	Date startDate = new Date();
 
 	Plant plant= new Plant();
 	
@@ -47,6 +49,12 @@ public class AddStyleRecordAction implements SessionAware {
 		style.setQCOTime(QCOTime);
 		style.setRsr(similarityRank);
 		style.setPlant(plant);
+		style.setStartDate(startDate);
+		style.setWeekNo(weekNo);
+		
+		if(fullPresettingChecker()){
+			style.setFullPresetting(1);
+		}
 	
 		Boolean value = StyleDAO.addStyle(style);
 	
@@ -56,6 +64,18 @@ public class AddStyleRecordAction implements SessionAware {
 		
 		return returnVal;
 		
+	}
+	
+	
+	public boolean fullPresettingChecker(){
+		boolean value = false;
+		
+		if(machineSetting.equals(1) && preTraining.equals(1) && preBulk.equals(1) && predictability.equals(1)){
+			value= true;
+		}
+		
+		
+		return value;
 	}
 	
 	@Override

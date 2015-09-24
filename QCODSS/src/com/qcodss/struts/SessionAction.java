@@ -134,7 +134,10 @@ public class SessionAction implements SessionAware {
 		Style style = new Style();	
 		style = StyleDAO.getStyle((String)styleRecSession.get("styleNo"));
 		
+		
+		
 		if(style==null){
+
 			setStyleExist(0);
 			return;
 		}
