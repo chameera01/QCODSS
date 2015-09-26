@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<!--     birt intergration -->
+<%@ taglib uri="/birt.tld" prefix="birt" %>
+    
 <!DOCTYPE html ">
 <html>
 <head>
@@ -148,6 +152,26 @@
                  		</div>
                 
            </div>
+           
+           
+<!--            	 birt intergration -->
+<!--            <div class="row"> -->
+	    	
+<!-- 		    	<div class="col-md-12"> -->
+<!-- 	                 <h3>Birt Report</h3>    -->
+	                 
+<%-- 	                 <birt:viewer id="birtViewer" reportDesign="firstReport.rptdesign" --%>
+<%-- 						baseURL="/BirtViewerExample" --%>
+<%-- 						pattern="frameset" --%>
+<%-- 						height="450" --%>
+<%-- 						width="700" --%>
+<%-- 						format="html"> --%>
+<%-- 					</birt:viewer> --%>
+	                  
+<!-- 	            </div> -->
+<!-- 	    	/. row 	 -->
+<!-- 	    	</div> -->
+			
 			
 			
 		<!-- /.page inner  -->
@@ -157,8 +181,7 @@
 	
 	
 	</div>
-	
-	
+
 
 </div>
 

@@ -53,6 +53,8 @@ function loadForm(){
 		    	$("#dayTwoTotalInspected").val(data.totalInspected_2);
 		    	$("#dayTwoTotalPassed").val(data.totalFTT_2);
 		    	
+		    	alert("totalFTT_2 : "+data.totalFTT_2);
+		    	
 		    	/* style fields - day 03 */
 		    	$("#dayThreeClocked").val(data.clockedHrs_3);
 		    	$("#dayThreeProduced").val(data.producedHrs_3);
