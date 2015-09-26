@@ -142,6 +142,13 @@
 		
 		</action>
 		
+		<!-- this action is for center charts -->
+		<action name="centerChart" class="com.qcodss.struts.CenterChartAction">
+			<result type="json"></result>
+		</action>
+		
+		
+		
 	</package>
 	
 	<package name="basicstruts2" extends="struts-default">
