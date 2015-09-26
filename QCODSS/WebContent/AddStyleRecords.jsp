@@ -23,7 +23,7 @@
      <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-      
+    
 
 
 		<!-- this style is used for validations in each part of the form -->
@@ -35,10 +35,7 @@
 			border:1px solid red;
 		}
 	</style>
-		
-		
-		
-		
+
    		<!-- JQUERY SCRIPTS -->
     <script src="assets/js/jquery-1.10.2.js"></script>
 
@@ -52,18 +49,15 @@
 	    	$("#styleRec_2_hide").hide();
 	    });
     </script>
-
-
-	
-	
-	
-	
     
-     
-	  
-	 
-    
-    
+    <!-- date picker (finish style) scripts -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script>
+		$(function() {
+		  $( "#datepicker" ).datepicker();
+		});
+	</script>
     
 </head>
 <body>
@@ -132,7 +126,7 @@
 			                              </div>	                 				
 
 
-	                 							
+	                 					
 	                 					
 	                 						
 	                 					
@@ -141,7 +135,7 @@
 		                                            
 		                                            <div class="input-group">
 		                                            
-			                                 			<input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
+			                                 <input id="styleNo" class="form-control" placeholder="Please enter style no" name="styleNo" />
 			                              
 			                                            
 			                                            <span class="form-group input-group-btn">
@@ -174,11 +168,7 @@
                                             
                                         </div>
                                         
-                                        <div class="form-group" >
-		                                            <label>Week no</label>
-		                                            <input id="weeekNo" class="form-control" placeholder="Please enter week no most relevant to this style" name="weekNo" />
-			                             
-		                                 </div>
+                                        
                                         
                                         <div class="form-group">
                                             <label>Module no</label>
@@ -734,9 +724,7 @@
 	        
 	        <div class="form-group">
                        
-              
-				
-				
+              <p>Date: <input type="text" id="datepicker"></p>
               <a href="finishStyle" class="btn btn-danger square-btn-adjust">Finish style</a>
               
        		</div>
