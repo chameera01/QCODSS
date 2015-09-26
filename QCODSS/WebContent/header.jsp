@@ -86,6 +86,58 @@
                     </li>
                     
                     
+                    <li>
+                        <a  href="#"><i class="fa fa-envelope-o fa-3x"></i>Charts</a>
+                        
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="MASActiveChart.jsp">MAS Active</a>
+                            </li>
+                            <li>
+                                <a href="">Shadowline</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Shadeline</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Contourline</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Leisureline</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Asialine</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Synergy</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Sleekline</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Linea AITC</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Mihintale</a>
+                            </li>
+                            
+                            <li>
+                                <a href="">Vaanavil</a>
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                    
+                    
                     
                     
                     <li>

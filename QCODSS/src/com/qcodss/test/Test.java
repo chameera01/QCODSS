@@ -1,13 +1,13 @@
 package com.qcodss.test;
 
-import com.qcodss.reportcontroller.WeekReportController;
+import com.qcodss.reportcontroller.ReportController;
 import com.qcodss.reportmodels.WeeklyReport;
 
 public class Test {
 	
 	public static void main(String args[]){
 		
-		WeekReportController wrc = new WeekReportController(1, 2015, 1);
+		ReportController wrc = new ReportController(1, 2015, 1);
 		WeeklyReport wr =  wrc.getReport();
 		
 		System.out.println("Average QCO time : " + wr.getAverageQCOTime());

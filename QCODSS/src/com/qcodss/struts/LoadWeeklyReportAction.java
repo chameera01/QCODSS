@@ -2,7 +2,7 @@ package com.qcodss.struts;
 
 
 
-import com.qcodss.reportcontroller.WeekReportController;
+import com.qcodss.reportcontroller.ReportController;
 import com.qcodss.reportmodels.WeeklyReport;
 
 public class LoadWeeklyReportAction {
@@ -15,7 +15,7 @@ public class LoadWeeklyReportAction {
 	
 	
 	public String execute(){
-		WeekReportController wrc = new WeekReportController(weekNumber, year, plantName);
+		ReportController wrc = new ReportController(weekNumber, year, plantName);
 		wr = wrc.getReport();
 		
 		

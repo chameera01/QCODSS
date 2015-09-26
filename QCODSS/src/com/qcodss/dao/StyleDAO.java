@@ -2,9 +2,12 @@ package com.qcodss.dao;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 
 import com.qcodss.db.DB;
 import com.qcodss.model.Style;
@@ -96,6 +99,35 @@ public class StyleDAO {
 		   return allStyles;
 	   }  
 	   
+	   //This method is to return number of months style has been inserted during an year
+	   public static int getNumofMonthes(int year){
+		   List numberOfMonthes;
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   int number = 0 ;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   //numberOfMonthes = session.createQuery("FROM Style s WHERE year(s.startDate)= '" + year + "'  ");
+			   numberOfMonthes = (session.createQuery("select count(*) from Style s WHERE year(s.startDate)= '" + year + "' group by month(s.startDate)  ")).list();
+			   
+			  
+			  number = numberOfMonthes.size();
+		
+			   
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   
+		   return number;
+	   }
+	   
+	   
 	   public static List<Style> getAllStylesByWeek(int weekNo , int plantID, int year ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -113,7 +145,26 @@ public class StyleDAO {
 		   }
 		   
 		   return allStyles;
-	   }  
+	   } 
+	   
+	   public static List<Style> getAllStylesByMonth(int month , int plantID, int year ){
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<Style> allStyles = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   allStyles = session.createQuery("FROM Style s WHERE month(s.startDate)= '" + month + "' and s.plant= '" + plantID + "'  and year(s.startDate)= '" + year + "' ").list();
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   return allStyles;
+	   } 
 	   
 	   
 }
