@@ -38,6 +38,7 @@ public class AddStyleRecordAction implements SessionAware {
 		plant.setId(plantName);
 	
 		Style style = new Style();
+		
 		style.setStyle_no(styleNo);
 		style.setNewRepeat(styleType);
 		style.setModuleNo(moduleNo);
@@ -57,6 +58,8 @@ public class AddStyleRecordAction implements SessionAware {
 		}
 	
 		Boolean value = StyleDAO.addStyle(style);
+		
+		System.out.println("** : "+value);
 	
 		if(value){
 			returnVal = "success";

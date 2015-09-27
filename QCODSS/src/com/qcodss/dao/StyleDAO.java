@@ -36,9 +36,7 @@ public class StyleDAO {
 		   
 		  return true;
 	   }
-
-	  
-	   
+   
 	   /* Method to get a STYLE from the database 
 	    * (return Style Object ) 
 	    */
@@ -79,6 +77,10 @@ public class StyleDAO {
 		   
 		   return style;
 	   }
+	   
+	   /* Method to get all STYLEs from the database 
+	    * (return Style list Object ) 
+	    */
 	   
 	   public static List<Style> getAllStyles( ){
 		   Session session = DB.getSessionFactory().openSession();
@@ -155,6 +157,41 @@ public class StyleDAO {
 		   try{
 			   tx = session.beginTransaction();
 			   allStyles = session.createQuery("FROM Style s WHERE month(s.startDate)= '" + month + "' and s.plant= '" + plantID + "'  and year(s.startDate)= '" + year + "' ").list();
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   return allStyles;
+	   } 
+	   
+	   /* Method to get all STYLEs from the database
+	    * @param : plantID -> possible value formats -> "*", "1", "1,2,3"
+	    * @return : Style list Object
+	    */
+	   public static List<Style> getStylesbyWeeksPlants(String fromWeek, String toWeek, String year, String plantID){
+		   
+		   // plant condition ( "1=1" indicates "all" )
+		   String whereClause_1;
+		   if("*".equals(plantID)){
+			   whereClause_1 = " 1=1 " ;
+		   } else{
+			   whereClause_1 = " s.plant IN (" +plantID+ ") " ;
+		   }
+		   
+		   // week condition
+		   String whereClause_2 = " s.weekNo between " +fromWeek+ "and " +toWeek+ "";
+		   
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<Style> allStyles = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   allStyles = session.createQuery("FROM Style s WHERE " +whereClause_1+ " and "+whereClause_2+" and year(s.startDate)= '" +year+ "' ").list();
 			   tx.commit();
 		   }catch (HibernateException e) {
 			   if (tx!=null) tx.rollback();

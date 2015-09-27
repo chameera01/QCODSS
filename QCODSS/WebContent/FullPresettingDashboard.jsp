@@ -2,7 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
 <!--     birt intergration -->
-<%@ taglib uri="/birt.tld" prefix="birt" %>
+<%-- <%@ taglib uri="/birt.tld" prefix="birt" %> --%>
     
 <!DOCTYPE html ">
 <html>
