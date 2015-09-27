@@ -1,7 +1,7 @@
 package com.qcodss.reportmodels;
 
 public class MonthlyReport {
-	private int month;
+	private double month;
 	private int numberOfNew;
 	private int numberOfRepeat;
 	private double averageQCOTime;
@@ -84,7 +84,7 @@ public class MonthlyReport {
 	}
 	
 	
-	public int getMonth() {
+	public double getMonth() {
 		return month;
 	}
 	public double getBudget_eff() {
@@ -94,7 +94,8 @@ public class MonthlyReport {
 	public void setBudget_eff(double budget_eff) {
 		this.budget_eff = budget_eff;
 	}
-	public void setMonth(int month) {
+	public void setMonth(double month) {
+		
 		this.month = month;
 	}
 	public int getNumberOfNew() {

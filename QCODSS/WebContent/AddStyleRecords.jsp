@@ -149,6 +149,11 @@
 	                <!-- this div added purposely to hide this part of the form -->			    	
 					<div id="styleRec_1_hide">                 				    	
 	                 				    	
+	                 				    
+	                 				    <div class="form-group">
+                                            <label>Week no</label>
+                                            <input id="weekNo" class="form-control" placeholder="Please enter week no" name="weekNo" />
+                                        </div>
 	                 				    	           					
                                         
                                         <div class="form-group">
