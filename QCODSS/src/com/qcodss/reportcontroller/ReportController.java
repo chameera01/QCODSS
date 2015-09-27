@@ -80,6 +80,7 @@ public class ReportController {
 		noOfStyles = allStyles.size();
 
 		mr = new MonthlyReport();
+		mr.setMonth(month);
 		AB = ActiveBaselineDAO.getActiveBaseline(year);
 		PB = PlantBaselineDAO.getPlantBaseline(month, year, plantID);
 
