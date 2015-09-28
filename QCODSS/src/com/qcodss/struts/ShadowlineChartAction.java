@@ -8,10 +8,9 @@ import java.util.Map;
 import com.qcodss.reportcontroller.ReportController;
 import com.qcodss.reportmodels.MonthlyReport;
 
-
-public class CenterChartAction {
-
-	private List<Map> allMonthes = new ArrayList<Map>() ;
+public class ShadowlineChartAction {
+	
+private List<Map> allMonthes = new ArrayList<Map>() ;
 	
 	//public variables need to be declared to access data from pop up
 
@@ -55,7 +54,10 @@ public class CenterChartAction {
 			} else if(i==12){
 			    month = "December";
 			}
-		
+			
+			
+			//This needs to be changed according to shadowline
+			
 			rc = new ReportController(month, 2015, 1);
 			
 			mr = rc.getMonthlyReport();

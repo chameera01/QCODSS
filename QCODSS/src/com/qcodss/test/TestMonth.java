@@ -10,6 +10,8 @@ public class TestMonth {
 		ReportController wrc = new ReportController("January", 2015, 1);
 		MonthlyReport mr =  wrc.getMonthlyReport();
 		
+		System.out.println("Month : " + mr.getMonth());
+		
 		System.out.println("Number of new : " + mr.getNumberOfNew());
 		System.out.println("Number of repeat : " + mr.getNumberOfRepeat());
 		

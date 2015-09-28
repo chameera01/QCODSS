@@ -142,10 +142,25 @@
 		
 		</action>
 		
+		
+		<action name="viewAllUsers" class="com.qcodss.struts.ViewUsersAction" >
+		
+			<result name="success">/AddUser.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
 		<!-- this action is for center charts -->
 		<action name="centerChart" class="com.qcodss.struts.CenterChartAction">
 			<result type="json"></result>
 		</action>
+		
+		
+		<!-- this action is for shadowline charts -->
+		<action name="shadowlineChart" class="com.qcodss.struts.ShadowlineChartAction">
+			<result type="json"></result>
+		</action>
+		
 		
 		
 		

@@ -578,7 +578,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_45 > 0 ){
 				EffAvg_45 = (produced_45 / clocked_45) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
