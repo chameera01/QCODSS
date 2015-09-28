@@ -14,7 +14,7 @@ import com.qcodss.model.Style;
 
 public class StyleDAO {
 
-	   /* Method to CREATE a STYLE in the database 
+	   /* Method to CREATE a STYLE
 	    * (return boolean true or false) 
 	    */
 	   public static boolean addStyle(Style style) {
@@ -37,7 +37,7 @@ public class StyleDAO {
 		  return true;
 	   }
    
-	   /* Method to get a STYLE from the database 
+	   /* Method to get a STYLE
 	    * (return Style Object ) 
 	    */
 	   
@@ -78,7 +78,7 @@ public class StyleDAO {
 		   return style;
 	   }
 	   
-	   /* Method to get all STYLEs from the database 
+	   /* Method to get all STYLEs
 	    * (return Style list Object ) 
 	    */
 	   
@@ -168,7 +168,7 @@ public class StyleDAO {
 		   return allStyles;
 	   } 
 	   
-	   /* Method to get all STYLEs from the database
+	   /* Method to get STYLEs filtered by a week range, year, plantID
 	    * @param : plantID -> possible value formats -> "*", "1", "1,2,3"
 	    * @return : Style list Object
 	    */

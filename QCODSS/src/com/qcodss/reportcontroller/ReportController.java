@@ -27,7 +27,7 @@ public class ReportController {
 	MonthlyReport mr;
 	List<Style> allStyles;
 
-	// Monthly report constructor
+	// Weekly report constructor
 	public ReportController(int weekNo, int year, int plantID) {
 		this.weekNo = weekNo;
 		// weekNo should be passed as a parameter to the below method

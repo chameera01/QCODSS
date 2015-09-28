@@ -147,6 +147,11 @@
 			<result type="json"></result>
 		</action>
 		
+		<!-- this action is for center charts -->
+		<action name="WkSummary" class="com.qcodss.struts.WkSummaryAction">
+			<result type="json"></result>
+		</action>
+		
 		
 		
 	</package>

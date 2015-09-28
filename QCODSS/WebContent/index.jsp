@@ -28,15 +28,17 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+		
+		<script src="assets/js/index.js"></script>
 
 		<!-- google charts intergration -->	
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-
+    	google.load("visualization", "1.1", {packages:["table"]});
+    	google.setOnLoadCallback(initialize);
     </script>
 		<!-- /(google charts intergration) -->
 
-	<script src="assets/js/index.js"></script>
 	
 </head>
 <body>
@@ -329,12 +331,11 @@
 		       				Weekly Summary
 		   				</div>
 		   				<div class="panel-body">
-							<button class="btn btn-danger" type="button" onclick="initTable()">Load</button>		    	
+							<button class="btn btn-danger" type="button" onclick="drawTable()">Load</button>  	
 				    		<div id="table_div"></div>
 				    	</div>
 				    </div>
-				</div>
-	    	
+				</div>    	
 	    	<!-- /. row  -->	
 	    	</div>
 	    	

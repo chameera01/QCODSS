@@ -74,4 +74,28 @@ public class ActiveBaselineDAO {
 
 		return allAB;
 	}
+
+	/*	method return list of years for which active baseline records were setup
+	 *  @return -> list(String) of year
+	 */
+	public static List<Integer> getAllABYears() {
+		Session session = DB.getSessionFactory().openSession();
+		Transaction tx = null;
+		List<Integer> allABYears = null;
+
+		try {
+			tx = session.beginTransaction();
+			allABYears = session.createQuery("SELECT ab.year FROM ActiveBaseline ab GROUP BY ab.year").list();
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+
+		return allABYears;
+	}
+
 }

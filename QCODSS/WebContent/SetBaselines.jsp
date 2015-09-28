@@ -1,3 +1,7 @@
+<%@page import="com.qcodss.model.ActiveBaseline"%>
+<%@page import="com.qcodss.dao.ActiveBaselineDAO"%>
+<%@page import="java.util.List"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html ">
@@ -222,7 +226,38 @@
 	    	<!-- /. row  -->	
 	    	</div>
 			
-			
+			<!-- previous baseline records is displayed here -->
+			<div class="row">
+	    		<div class="col-md-8">
+	            	<div class="panel panel-default">
+	                	<div class="panel-heading">
+                            See previous Baseline records
+                        </div>
+	                 	<div class="panel-body">
+	                 	
+		                <div class="form-group">
+                       		<label>Select Year</label>
+                       		<div class="input-group">
+	                       		<select id="ABYear" class="form-control" name="ABYear">	                                        	
+								<%
+								/* Loading Active Baseline years list to the drop down */
+								ActiveBaseline activeBaseline = new ActiveBaseline();
+								List<Integer> allABYears = ActiveBaselineDAO.getAllABYears();
+								for(int year:allABYears){ %>                           				
+									<option value="<%=year%>"> <%=year%> </option>
+								<%   
+								}		                                            
+								           %>	                                            	                                            
+								</select>
+								<span><button class="btn btn-danger" type="button" onclick="loadBLTable()">Preview</button></span>
+								
+							</div>
+						</div>
+	                 	</div>
+	                 </div>
+				</div>
+	    	<!-- /. row  -->	
+	    	</div>	
 		
 		</div>
 	
@@ -249,6 +284,9 @@
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+    
+    <!-- this page's SCRIPTS -->
+    <script src="assets/js/SetBaselines.js"></script>
 
 </body>
 </html>
