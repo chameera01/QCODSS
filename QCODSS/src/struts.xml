@@ -143,12 +143,12 @@
 		</action>
 		
 		
-<!-- 		<action name="viewAllUsers" class="com.qcodss.struts.ViewUsersAction" > -->
+		<action name="viewAllUsers" class="com.qcodss.struts.ViewUsersAction" >
 		
-<!-- 			<result name="success">/AddUser.jsp</result> -->
-<!-- 			<result name="error">/Error.jsp</result> -->
+			<result name="success">/AddUser.jsp</result>
+			<result name="error">/Error.jsp</result>
 		
-<!-- 		</action> -->
+		</action>
 		
 		<!-- this action is for center charts -->
 		<action name="centerChart" class="com.qcodss.struts.CenterChartAction">
