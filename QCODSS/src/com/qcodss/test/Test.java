@@ -7,8 +7,10 @@ public class Test {
 	
 	public static void main(String args[]){
 		
-		ReportController wrc = new ReportController(1, 2015, 1);
+		ReportController wrc = new ReportController(2, 2015, 1);
 		WeeklyReport wr =  wrc.getReport();
+		
+		
 		
 		System.out.println("Average QCO time : " + wr.getAverageQCOTime());
 		System.out.println("Firstday Average Efficiency : " + wr.getAvgEff_1());
@@ -37,6 +39,8 @@ public class Test {
 		System.out.println(wr.getAvgEff_repeatTarget());
 		
 		System.out.println("4 5 Efficiency average : " + wr.getAvgEff_45());
+		
+		
 		
 	}
 	
