@@ -94,7 +94,7 @@
                                 <a href="MASActiveChart.jsp">MAS Active</a>
                             </li>
                             <li>
-                                <a href="">Shadowline</a>
+                                <a href="ShadowlineChart.jsp">Shadowline</a>
                             </li>
                             
                             <li>

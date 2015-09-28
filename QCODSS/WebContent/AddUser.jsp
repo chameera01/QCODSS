@@ -134,6 +134,43 @@
 	                 	
 	                 
 	                 </div>
+	                 
+	                 
+	                 
+	                 <div class="panel panel-default">
+	                 
+	                 	
+	                 	<div class="panel-heading">
+                         	Authenticated users 
+                        </div>
+                        
+                        
+                        <div class="panel-body">
+                        
+                        	<div class="row"> 
+                        			
+                        		 <div class="col-md-6">	
+                        			
+                        		  <button class="btn btn-danger ">View table</button>
+                        		
+                        		 </div>
+                        		
+                        	</div>
+                        
+                        
+                        </div>
+	                 
+	                 
+	                  </div>
+	                 
+	                 
+	                 
+	                 
+	                 
+	                 
+	                 
+	                 
+	                 
 	                  
 	            </div>
 		    	

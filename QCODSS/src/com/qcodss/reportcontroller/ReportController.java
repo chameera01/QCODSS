@@ -126,10 +126,10 @@ public class ReportController {
 				QCOTime = QCOTime + style.getQCOTime();
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 ){
 				averageQCOTime = QCOTime / noOfStyles;
 			}
-			// System.out.println("Average QCO Time : " + averageQCOTime);
+			//System.out.println("Average QCO Time : " + averageQCOTime);
 		}
 
 		return averageQCOTime;
@@ -148,10 +148,12 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_1>0){
 				EffAvg_1 = (produced_1 / clocked_1) * 100;
 			}
-			// System.out.println("Average QCO Time : " + averageQCOTime);
+			
+			//System.out.println("EffAvg_1 : " + EffAvg_1);
+			
 		}
 
 		return EffAvg_1;
@@ -169,10 +171,10 @@ public class ReportController {
 				produced_2 = produced_2 + style.getProducedHrs_2();
 
 			}
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_2>0){
 				EffAvg_2 = (produced_2 / clocked_2) * 100;
 			}	
-			// System.out.println("Average QCO Time : " + averageQCOTime);
+			//System.out.println("EffAvg_2 : " + EffAvg_2);
 		}
 
 		return EffAvg_2;
@@ -191,10 +193,10 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && produced_3>0){
 				EffAvg_3 = (produced_3 / clocked_3) * 100;
 			}	
-			// System.out.println("Average QCO Time : " + averageQCOTime);
+			System.out.println("EffAvg_3 : " + EffAvg_3 );
 		}
 
 		return EffAvg_3;
@@ -213,7 +215,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_4>0){
 				EffAvg_4 = (produced_4 / clocked_4) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -235,7 +237,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_5>0){
 				EffAvg_5 = (produced_5 / clocked_5) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -259,7 +261,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_1d>0){
 				EffAvg_1d = (produced_1d / clocked_1d) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -283,7 +285,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_2d>0){
 				EffAvg_2d = (produced_2d / clocked_2d) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -307,7 +309,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_3d>0){
 				EffAvg_3d = (produced_3d / clocked_3d) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -336,7 +338,7 @@ public class ReportController {
 
 			}
 			
-			if(calNumberofNew(allStyles) > 0 ){
+			if(calNumberofNew(allStyles) > 0 && clocked_123n>0){
 				EffAvg_123n = (produced_123n / clocked_123n) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -365,7 +367,7 @@ public class ReportController {
 
 			}
 			
-			if(calNumberofRepeat(allStyles)>0){
+			if(calNumberofRepeat(allStyles)>0 && clocked_123r>0){
 				EffAvg_123r = (produced_123r / clocked_123r) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -390,7 +392,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_123>0){
 				EffAvg_123 = (produced_123 / clocked_123) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -419,7 +421,7 @@ public class ReportController {
 			}
 
 			// EPR123n = ENdlinePassRate 1st three days new
-			if(calNumberofNew(allStyles)>0){
+			if(calNumberofNew(allStyles)>0 && INSn>0){
 				EPR123n = (FTTn / INSn) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -448,7 +450,7 @@ public class ReportController {
 			}
 
 			// EPR123n = ENdlinePassRate 1st three days new
-			if(calNumberofRepeat(allStyles)>0){
+			if(calNumberofRepeat(allStyles)>0 && INSr>0){
 				EPR123r = (FTTr / INSr) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -475,7 +477,7 @@ public class ReportController {
 			}
 
 			// EPR123n = ENdlinePassRate 1st three days new
-			if(noOfStyles>0){
+			if(noOfStyles>0 && INS>0){
 				EPR123 = (FTT / INS) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -495,7 +497,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 ){
 				averageFeedingTime = (feedingTime / noOfStyles);
 			}
 			// System.out.println("Average QCO Time : " + averageQCOTime);
@@ -578,7 +580,7 @@ public class ReportController {
 
 			}
 			
-			if(noOfStyles>0){
+			if(noOfStyles>0 && clocked_45 > 0 ){
 				EffAvg_45 = (produced_45 / clocked_45) * 100;
 			}	
 			// System.out.println("Average QCO Time : " + averageQCOTime);
