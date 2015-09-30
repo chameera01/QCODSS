@@ -66,84 +66,164 @@ public class PlantWR {
 	private double QCOTimeAvgRepeat;
 	
 	/* 
-	 * 1st day clocked hours, produced hours, 
+	 * 1st day (new) clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_1")
-	private double clockedHrs_1;
+	@Column(name = "plantWR_clockedHrs_1n")
+	private double clockedHrs_1n;
 	
-	@Column(name = "plantWR_producedHrs_1")
-	private double producedHrs_1;
+	@Column(name = "plantWR_producedHrs_1n")
+	private double producedHrs_1n;
 	
-	@Column(name = "plantWR_totalInspected_1")
-	private double totalInspected_1;
+	@Column(name = "plantWR_totalInspected_1n")
+	private double totalInspected_1n;
 	
-	@Column(name = "plantWR_totalFTT_1")
-	private double totalFTT_1;
+	@Column(name = "plantWR_totalFTT_1n")
+	private double totalFTT_1n;
 	
 	/* 
-	 * 2nd day clocked hours, produced hours, 
+	 * 1st day (repeat) clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_2")
-	private double clockedHrs_2;
+	@Column(name = "plantWR_clockedHrs_1r")
+	private double clockedHrs_1r;
 	
-	@Column(name = "plantWR_producedHrs_2")
-	private double producedHrs_2;
+	@Column(name = "plantWR_producedHrs_1r")
+	private double producedHrs_1r;
 	
-	@Column(name = "plantWR_totalInspected_2")
-	private double totalInspected_2;
+	@Column(name = "plantWR_totalInspected_1r")
+	private double totalInspected_1r;
 	
-	@Column(name = "plantWR_totalFTT_2")
-	private double totalFTT_2;
+	@Column(name = "plantWR_totalFTT_1r")
+	private double totalFTT_1r;
 	
 	/* 
-	 * 3rd day clocked hours, produced hours, 
+	 * 2nd day (new) clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_3")
-	private double clockedHrs_3;
+	@Column(name = "plantWR_clockedHrs_2n")
+	private double clockedHrs_2n;
 	
-	@Column(name = "plantWR_producedHrs_3")
-	private double producedHrs_3;
+	@Column(name = "plantWR_producedHrs_2n")
+	private double producedHrs_2n;
 	
-	@Column(name = "plantWR_totalInspected_3")
-	private double totalInspected_3;
+	@Column(name = "plantWR_totalInspected_2n")
+	private double totalInspected_2n;
 	
-	@Column(name = "plantWR_totalFTT_3")
-	private double totalFTT_3;
+	@Column(name = "plantWR_totalFTT_2n")
+	private double totalFTT_2n;
+	
+	/* 
+	 * 2nd day (repeat) clocked hours, produced hours, 
+	 * total inspected garments, Total first time passed garments
+	 */
+	@Column(name = "plantWR_clockedHrs_2r")
+	private double clockedHrs_2r;
+	
+	@Column(name = "plantWR_producedHrs_2r")
+	private double producedHrs_2r;
+	
+	@Column(name = "plantWR_totalInspected_2r")
+	private double totalInspected_2r;
+	
+	@Column(name = "plantWR_totalFTT_2r")
+	private double totalFTT_2r;
+	
+	/* 
+	 * 3rd day (new) clocked hours, produced hours, 
+	 * total inspected garments, Total first time passed garments
+	 */
+	@Column(name = "plantWR_clockedHrs_3n")
+	private double clockedHrs_3n;
+	
+	@Column(name = "plantWR_producedHrs_3n")
+	private double producedHrs_3n;
+	
+	@Column(name = "plantWR_totalInspected_3n")
+	private double totalInspected_3n;
+	
+	@Column(name = "plantWR_totalFTT_3n")
+	private double totalFTT_3n;
+	
+	/* 
+	 * 3rd day (repeat) clocked hours, produced hours, 
+	 * total inspected garments, Total first time passed garments
+	 */
+	@Column(name = "plantWR_clockedHrs_3r")
+	private double clockedHrs_3r;
+	
+	@Column(name = "plantWR_producedHrs_3r")
+	private double producedHrs_3r;
+	
+	@Column(name = "plantWR_totalInspected_3r")
+	private double totalInspected_3r;
+	
+	@Column(name = "plantWR_totalFTT_3r")
+	private double totalFTT_3r;
 
 	/* 
-	 * 4th day clocked hours, produced hours, 
+	 * 4th day (new) clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_4")
-	private double clockedHrs_4;
+	@Column(name = "plantWR_clockedHrs_4n")
+	private double clockedHrs_4n;
 	
-	@Column(name = "plantWR_producedHrs_4")
-	private double producedHrs_4;
+	@Column(name = "plantWR_producedHrs_4n")
+	private double producedHrs_4n;
 	
-	@Column(name = "plantWR_totalInspected_4")
-	private double totalInspected_4;
+	@Column(name = "plantWR_totalInspected_4n")
+	private double totalInspected_4n;
 	
-	@Column(name = "plantWR_totalFTT_4")
-	private double totalFTT_4;
+	@Column(name = "plantWR_totalFTT_4n")
+	private double totalFTT_4n;
 	
 	/* 
-	 * 5th day clocked hours, produced hours, 
+	 * 4th day (repeat) clocked hours, produced hours, 
 	 * total inspected garments, Total first time passed garments
 	 */
-	@Column(name = "plantWR_clockedHrs_5")
-	private double clockedHrs_5;
+	@Column(name = "plantWR_clockedHrs_4r")
+	private double clockedHrs_4r;
 	
-	@Column(name = "plantWR_producedHrs_5")
-	private double producedHrs_5;
+	@Column(name = "plantWR_producedHrs_4r")
+	private double producedHrs_4r;
 	
-	@Column(name = "plantWR_totalInspected_5")
-	private double totalInspected_5;
+	@Column(name = "plantWR_totalInspected_4r")
+	private double totalInspected_4r;
 	
-	@Column(name = "plantWR_totalFTT_5")
-	private double totalFTT_5;
+	@Column(name = "plantWR_totalFTT_4r")
+	private double totalFTT_4r;
+	
+	/* 
+	 * 5th day (new) clocked hours, produced hours, 
+	 * total inspected garments, Total first time passed garments
+	 */
+	@Column(name = "plantWR_clockedHrs_5n")
+	private double clockedHrs_5n;
+	
+	@Column(name = "plantWR_producedHrs_5n")
+	private double producedHrs_5n;
+	
+	@Column(name = "plantWR_totalInspected_5n")
+	private double totalInspected_5n;
+	
+	@Column(name = "plantWR_totalFTT_5n")
+	private double totalFTT_5n;
+	
+	/* 
+	 * 5th day (repeat) clocked hours, produced hours, 
+	 * total inspected garments, Total first time passed garments
+	 */
+	@Column(name = "plantWR_clockedHrs_5r")
+	private double clockedHrs_5r;
+	
+	@Column(name = "plantWR_producedHrs_5r")
+	private double producedHrs_5r;
+	
+	@Column(name = "plantWR_totalInspected_5r")
+	private double totalInspected_5r;
+	
+	@Column(name = "plantWR_totalFTT_5r")
+	private double totalFTT_5r;
 	
 	/* 
 	 * previous day clocked hours, produced hours, 
@@ -245,85 +325,165 @@ public class PlantWR {
 	public double getQCOTimeAvgRepeat() {
 		return QCOTimeAvgRepeat;
 	}
-
-	public double getClockedHrs_1() {
-		return clockedHrs_1;
+	
+	public double getClockedHrs_1n() {
+		return clockedHrs_1n;
 	}
 
-	public double getProducedHrs_1() {
-		return producedHrs_1;
+	public double getProducedHrs_1n() {
+		return producedHrs_1n;
 	}
 
-	public double getTotalInspected_1() {
-		return totalInspected_1;
+	public double getTotalInspected_1n() {
+		return totalInspected_1n;
 	}
 
-	public double getTotalFTT_1() {
-		return totalFTT_1;
+	public double getTotalFTT_1n() {
+		return totalFTT_1n;
 	}
 
-	public double getClockedHrs_2() {
-		return clockedHrs_2;
+	public double getClockedHrs_1r() {
+		return clockedHrs_1r;
 	}
 
-	public double getProducedHrs_2() {
-		return producedHrs_2;
+	public double getProducedHrs_1r() {
+		return producedHrs_1r;
 	}
 
-	public double getTotalInspected_2() {
-		return totalInspected_2;
+	public double getTotalInspected_1r() {
+		return totalInspected_1r;
 	}
 
-	public double getTotalFTT_2() {
-		return totalFTT_2;
+	public double getTotalFTT_1r() {
+		return totalFTT_1r;
 	}
 
-	public double getClockedHrs_3() {
-		return clockedHrs_3;
+	public double getClockedHrs_2n() {
+		return clockedHrs_2n;
 	}
 
-	public double getProducedHrs_3() {
-		return producedHrs_3;
+	public double getProducedHrs_2n() {
+		return producedHrs_2n;
 	}
 
-	public double getTotalInspected_3() {
-		return totalInspected_3;
+	public double getTotalInspected_2n() {
+		return totalInspected_2n;
 	}
 
-	public double getTotalFTT_3() {
-		return totalFTT_3;
+	public double getTotalFTT_2n() {
+		return totalFTT_2n;
 	}
 
-	public double getClockedHrs_4() {
-		return clockedHrs_4;
+	public double getClockedHrs_2r() {
+		return clockedHrs_2r;
 	}
 
-	public double getProducedHrs_4() {
-		return producedHrs_4;
+	public double getProducedHrs_2r() {
+		return producedHrs_2r;
 	}
 
-	public double getTotalInspected_4() {
-		return totalInspected_4;
+	public double getTotalInspected_2r() {
+		return totalInspected_2r;
 	}
 
-	public double getTotalFTT_4() {
-		return totalFTT_4;
+	public double getTotalFTT_2r() {
+		return totalFTT_2r;
 	}
 
-	public double getClockedHrs_5() {
-		return clockedHrs_5;
+	public double getClockedHrs_3n() {
+		return clockedHrs_3n;
 	}
 
-	public double getProducedHrs_5() {
-		return producedHrs_5;
+	public double getProducedHrs_3n() {
+		return producedHrs_3n;
 	}
 
-	public double getTotalInspected_5() {
-		return totalInspected_5;
+	public double getTotalInspected_3n() {
+		return totalInspected_3n;
 	}
 
-	public double getTotalFTT_5() {
-		return totalFTT_5;
+	public double getTotalFTT_3n() {
+		return totalFTT_3n;
+	}
+
+	public double getClockedHrs_3r() {
+		return clockedHrs_3r;
+	}
+
+	public double getProducedHrs_3r() {
+		return producedHrs_3r;
+	}
+
+	public double getTotalInspected_3r() {
+		return totalInspected_3r;
+	}
+
+	public double getTotalFTT_3r() {
+		return totalFTT_3r;
+	}
+
+	public double getClockedHrs_4n() {
+		return clockedHrs_4n;
+	}
+
+	public double getProducedHrs_4n() {
+		return producedHrs_4n;
+	}
+
+	public double getTotalInspected_4n() {
+		return totalInspected_4n;
+	}
+
+	public double getTotalFTT_4n() {
+		return totalFTT_4n;
+	}
+
+	public double getClockedHrs_4r() {
+		return clockedHrs_4r;
+	}
+
+	public double getProducedHrs_4r() {
+		return producedHrs_4r;
+	}
+
+	public double getTotalInspected_4r() {
+		return totalInspected_4r;
+	}
+
+	public double getTotalFTT_4r() {
+		return totalFTT_4r;
+	}
+
+	public double getClockedHrs_5n() {
+		return clockedHrs_5n;
+	}
+
+	public double getProducedHrs_5n() {
+		return producedHrs_5n;
+	}
+
+	public double getTotalInspected_5n() {
+		return totalInspected_5n;
+	}
+
+	public double getTotalFTT_5n() {
+		return totalFTT_5n;
+	}
+
+	public double getClockedHrs_5r() {
+		return clockedHrs_5r;
+	}
+
+	public double getProducedHrs_5r() {
+		return producedHrs_5r;
+	}
+
+	public double getTotalInspected_5r() {
+		return totalInspected_5r;
+	}
+
+	public double getTotalFTT_5r() {
+		return totalFTT_5r;
 	}
 
 	public double getClockedHrs_1d() {
@@ -418,84 +578,164 @@ public class PlantWR {
 		QCOTimeAvgRepeat = qCOTimeAvgRepeat;
 	}
 
-	public void setClockedHrs_1(double clockedHrs_1) {
-		this.clockedHrs_1 = clockedHrs_1;
+	public void setClockedHrs_1n(double clockedHrs_1n) {
+		this.clockedHrs_1n = clockedHrs_1n;
 	}
 
-	public void setProducedHrs_1(double producedHrs_1) {
-		this.producedHrs_1 = producedHrs_1;
+	public void setProducedHrs_1n(double producedHrs_1n) {
+		this.producedHrs_1n = producedHrs_1n;
 	}
 
-	public void setTotalInspected_1(double totalInspected_1) {
-		this.totalInspected_1 = totalInspected_1;
+	public void setTotalInspected_1n(double totalInspected_1n) {
+		this.totalInspected_1n = totalInspected_1n;
 	}
 
-	public void setTotalFTT_1(double totalFTT_1) {
-		this.totalFTT_1 = totalFTT_1;
+	public void setTotalFTT_1n(double totalFTT_1n) {
+		this.totalFTT_1n = totalFTT_1n;
 	}
 
-	public void setClockedHrs_2(double clockedHrs_2) {
-		this.clockedHrs_2 = clockedHrs_2;
+	public void setClockedHrs_1r(double clockedHrs_1r) {
+		this.clockedHrs_1r = clockedHrs_1r;
 	}
 
-	public void setProducedHrs_2(double producedHrs_2) {
-		this.producedHrs_2 = producedHrs_2;
+	public void setProducedHrs_1r(double producedHrs_1r) {
+		this.producedHrs_1r = producedHrs_1r;
 	}
 
-	public void setTotalInspected_2(double totalInspected_2) {
-		this.totalInspected_2 = totalInspected_2;
+	public void setTotalInspected_1r(double totalInspected_1r) {
+		this.totalInspected_1r = totalInspected_1r;
 	}
 
-	public void setTotalFTT_2(double totalFTT_2) {
-		this.totalFTT_2 = totalFTT_2;
+	public void setTotalFTT_1r(double totalFTT_1r) {
+		this.totalFTT_1r = totalFTT_1r;
 	}
 
-	public void setClockedHrs_3(double clockedHrs_3) {
-		this.clockedHrs_3 = clockedHrs_3;
+	public void setClockedHrs_2n(double clockedHrs_2n) {
+		this.clockedHrs_2n = clockedHrs_2n;
 	}
 
-	public void setProducedHrs_3(double producedHrs_3) {
-		this.producedHrs_3 = producedHrs_3;
+	public void setProducedHrs_2n(double producedHrs_2n) {
+		this.producedHrs_2n = producedHrs_2n;
 	}
 
-	public void setTotalInspected_3(double totalInspected_3) {
-		this.totalInspected_3 = totalInspected_3;
+	public void setTotalInspected_2n(double totalInspected_2n) {
+		this.totalInspected_2n = totalInspected_2n;
 	}
 
-	public void setTotalFTT_3(double totalFTT_3) {
-		this.totalFTT_3 = totalFTT_3;
+	public void setTotalFTT_2n(double totalFTT_2n) {
+		this.totalFTT_2n = totalFTT_2n;
 	}
 
-	public void setClockedHrs_4(double clockedHrs_4) {
-		this.clockedHrs_4 = clockedHrs_4;
+	public void setClockedHrs_2r(double clockedHrs_2r) {
+		this.clockedHrs_2r = clockedHrs_2r;
 	}
 
-	public void setProducedHrs_4(double producedHrs_4) {
-		this.producedHrs_4 = producedHrs_4;
+	public void setProducedHrs_2r(double producedHrs_2r) {
+		this.producedHrs_2r = producedHrs_2r;
 	}
 
-	public void setTotalInspected_4(double totalInspected_4) {
-		this.totalInspected_4 = totalInspected_4;
+	public void setTotalInspected_2r(double totalInspected_2r) {
+		this.totalInspected_2r = totalInspected_2r;
 	}
 
-	public void setTotalFTT_4(double totalFTT_4) {
-		this.totalFTT_4 = totalFTT_4;
+	public void setTotalFTT_2r(double totalFTT_2r) {
+		this.totalFTT_2r = totalFTT_2r;
 	}
 
-	public void setClockedHrs_5(double clockedHrs_5) {
-		this.clockedHrs_5 = clockedHrs_5;
+	public void setClockedHrs_3n(double clockedHrs_3n) {
+		this.clockedHrs_3n = clockedHrs_3n;
 	}
 
-	public void setProducedHrs_5(double producedHrs_5) {
-		this.producedHrs_5 = producedHrs_5;
+	public void setProducedHrs_3n(double producedHrs_3n) {
+		this.producedHrs_3n = producedHrs_3n;
 	}
 
-	public void setTotalInspected_5(double totalInspected_5) {
-		this.totalInspected_5 = totalInspected_5;
+	public void setTotalInspected_3n(double totalInspected_3n) {
+		this.totalInspected_3n = totalInspected_3n;
 	}
 
-	public void setTotalFTT_5(double totalFTT_5) {
-		this.totalFTT_5 = totalFTT_5;
+	public void setTotalFTT_3n(double totalFTT_3n) {
+		this.totalFTT_3n = totalFTT_3n;
+	}
+
+	public void setClockedHrs_3r(double clockedHrs_3r) {
+		this.clockedHrs_3r = clockedHrs_3r;
+	}
+
+	public void setProducedHrs_3r(double producedHrs_3r) {
+		this.producedHrs_3r = producedHrs_3r;
+	}
+
+	public void setTotalInspected_3r(double totalInspected_3r) {
+		this.totalInspected_3r = totalInspected_3r;
+	}
+
+	public void setTotalFTT_3r(double totalFTT_3r) {
+		this.totalFTT_3r = totalFTT_3r;
+	}
+
+	public void setClockedHrs_4n(double clockedHrs_4n) {
+		this.clockedHrs_4n = clockedHrs_4n;
+	}
+
+	public void setProducedHrs_4n(double producedHrs_4n) {
+		this.producedHrs_4n = producedHrs_4n;
+	}
+
+	public void setTotalInspected_4n(double totalInspected_4n) {
+		this.totalInspected_4n = totalInspected_4n;
+	}
+
+	public void setTotalFTT_4n(double totalFTT_4n) {
+		this.totalFTT_4n = totalFTT_4n;
+	}
+
+	public void setClockedHrs_4r(double clockedHrs_4r) {
+		this.clockedHrs_4r = clockedHrs_4r;
+	}
+
+	public void setProducedHrs_4r(double producedHrs_4r) {
+		this.producedHrs_4r = producedHrs_4r;
+	}
+
+	public void setTotalInspected_4r(double totalInspected_4r) {
+		this.totalInspected_4r = totalInspected_4r;
+	}
+
+	public void setTotalFTT_4r(double totalFTT_4r) {
+		this.totalFTT_4r = totalFTT_4r;
+	}
+
+	public void setClockedHrs_5n(double clockedHrs_5n) {
+		this.clockedHrs_5n = clockedHrs_5n;
+	}
+
+	public void setProducedHrs_5n(double producedHrs_5n) {
+		this.producedHrs_5n = producedHrs_5n;
+	}
+
+	public void setTotalInspected_5n(double totalInspected_5n) {
+		this.totalInspected_5n = totalInspected_5n;
+	}
+
+	public void setTotalFTT_5n(double totalFTT_5n) {
+		this.totalFTT_5n = totalFTT_5n;
+	}
+
+	public void setClockedHrs_5r(double clockedHrs_5r) {
+		this.clockedHrs_5r = clockedHrs_5r;
+	}
+
+	public void setProducedHrs_5r(double producedHrs_5r) {
+		this.producedHrs_5r = producedHrs_5r;
+	}
+
+	public void setTotalInspected_5r(double totalInspected_5r) {
+		this.totalInspected_5r = totalInspected_5r;
+	}
+
+	public void setTotalFTT_5r(double totalFTT_5r) {
+		this.totalFTT_5r = totalFTT_5r;
 	}
 
 	public void setClockedHrs_1d(double clockedHrs_1d) {
