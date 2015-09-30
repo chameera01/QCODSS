@@ -86,30 +86,50 @@ public class AddWeekRecordsAction {
 		WR.setQCOTimeAvgNew(QCOAverageNew);
 		WR.setQCOTimeAvgRepeat(QCOAverageRepeat);
 		
-		WR.setClockedHrs_1(day1Clocked);
-		WR.setProducedHrs_1(day1Produced);
-		WR.setTotalInspected_1(day1TotalInspected);
-		WR.setTotalFTT_1(day1FTT);
+		WR.setClockedHrs_1n(day1Clockedn);
+		WR.setProducedHrs_1n(day1Producedn);
+		WR.setTotalInspected_1n(day1TotalInspectedn);
+		WR.setTotalFTT_1n(day1FTTn);
+		WR.setClockedHrs_1r(day1Clockedr);
+		WR.setProducedHrs_1r(day1Producedr);
+		WR.setTotalInspected_1r(day1TotalInspectedr);
+		WR.setTotalFTT_1r(day1FTTr);
 		
-		WR.setClockedHrs_2(day2Clocked);
-		WR.setProducedHrs_2(day2Produced);
-		WR.setTotalInspected_2(day2TotalInspected);
-		WR.setTotalFTT_2(day2FTT);
+		WR.setClockedHrs_2n(day2Clockedn);
+		WR.setProducedHrs_2n(day2Producedn);
+		WR.setTotalInspected_2n(day2TotalInspectedn);
+		WR.setTotalFTT_2n(day2FTTn);
+		WR.setClockedHrs_2r(day2Clockedr);
+		WR.setProducedHrs_2r(day2Producedr);
+		WR.setTotalInspected_2r(day2TotalInspectedr);
+		WR.setTotalFTT_2r(day2FTTr);
 		
-		WR.setClockedHrs_3(day3Clocked);
-		WR.setProducedHrs_3(day3Produced);
-		WR.setTotalInspected_3(day3TotalInspected);
-		WR.setTotalFTT_3(day3FTT);
+		WR.setClockedHrs_3n(day3Clockedn);
+		WR.setProducedHrs_3n(day3Producedn);
+		WR.setTotalInspected_3n(day3TotalInspectedn);
+		WR.setTotalFTT_3n(day3FTTn);
+		WR.setClockedHrs_3r(day3Clockedr);
+		WR.setProducedHrs_3r(day3Producedr);
+		WR.setTotalInspected_3r(day3TotalInspectedr);
+		WR.setTotalFTT_3r(day3FTTr);
 		
-		WR.setClockedHrs_4(day4Clocked);
-		WR.setProducedHrs_4(day4Produced);
-		WR.setTotalInspected_4(day4TotalInspected);
-		WR.setTotalFTT_4(day4FTT);
+		WR.setClockedHrs_4n(day4Clockedn);
+		WR.setProducedHrs_4n(day4Producedn);
+		WR.setTotalInspected_4n(day4TotalInspectedn);
+		WR.setTotalFTT_4n(day4FTTn);
+		WR.setClockedHrs_4r(day4Clockedr);
+		WR.setProducedHrs_4r(day4Producedr);
+		WR.setTotalInspected_4r(day4TotalInspectedr);
+		WR.setTotalFTT_4r(day4FTTr);
 		
-		WR.setClockedHrs_5(day5Clocked);
-		WR.setProducedHrs_5(day5Produced);
-		WR.setTotalInspected_5(day5TotalInspected);
-		WR.setTotalFTT_5(day5FTT);
+		WR.setClockedHrs_5n(day5Clockedn);
+		WR.setProducedHrs_5n(day5Producedn);
+		WR.setTotalInspected_5n(day5TotalInspectedn);
+		WR.setTotalFTT_5n(day5FTTn);
+		WR.setClockedHrs_5r(day5Clockedr);
+		WR.setProducedHrs_5r(day5Producedr);
+		WR.setTotalInspected_5r(day5TotalInspectedr);
+		WR.setTotalFTT_5r(day5FTTr);
 		
 		Boolean value = PlantWRDAO.addPlantWR(WR);
 		
