@@ -19,30 +19,50 @@ public class AddWeekRecordsAction {
 	public Double QCOAverageNew;
 	public Double QCOAverageRepeat;
 	
-	public Double day1Clocked;
-	public Double day1Produced;
-	public Double day1TotalInspected;
-	public Double day1FTT;
+	public Double day1Clockedn;
+	public Double day1Producedn;
+	public Double day1TotalInspectedn;
+	public Double day1FTTn;
+	public Double day1Clockedr;
+	public Double day1Producedr;
+	public Double day1TotalInspectedr;
+	public Double day1FTTr;
 	
-	public Double day2Clocked;
-	public Double day2Produced;
-	public Double day2TotalInspected;
-	public Double day2FTT;
+	public Double day2Clockedn;
+	public Double day2Producedn;
+	public Double day2TotalInspectedn;
+	public Double day2FTTn;
+	public Double day2Clockedr;
+	public Double day2Producedr;
+	public Double day2TotalInspectedr;
+	public Double day2FTTr;
 	
-	public Double day3Clocked;
-	public Double day3Produced;
-	public Double day3TotalInspected;
-	public Double day3FTT;
+	public Double day3Clockedn;
+	public Double day3Producedn;
+	public Double day3TotalInspectedn;
+	public Double day3FTTn;
+	public Double day3Clockedr;
+	public Double day3Producedr;
+	public Double day3TotalInspectedr;
+	public Double day3FTTr;
 	
-	public Double day4Clocked;
-	public Double day4Produced;
-	public Double day4TotalInspected;
-	public Double day4FTT;
+	public Double day4Clockedn;
+	public Double day4Producedn;
+	public Double day4TotalInspectedn;
+	public Double day4FTTn;
+	public Double day4Clockedr;
+	public Double day4Producedr;
+	public Double day4TotalInspectedr;
+	public Double day4FTTr;
 	
-	public Double day5Clocked;
-	public Double day5Produced;
-	public Double day5TotalInspected;
-	public Double day5FTT;
+	public Double day5Clockedn;
+	public Double day5Producedn;
+	public Double day5TotalInspectedn;
+	public Double day5FTTn;
+	public Double day5Clockedr;
+	public Double day5Producedr;
+	public Double day5TotalInspectedr;
+	public Double day5FTTr;
 	
 	String returnVal="error";
 	Plant plant= new Plant();
