@@ -4,6 +4,8 @@ import java.text.DecimalFormat;
 
 public class WeeklyReport {
 	
+	private int year;
+	private int month;
 	private int weekNo;
 	private int numberOfNew;
 	private int numberOfRepeat;
@@ -36,6 +38,18 @@ public class WeeklyReport {
 	
 	
 	
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
 	public double getEPR_123n() {
 		EPR_123n =  Math.floor(EPR_123n) ;
 		return EPR_123n;

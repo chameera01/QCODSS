@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
+<%@taglib prefix="s" uri="/struts-tags"  %>    
+    
 <!DOCTYPE html ">
 <html>
 <head>
@@ -20,6 +23,13 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+<script type="text/javascript">
+
+	
+
+
+</script>
+
 </head>
 <body>
 
@@ -32,17 +42,105 @@
 	<div id="page-wrapper">
 	
 		<div id="page-inner"> 
+				
+				<div class="row">
+	    		
+	    		<div class="col-md-8">	
+		
+			     <div class="panel panel-default ">
+	                 
+	                 	
+	                 	
+	                 	
+	                 	<div class="panel-heading">
+                         	Authenticated users 
+                        </div>
+                        
+                        
+                        <div class="panel-body">
+                        
+                        	<div class="row"> 
+                        			
+                        		 <div class="col-md-8">	
+                        			
+                        		  <form action="viewAllUsers" method="post">
+                        		  	
+                       		  			<div class="form-group">
+                                           
+                                           
+                                           <input type="submit" class="btn btn-danger" value="View authenticated users"  />
+                                           
+                                           <hr>
+                                           
+                                           		<table class="table table-bordered">
+                                           			
+                                           			<thead>
+												      <tr>
+												        <th>Name</th>
+												        <th>email</th>
+												        <th>Role</th>
+												        <th>Plant</th>
+												      </tr>
+												    </thead>
+                                           			
+                                           			<tbody>
+                                           			
+                                           		<s:iterator value="allUsers" var="allUsers">
+                                           		
+ 
+													<tr>
+													    <td><s:property value="#allUsers.name" /></td>
+													    <td><s:property value="#allUsers.email" /></td>
+													    <td><s:property value="#allUsers.role" /></td>
+													    <td><s:property value="#allUsers.plantid.name" /></td>
+													</tr>
+													
+													
+                                           		 </s:iterator>
+
+                                            </tbody>	
+                                            
+                                           	</table>
+                                       </div>
+                        		  	   
+                        		  	   
+                        		  	   	
+                        		  		
+                        		  </form>
+                        		  
+                        		  
+                        		
+                        		 </div>
+                        		
+                        	</div>
+                        
+                        
+                        </div>
+	                 
+	                 
+	                  </div>
+		
+				</div>
+						
+			</div>
+		
+		
+		
+		
+		
+		
+		
 			
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Add user</h3>   
+	                 <h3>Add new user</h3>   
 	                  
 	            </div>
 	    	<!-- /. row  -->	
 	    	</div>
 	    	
-	    	<hr>
+	    
 			
 			<div class="row">
 	    		
@@ -137,31 +235,7 @@
 	                 
 	                 
 	                 
-	                 <div class="panel panel-default">
-	                 
-	                 	
-	                 	<div class="panel-heading">
-                         	Authenticated users 
-                        </div>
-                        
-                        
-                        <div class="panel-body">
-                        
-                        	<div class="row"> 
-                        			
-                        		 <div class="col-md-6">	
-                        			
-                        		  <button class="btn btn-danger ">View table</button>
-                        		
-                        		 </div>
-                        		
-                        	</div>
-                        
-                        
-                        </div>
-	                 
-	                 
-	                  </div>
+	            
 	                 
 	                 
 	                 

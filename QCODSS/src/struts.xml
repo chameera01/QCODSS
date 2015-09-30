@@ -13,7 +13,7 @@
 		
 		<action name="adduser" class="com.qcodss.struts.AddUsersAction">
 		
-			<result name="success">/index.jsp</result>
+			<result name="success">/AddUser.jsp</result>
 			<result name="error">/Error.jsp</result>
 		
 		</action>
