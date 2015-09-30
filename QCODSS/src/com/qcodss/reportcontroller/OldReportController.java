@@ -435,7 +435,13 @@ public class OldReportController {
 		
 		wr.setAvgEff_new123(cal123EfficiencyNew(oldReports));
 		wr.setAvgEff_repeat123(cal123EfficiencyRepeat(oldReports));
-		wr.setAvgEff_new123(cal123EfficiencyAverage(oldReports));
+		wr.setAvgEff_123(cal123EfficiencyAverage(oldReports));
+		
+		wr.setAvgEff_newTarget(newTarget);
+		wr.setAvgEff_repeatTarget(repeatTarget);
+		
+		
+		
 		
 		return wr;
 	}
