@@ -80,8 +80,8 @@ function drawTable() {
 	}
 
 	var data = new google.visualization.DataTable();
-	alert("@@@--- "+tableContent[0].averageQCOTime);
 	
+	data.addColumn('number', '<table align="center" width="100%"><tr><td colspan="2">Year1</td></tr> <tr><td>price</td> <td>qty</td></tr></table>');
 	data.addColumn('number', 'Week');
 	data.addColumn('number', 'New');
 	data.addColumn('number', 'Repeat');
@@ -109,8 +109,28 @@ function drawTable() {
 	
 	data.addRows(tableContent);
 	
-	var table = new google.visualization.Table(document.getElementById('table_div'));
+	var table = new google.visualization.Table(document.getElementById('table'));
 	
-	table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+	function setWidth () {
+		
+		alert();
+        // set the width of the column with the title "Name" to 100px
+        var title = 'Week';
+        var width = '1000px';
+        $('.google-visualization-table-table-th:contains(' + title + ')').css('width', width);     
+        
+//        $("#chart_div tr:eq(1) td:eq(1)").attr("colspan","2").next("td").remove();
+    }
+
+    google.visualization.events.addListener(table, 'ready', setWidth);
+    google.visualization.events.addListener(table, 'sort', setWidth);
+    
+    var formatter = new google.visualization.ColorFormat();
+    formatter.addRange(0, 3, 'black', 'orange');
+    //formatter.addRange(20000, null, 'red', '#33ff33');
+    formatter.format(data, 1); // Apply formatter to second column
+
+	
+	table.draw(data, {allowHtml: true, showRowNumber: false, width: '100%', height: '100%'});
 }
 

@@ -19,6 +19,8 @@ public class StyleDAO {
 	    */
 	   public static boolean addStyle(Style style) {
 		   
+		   System.out.println("produceHrs_3d : "+style.getProducedHrs_3d());
+		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   try {

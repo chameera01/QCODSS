@@ -28,6 +28,8 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
+    <!-- JQUERY SCRIPTS -->
+    <script type='text/javascript' src="assets/js/jquery-1.10.2.js"></script>
 		
 		<script src="assets/js/index.js"></script>
 
@@ -332,7 +334,7 @@
 		   				</div>
 		   				<div class="panel-body">
 							<button class="btn btn-danger" type="button" onclick="drawTable()">Load</button>  	
-				    		<div id="table_div"></div>
+				    		<div id="table"></div>
 				    	</div>
 				    </div>
 				</div>    	
@@ -351,8 +353,7 @@
 </div>
 
 	<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
-    <!-- JQUERY SCRIPTS -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
+
       <!-- BOOTSTRAP SCRIPTS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->

@@ -17,10 +17,10 @@ public class Style {
 	private String style_no;
 	
 	@OneToOne
-	private Plant  plant;
+	private Plant plant;
 	
 	
-	private int  weekNo;
+	private int weekNo;
 	
 	
 	@Column(name = "style_startDate")
