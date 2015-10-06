@@ -70,9 +70,9 @@
 			                                            	
 			                                                <%
 			                                                //Loading plant list to the drop down
-			                                                Plant plant = new Plant(); 
+			                                                //Plant plant = new Plant(); 
 			                                                
-			                                                 List<Plant> allPlants =   PlantDAO.getAllPlants();
+			                                                 //List<Plant> allPlants =   PlantDAO.getAllPlants();
 			                                                 for(Plant p:allPlants){
 			                                 				   plant = p;
 			                                 				%>

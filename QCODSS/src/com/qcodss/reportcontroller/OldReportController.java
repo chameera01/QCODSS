@@ -9,6 +9,7 @@ import com.qcodss.model.ActiveBaseline;
 import com.qcodss.model.PlantBaseline;
 import com.qcodss.model.PlantWR;
 import com.qcodss.model.Style;
+import com.qcodss.reportmodels.MonthlyReport;
 import com.qcodss.reportmodels.WeeklyReport;
 import com.sun.org.apache.bcel.internal.generic.CALOAD;
 
@@ -23,6 +24,8 @@ public class OldReportController {
 	List<PlantBaseline> PB = null;
 	PlantBaseline monthPB = null;
 	Double monthlyBaseline = null;
+	
+	MonthlyReport mr;
 	
 	private ActiveBaseline ab = null;
 	double newTarget = 0;
@@ -41,6 +44,23 @@ public class OldReportController {
 		wr = new WeeklyReport();
 		wr.setYear(year);
 		wr.setWeekNo(weekNo);
+		AB = ActiveBaselineDAO.getActiveBaseline(year);
+		PB = PlantBaselineDAO.getPlantBaseline(month, year, plantID);
+		
+	}
+	
+	public OldReportController(int month, int year, int plantID ){
+		oldReports = PlantWRDAO.getOldRecordsByMonth(month, plantID, year);
+		
+		if(oldReports.size()>0){
+			noOfOldReports = oldReports.size();
+		} else{
+			noOfOldReports = 0;
+		}
+		
+		mr = new MonthlyReport();
+		mr.setYear(year);
+		mr.setMonth(month);
 		AB = ActiveBaselineDAO.getActiveBaseline(year);
 		PB = PlantBaselineDAO.getPlantBaseline(month, year, plantID);
 		
@@ -412,6 +432,124 @@ public class OldReportController {
 		repeatTarget = ab.getRepeatTarget();
 	}
 	
+	private double calEPR123n(List<PlantWR> oldReports) {
+		double EPR123n = 0;
+		double FTTn = 0;
+		double INSn = 0;
+
+		if (oldReports.isEmpty() == false) {
+			for (PlantWR oldReport : oldReports) {
+
+				
+					FTTn = FTTn + oldReport.getTotalFTT_1n() + oldReport.getTotalFTT_2n()
+							+ oldReport.getTotalFTT_3n();
+
+					INSn = INSn + oldReport.getTotalInspected_1n()
+							+ oldReport.getTotalInspected_2n()
+							+ oldReport.getTotalInspected_3n();
+				
+
+			}
+
+			// EPR123n = ENdlinePassRate 1st three days new
+			if(calNumberofNew(oldReports)>0 && INSn>0){
+				EPR123n = (FTTn / INSn) * 100;
+			}	
+			// System.out.println("Average QCO Time : " + averageQCOTime);
+		}
+
+		return EPR123n;
+	}
+	
+	private double calEPR123r(List<PlantWR> oldReports) {
+		double EPR123r = 0;
+		double FTTr = 0;
+		double INSr = 0;
+
+		if (oldReports.isEmpty() == false) {
+			for (PlantWR oldReport : oldReports) {
+
+				
+					FTTr = FTTr + oldReport.getTotalFTT_1r() + oldReport.getTotalFTT_2r()
+							+ oldReport.getTotalFTT_3r();
+
+					INSr = INSr + oldReport.getTotalInspected_1r()
+							+ oldReport.getTotalInspected_2r()
+							+ oldReport.getTotalInspected_3r();
+				
+
+			}
+
+			// EPR123n = ENdlinePassRate 1st three days new
+			if(calNumberofRepeat(oldReports)>0 && INSr>0){
+				EPR123r = (FTTr / INSr) * 100;
+			}	
+			// System.out.println("Average QCO Time : " + averageQCOTime);
+		}
+
+		return EPR123r;
+	}
+	
+	private double calEPR123(List<PlantWR> oldReports) {
+		double EPR123 = 0;
+		double FTT = 0;
+		double INS = 0;
+
+		if (oldReports.isEmpty() == false) {
+			for (PlantWR oldReport : oldReports) {
+
+				
+					FTT = FTT +  oldReport.getTotalFTT_1n()  +  oldReport.getTotalFTT_2n()  + oldReport.getTotalFTT_3n() + oldReport.getTotalFTT_1r()
+							+ oldReport.getTotalFTT_2r() + oldReport.getTotalFTT_3r()  ;
+
+					INS = INS + oldReport.getTotalInspected_1n()
+							+ oldReport.getTotalInspected_2n()
+							+ oldReport.getTotalInspected_3n()
+							+ oldReport.getTotalInspected_1r()
+							+ oldReport.getTotalInspected_2r()
+							+ oldReport.getTotalInspected_3r();
+				
+
+			}
+
+			// EPR123n = ENdlinePassRate 1st three days new
+			if( INS>0){
+				EPR123 = (FTT / INS) * 100;
+			}	
+			// System.out.println("Average QCO Time : " + averageQCOTime);
+		}
+
+		return EPR123;
+	}
+	
+	private double cal45EfficiencyAverage(List<PlantWR> oldReports) {
+
+		double EffAvg_45 = 0;
+		double clocked_45 = 0;
+		double produced_45 = 0;
+
+		if (oldReports.isEmpty() == false) {
+			for (PlantWR oldReport : oldReports) {
+
+				clocked_45 = clocked_45 + oldReport.getClockedHrs_4n()+oldReport.getClockedHrs_4r()
+						+ oldReport.getClockedHrs_5n()+oldReport.getClockedHrs_5r();
+
+				produced_45 = produced_45 + oldReport.getProducedHrs_4n()+oldReport.getProducedHrs_4r()
+						+ oldReport.getProducedHrs_5n()+oldReport.getProducedHrs_5r();
+
+			}
+			
+			if(noOfOldReports>0 && clocked_45 > 0 ){
+				EffAvg_45 = (produced_45 / clocked_45) * 100;
+			}	
+			// System.out.println("Average QCO Time : " + averageQCOTime);
+		}
+
+		return EffAvg_45;
+	}
+
+	
+	
 	
 	//Method to get Weekly report
 	public WeeklyReport getWeeklyReport() {
@@ -440,11 +578,51 @@ public class OldReportController {
 		wr.setAvgEff_newTarget(newTarget);
 		wr.setAvgEff_repeatTarget(repeatTarget);
 		
+		wr.setEPR_123n(calEPR123n(oldReports));
+		wr.setEPR_123r(calEPR123r(oldReports));
+		wr.setEPR_123(calEPR123(oldReports));
 		
-		
+		wr.setAvgEff_45(cal45EfficiencyAverage(oldReports));
 		
 		return wr;
 	}
 	
+	
+	// Method to get single monthly report
+		public MonthlyReport getMonthlyReport() {
+
+			getAB();
+
+			mr.setAverageQCOTime(calAverageQCOTime(oldReports));
+			mr.setNumberOfNew(calNumberofNew(oldReports));
+			mr.setNumberOfRepeat(calNumberofRepeat(oldReports));
+			mr.setFullPresettingHR(calFullPresettingHR(oldReports));
+			mr.setSbHR(calSillhotteBHR(oldReports));
+			mr.setAvgFeedingTime(calAverageFeedingTime(oldReports));
+			
+			mr.setAvgEff_1(cal1stDayEfficiencyAverage(oldReports));
+			mr.setAvgEff_2(cal2stDayEfficiencyAverage(oldReports));
+			mr.setAvgEff_3(cal3stDayEfficiencyAverage(oldReports));
+			mr.setAvgEff_4(cal4stDayEfficiencyAverage(oldReports));
+			mr.setAvgEff_5(cal5stDayEfficiencyAverage(oldReports));
+			
+			mr.setAvgEff_new123(cal123EfficiencyNew(oldReports));
+			mr.setAvgEff_repeat123(cal123EfficiencyRepeat(oldReports));
+			mr.setAvgEff_123(cal123EfficiencyAverage(oldReports));
+			
+			mr.setAvgEff_newTarget(newTarget);
+			mr.setAvgEff_repeatTarget(repeatTarget);
+			
+			mr.setEPR_123n(calEPR123n(oldReports));
+			mr.setEPR_123r(calEPR123r(oldReports));
+			mr.setEPR_123(calEPR123(oldReports));
+			
+			mr.setAvgEff_45(cal45EfficiencyAverage(oldReports));
+			
+			
+			
+			return mr;
+		}
+
 	
 }

@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.qcodss.reportcontroller.OldReportController;
 import com.qcodss.reportcontroller.ReportController;
 import com.qcodss.reportmodels.MonthlyReport;
 
@@ -12,6 +13,8 @@ import com.qcodss.reportmodels.MonthlyReport;
 public class CenterChartAction {
 
 	private List<Map> allMonthes = new ArrayList<Map>() ;
+	public int year;
+	public int plantID;
 	
 	//public variables need to be declared to access data from pop up
 
@@ -21,6 +24,9 @@ public class CenterChartAction {
 		
 		ReportController rc = null;
 		MonthlyReport mr = null;
+		
+		OldReportController oldRC = null;
+		MonthlyReport oldMR = null;
 		
 		//plantID
 		//Months
@@ -55,28 +61,95 @@ public class CenterChartAction {
 			} else if(i==12){
 			    month = "December";
 			}
-		
-			rc = new ReportController(month, 2015, 1);
 			
-			mr = rc.getMonthlyReport();
+			if(year ==2013 || year == 2014){
+				oldRC = new OldReportController(i, year, plantID);
+				oldMR = oldRC.getMonthlyReport();
+				
+				 Map<String, Double> maps = new HashMap<String, Double>();
+				 
+				 maps.put("month", oldMR.getMonth() );
+					maps.put("noOfNew", (double)oldMR.getNumberOfNew() );
+					maps.put("noOfRepeat", (double)oldMR.getNumberOfRepeat() );
+					maps.put("newActual", oldMR.getAvgEff_new123() );
+					maps.put("repeatActual", oldMR.getAvgEff_repeat123() );
+					maps.put("newTarget", oldMR.getAvgEff_newTarget() );
+					maps.put("repeatTarget", oldMR.getAvgEff_repeatTarget() );
+					maps.put("averageEfficiency", oldMR.getAvgEff_123());
+					//System.out.println(i);
+			 
+				
+				allMonthes.add(maps);
+			}
 			
-		    //System.out.println("Month is "+ mr.getMonth());
+			else if(year == 2015){
+				
+				Map<String, Double> maps = new HashMap<String, Double>();
+				
+				if(i==1 || i==2 || i==3){
+					oldRC = new OldReportController(i, year, plantID);
+					oldMR = oldRC.getMonthlyReport();
+					
+					maps.put("month", oldMR.getMonth() );
+					maps.put("noOfNew", (double)oldMR.getNumberOfNew() );
+					maps.put("noOfRepeat", (double)oldMR.getNumberOfRepeat() );
+					maps.put("newActual", oldMR.getAvgEff_new123() );
+					maps.put("repeatActual", oldMR.getAvgEff_repeat123() );
+					maps.put("newTarget", oldMR.getAvgEff_newTarget() );
+					maps.put("repeatTarget", oldMR.getAvgEff_repeatTarget() );
+					maps.put("averageEfficiency", oldMR.getAvgEff_123());
+					allMonthes.add(maps);
+				}
+				
+				else{
+					rc = new ReportController(month, year, plantID);
+					
+					mr = rc.getMonthlyReport();
+					maps.put("month", mr.getMonth() );
+					maps.put("noOfNew", (double)mr.getNumberOfNew() );
+					maps.put("noOfRepeat", (double)mr.getNumberOfRepeat() );
+					maps.put("newActual", mr.getAvgEff_new123() );
+					maps.put("repeatActual", mr.getAvgEff_repeat123() );
+					maps.put("newTarget", mr.getAvgEff_newTarget() );
+					maps.put("repeatTarget", mr.getAvgEff_repeatTarget() );
+					maps.put("averageEfficiency", mr.getAvgEff_123());
+					//System.out.println(i);
+					allMonthes.add(maps);
+				}
+				
+			}
 			
-		    Map<String, Double> maps = new HashMap<String, Double>();
-		    
-			maps.put("month", mr.getMonth() );
-			maps.put("noOfNew", (double)mr.getNumberOfNew() );
-			maps.put("noOfRepeat", (double)mr.getNumberOfRepeat() );
-			maps.put("newActual", mr.getAvgEff_new123() );
-			maps.put("repeatActual", mr.getAvgEff_repeat123() );
-			maps.put("newTarget", mr.getAvgEff_newTarget() );
-			maps.put("repeatTarget", mr.getAvgEff_repeatTarget() );
-			maps.put("averageEfficiency", mr.getAvgEff_123());
-			//System.out.println(i);
+			else{
 			
-			allMonthes.add(maps);
-
+				rc = new ReportController(month, year, plantID);
+				
+				mr = rc.getMonthlyReport();
+				
+			    //System.out.println("Month is "+ mr.getMonth());
+				
+			    Map<String, Double> maps = new HashMap<String, Double>();
+			    
+			   
+			    
+					maps.put("month", mr.getMonth() );
+					maps.put("noOfNew", (double)mr.getNumberOfNew() );
+					maps.put("noOfRepeat", (double)mr.getNumberOfRepeat() );
+					maps.put("newActual", mr.getAvgEff_new123() );
+					maps.put("repeatActual", mr.getAvgEff_repeat123() );
+					maps.put("newTarget", mr.getAvgEff_newTarget() );
+					maps.put("repeatTarget", mr.getAvgEff_repeatTarget() );
+					maps.put("averageEfficiency", mr.getAvgEff_123());
+					//System.out.println(i);
+			 
+				
+				allMonthes.add(maps);
+			
+			}
+			
 		}
+		
+		
+		
 			
 		return returnVal;
 	}

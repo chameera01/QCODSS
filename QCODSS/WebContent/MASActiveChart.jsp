@@ -60,12 +60,32 @@
         });
 
     }
+    
+    
+    function setTitles(){
+    	var selectedPlant = sessionStorage.selectedPlantName;
+        alert("You have selected "+ selectedPlant);
+        
+        document.getElementById("topTitle").innerHTML = "MAS Active " + selectedPlant ;
+        document.getElementById("panelHeadNew").innerHTML = "MAS Active " + selectedPlant + " New";
+        document.getElementById("panelHeadRepeat").innerHTML = "MAS Active " + selectedPlant + " Repeat";
+        document.getElementById("panelHeadAll").innerHTML = "MAS Active " + selectedPlant + " All";
+    }
+    
+    
      
       // Callback that creates and populates a data table,
       // instantiates the pie chart, passes in the data and
       // draws it.
       function drawChartNew() {
 		
+    	 
+    	  var e = document.getElementById("yearNew");
+    	  var year = e.options[e.selectedIndex].text; 
+    	  
+    	  var selectedPlant = sessionStorage.selectedPlant;
+    	  
+    	  alert("You have selected "+ year);
     	  
     	 // drawChartCenter();
     	 var month;
@@ -90,7 +110,7 @@
     		url: "centerChart",
     	    type: 'POST',
     	    dataType: 'json',
-    	    data: {styleNo:1},
+    	    data: {year:year , plantID:selectedPlant},
     	    async: false,
     	    success: function (data) {
     	    	
@@ -157,7 +177,7 @@
      	
      
      	
-     	alert(newStyles[1][0]);
+     	//alert(newStyles[1][0]);
     	  
         // Create the data table.
        	//alert(noOfNew);
@@ -188,6 +208,13 @@
       
       function drawChartRepeat() {
   		
+    	  var e = document.getElementById("yearRepeat");
+    	  var year = e.options[e.selectedIndex].text; 
+    	  
+    	  var selectedPlant = sessionStorage.selectedPlant;
+    	  
+    	  alert("You have selected "+ year); 
+    	  
     	  
      	 // drawChartCenter();
      	 var month;
@@ -211,7 +238,7 @@
      		url: "centerChart",
      	    type: 'POST',
      	    dataType: 'json',
-     	    data: {styleNo:1},
+     	    data: {year:year , plantID:selectedPlant},
      	    async: false,
      	    success: function (data) {
      	    	
@@ -311,6 +338,12 @@
       
       function drawChartAll() {
     		
+    	  var e = document.getElementById("yearAll");
+    	  var year = e.options[e.selectedIndex].text; 
+    	  
+    	  var selectedPlant = sessionStorage.selectedPlant;
+    	  
+    	  alert("You have selected "+ year);  
     	  
       	 // drawChartCenter();
       	 var month;
@@ -333,7 +366,7 @@
       		url: "centerChart",
       	    type: 'POST',
       	    dataType: 'json',
-      	    data: {styleNo:1},
+      	    data: {year:year , plantID:selectedPlant},
       	    async: false,
       	    success: function (data) {
       	    	
@@ -439,7 +472,7 @@
    
 
 </head>
-<body>
+<body onload= "setTitles()">
 
 <div id="wrapper">
 
@@ -453,7 +486,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>MAS Active Charts</h3>   
+	                 <h3 id="topTitle">MAS Active Charts</h3>   
 	                 
 	                  
 	            </div>
@@ -468,11 +501,11 @@
 			
 			<div class="row">
 	    		
-	    		<div class="col-md-10">
+	    		<div class="col-md-12">
 	                 
 	                 <div class="panel panel-default">
 	                 	
-	                 	<div class="panel-heading">
+	                 	<div class="panel-heading" id="panelHeadNew">
                             MAS Active Total New
                             
                             
@@ -480,21 +513,36 @@
                         </div>
 	                 	
 	                 	<div class="panel-body">
-	                 	
+	                 		
 	                 		<div class="row">
+	                 			<div class="col-md-4">
 	                 			
+	                 			<form>
+	                 				<div class="form-group">
+	                 				
+		                 				<select id="yearNew" class="form-control">
+		                 					<option>2013 </option>
+		                 					<option>2014 </option>
+		                 					<option>2015 </option>
+		                 				</select>
+	                 				</div>
+	                 			</form>
+	                 		
+	                 			<button id="drawChartNew" class= "btn btn-danger " > Draw Chart - New styles</button>
 	                 			
+	                 			</div>
 	                 			
-	                 				<button id="drawChartNew" class= "btn btn-danger pull-right" > Draw Chart - New styles</button>
-	                 			
-	                 			
-	                 			
+	                 		</div>
+	                 		
+	                 		
+	                 		<div class="row">
+
 	                 			<!--Div that will hold the pie chart-->
-	                 			<div id="chart_div_new" style="width: 1000px; height: 500px;"></div>
+	                 			<div id="chart_div_new" style="width: 800px; height: 400px;"></div>
 
 	    
 	                 			<!-- /.col-md-10  -->
-	                 			</div>
+	                 		</div>
 	                 		
 	                 		</div>
 	                 	
@@ -511,22 +559,43 @@
 	    	
 	    		<div class="row">
 	    		
-	    		<div class="col-md-10">
+	    		<div class="col-md-12">
 	                 
 	                 <div class="panel panel-default">
 	                 	
-	                 	<div class="panel-heading">
+	                 	<div class="panel-heading" id= "panelHeadRepeat">
                             MAS Active Total Repeat
                         </div>
 	                 	
 	                 	<div class="panel-body">
 	                 	
 	                 		<div class="row">
+	                 			
+	                 			<div class="col-md-4">
 	                 		
-	                 			<button id="drawChartRepeat" class= "btn btn-danger pull-right" > Draw Chart - Repeat styles </button>
+	                 			<form>
+	                 				<div class="form-group">
+	                 				
+		                 				<select id="yearRepeat" class="form-control">
+		                 					<option>2013 </option>
+		                 					<option>2014 </option>
+		                 					<option>2015 </option>
+		                 				</select>
+	                 				</div>
+	                 			</form>
+	                 		
+	                 			<button id="drawChartRepeat" class= "btn btn-danger " > Draw Chart - Repeat styles </button>
+	                 			
+	                 			</div>
+	                 			
+	                 		</div>
+	                 	
+	                 		<div class="row">
+	                 		
+	                 			
 	                 		
 	                 			<!--Div that will hold the pie chart-->
-	                 			<div id="chart_div_repeat" style="width: 1000px; height: 500px;"></div>
+	                 			<div id="chart_div_repeat" style="width: 800px; height: 400px;"></div>
 
 	    
 	                 			<!-- /.col-md-6  -->
@@ -544,22 +613,43 @@
 	            
 	            <div class="row">
 	    		
-	    		<div class="col-md-10">
+	    		<div class="col-md-12">
 	                 
 	                 <div class="panel panel-default">
 	                 	
-	                 	<div class="panel-heading">
+	                 	<div class="panel-heading" id= "panelHeadAll">
                             MAS Active all styles
                         </div>
 	                 	
 	                 	<div class="panel-body">
-	                 	
+	                 		
 	                 		<div class="row">
 	                 		
-	                 			<button id="drawChartAll" class= "btn btn-danger pull-right" > Draw chart - all styles </button>
+	                 			<div class="col-md-4">
+	                 		
+		                 			<form>
+		                 				<div class="form-group">
+		                 				
+			                 				<select id="yearAll" class="form-control">
+			                 					<option>2013 </option>
+			                 					<option>2014 </option>
+			                 					<option>2015 </option>
+			                 				</select>
+		                 				</div>
+		                 			</form>
+	                 		
+	                 				<button id="drawChartAll" class= "btn btn-danger " > Draw chart - all styles </button>
+	                 			
+	                 			</div>
+	                 			
+	                 		</div>
+	                 		
+	                 		<div class="row">
+	                 		
+	                 			
 	                 		
 	                 			<!--Div that will hold the pie chart-->
-	                 			<div id="chart_div_all" style="width: 1000px; height: 500px;"></div>
+	                 			<div id="chart_div_all" style="width: 800px; height: 400px;"></div>
 
 	    
 	                 			<!-- /.col-md-6  -->

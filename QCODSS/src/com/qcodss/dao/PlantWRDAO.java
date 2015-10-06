@@ -55,4 +55,23 @@ public class PlantWRDAO {
 		   
 		   return plantWR;
 	   } 
+	   
+	   public static List<PlantWR> getOldRecordsByMonth(int month , int plantID, int year ){
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<PlantWR> plantWR = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   plantWR = session.createQuery("FROM PlantWR pw WHERE pw.month = '" + month + "' and pw.plant= '" + plantID + "'  and pw.year= '" + year + "' ").list();
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   return plantWR;
+	   } 
 }

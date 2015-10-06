@@ -69,8 +69,8 @@
 	                                            <%
 	                                            /* Loading plant list to the drop down and 
 	                                            	default plant is selected using plantid sotored in the session */
-	                                            Plant plant = new Plant(); 
-	                                            List<Plant> allPlants = PlantDAO.getAllPlants();
+	                                            //Plant plant = new Plant(); 
+	                                            //List<Plant> allPlants = PlantDAO.getAllPlants();
 	                                            for(Plant p:allPlants){
 	                             				 	plant = p;
 	                             				 	if( plant.getId()==(Integer)session.getAttribute("plantID") ){ %>                           				
