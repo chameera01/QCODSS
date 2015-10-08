@@ -62,7 +62,7 @@
                 	
 		                	<div class="text-box" >
 		                    	<p class="main-text"> <a href="#" > Full presetting details </a> </p> 
-		                    	<p class="text-muted">Generate single weekly report </p>
+		                    	<p class="text-muted">View full presetting information </p>
 		                	</div>
                 	
              			</div>
@@ -75,7 +75,7 @@
 			                </span>
 			                <div class="text-box" >
 			                    <p class="main-text"> <a href="#" > Pre setting details </a></p>
-			                    <p class="text-muted">Generate weekly report for all weeks</p>
+			                    <p class="text-muted">View presetting information</p>
 			                </div>
 			             </div>
 		     		</div>
@@ -87,7 +87,7 @@
                 			</span>
                 		<div class="text-box" >
                     		<p class="main-text"> <a href="#" > Pre training details</a> </p>
-                    		<p class="text-muted">Generate MAS Active weekly report</p>
+                    		<p class="text-muted">View pre training information</p>
                 		</div>
              			</div>
 		     		</div>
@@ -99,7 +99,7 @@
                 				</span>
                 		<div class="text-box" >
                     		<p class="main-text"> <a href="#" > Pre bulk details </a> </p>
-                    		<p class="text-muted">Generate single monthly report</p>
+                    		<p class="text-muted">View pre bulk information</p>
                 		</div>
              			</div>
 		     		</div>

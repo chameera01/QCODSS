@@ -78,7 +78,7 @@
                 			</span>
                 	
 		                	<div class="text-box" >
-		                    	<p class="main-text"> <a href="#" > Weekly report-Single </a> </p> 
+		                    	<p class="main-text"> <a href="WeeklyReportSingle.jsp" > Weekly report-Single </a> </p> 
 		                    	<p class="text-muted">Generate single weekly report </p>
 		                	</div>
                 	

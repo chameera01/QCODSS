@@ -1,3 +1,6 @@
+<%@page import="com.qcodss.model.Plant"%>
+<%@page import="java.util.List"%>
+<%@page import="com.qcodss.dao.PlantDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     
@@ -25,7 +28,23 @@
 
 <script type="text/javascript">
 
-	
+	function deleteUser(userID){
+		alert("Deleting user "+ userID);
+		
+		 $.ajax({
+
+	    		url: "deleteuser",
+	    	    type: 'POST',
+	    	    dataType: 'json',
+	    	    data: {id:userID },
+	    	    async: false,
+	    	    success: function (data) {
+	    	    	
+	    	    }
+	    	    
+		 });
+		
+	}
 
 
 </script>
@@ -76,10 +95,12 @@
                                            			
                                            			<thead>
 												      <tr>
+												      	<th style="display:none;">ID</th>
 												        <th>Name</th>
 												        <th>email</th>
 												        <th>Role</th>
 												        <th>Plant</th>
+												        <th>Action</th>
 												      </tr>
 												    </thead>
                                            			
@@ -89,10 +110,12 @@
                                            		
  
 													<tr>
+														<td style="display:none;"> <s:property value="#allUsers.id" /> </td>
 													    <td><s:property value="#allUsers.name" /></td>
 													    <td><s:property value="#allUsers.email" /></td>
 													    <td><s:property value="#allUsers.role" /></td>
 													    <td><s:property value="#allUsers.plantid.name" /></td>
+													    <td> <button onclick="deleteUser(<s:property value="#allUsers.id" />)" id="<s:property value="#allUsers.id" />" class="btn btn-danger">Delete</button></td>
 													</tr>
 													
 													
@@ -190,24 +213,29 @@
                                         </div>
                                         
                                         <div class="form-group">
-                                            <label>Select plant</label>
-                                            <select class="form-control" name="plant">
-                                                <option>Shadowline</option>
-                                                <option>Leisureline</option>
-                                                <option>Contourline</option>
-                                                <option>Shadeline</option>
-                                                <option>Nirmana</option>
-                                                <option>Sleekline</option>
-                                                <option>Synergy</option>
-                                                <option>Vaanavil</option>
-                                                <option>Asialine</option>
-                                                <option>Mihintale</option>
-                                                <option>DM Lanka</option>
-                                                <option>Active center</option>
-                                                
-                                                
-                                            </select>
-                                        </div>
+	                                        <label>Select plant</label>
+	                                        <select id="plantName" class="form-control" name="plantName">	                                        	
+	                                            <%
+	                                            /* Loading plant list to the drop down and 
+	                                            	default plant is selected using plantid sotored in the session */
+	                                            //Plant plant = new Plant(); 
+	                                            //List<Plant> allPlants = PlantDAO.getAllPlants();
+	                                            for(Plant p:allPlants){
+	                             				 	plant = p;
+	                             				 	if( plant.getId()==(Integer)session.getAttribute("plantID") ){ %>                           				
+	                             				   		<option value="<%= plant.getId()%>" selected> <%= plant.getName()  %></option>
+		                             				<%  
+		                             				} else{ %>
+		                             					<option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+		                             				<%	
+		                             				}
+		                                            %>
+	                             				<%   
+	                             				}		                                            
+	                                            %>	                                            	                                            
+	                                        </select>
+			                              </div>	                 				
+
 	                 					
 	                 					
 	                 					<div class="form-group">
