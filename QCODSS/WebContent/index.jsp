@@ -27,6 +27,9 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+   
+        <!-- TABLE STYLES-->
+    <link href="assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
 
     <!-- JQUERY SCRIPTS -->
     <script type='text/javascript' src="assets/js/jquery-1.10.2.js"></script>
@@ -324,22 +327,26 @@
                  		</div>
                 
            </div>
-           
-			<!-- google chart intergration -->
-			<div class="row">
-				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="panel panel-default">
-		   				<div class="panel-heading">
-		       				Weekly Summary
-		   				</div>
-		   				<div class="panel-body">
-							<button class="btn btn-danger" type="button" onclick="drawTable()">Load</button>  	
-				    		<div id="table"></div>
-				    	</div>
-				    </div>
-				</div>    	
-	    	<!-- /. row  -->	
-	    	</div>
+
+<!-- ***************** table table table ************************************ -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             Weekly Summary
+                        </div>
+                        <div class="panel-body">
+<!--                         <button class="btn btn-danger" type="button" onclick="weeklySummaryTab()">Load</button>                    -->
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+            </div>
+
+	    	<!-- /. row  -->
+<!-- ***************** / . table table table ************************************ -->
 	    	
 	    	
 	    	
@@ -363,6 +370,15 @@
     <script src="assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+    
+         <!-- DATA TABLE SCRIPTS -->
+    <script src="assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
 
 
 </body>
