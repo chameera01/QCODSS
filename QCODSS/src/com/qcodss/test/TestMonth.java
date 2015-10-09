@@ -7,7 +7,7 @@ import com.qcodss.reportmodels.MonthlyReport;
 public class TestMonth {
 	public static void main(String args[]){
 		
-		ReportController wrc = new ReportController("January", 2015, 1);
+		ReportController wrc = new ReportController("September", 2015, 1);
 		MonthlyReport mr =  wrc.getMonthlyReport();
 		
 		System.out.println("Month : " + mr.getMonth());

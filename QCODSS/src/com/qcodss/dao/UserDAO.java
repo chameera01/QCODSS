@@ -37,6 +37,28 @@ public class UserDAO {
 		  return true;
 	   }
 	   
+	   
+	   public static boolean deleteUser(User user) {
+		   
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   try {
+			   tx = session.beginTransaction();
+			   session.delete(user); 
+			   tx.commit();
+		  } catch (HibernateException e) {
+			  if (tx!=null) tx.rollback();
+			  e.printStackTrace();
+			  
+			  return false;
+		  } finally {
+			  session.close();
+		  }
+		   
+		  return true;
+	   }
+	   
+	   
 	   /* Method to  GET all the Users (return list of all users) */
 	   public static List<User> getAllUsers( ){
 		   Session session = DB.getSessionFactory().openSession();

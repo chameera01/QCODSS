@@ -1,6 +1,8 @@
 package com.qcodss.reportmodels;
 
 public class MonthlyReport {
+	private int year;
+	
 	private double month;
 	private int numberOfNew;
 	private int numberOfRepeat;
@@ -31,6 +33,15 @@ public class MonthlyReport {
 	private double fullPresettingHR;
 	private double avgEff_45;
 	private double sbHR;
+	
+	
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	
 	
 	public double getEPR_123n() {
 		EPR_123n =  Math.floor(EPR_123n) ;

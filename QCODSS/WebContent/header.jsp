@@ -1,3 +1,6 @@
+<%@page import="com.qcodss.model.Plant"%>
+<%@page import="java.util.List"%>
+<%@page import="com.qcodss.dao.PlantDAO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html >
@@ -19,7 +22,24 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-
+	
+	
+	<script>
+		
+	
+		function getPlant(plantID, plantName){
+			
+			
+			
+			sessionStorage.selectedPlant= plantID ;
+			sessionStorage.selectedPlantName= plantName ;
+			
+			window.location = "MASActiveChart.jsp";
+			
+		}
+	
+	</script>
+	
 </head>
 
 <body>
@@ -46,7 +66,7 @@
   			<div style="color: white;
 				padding: 15px 50px 5px 50px;
 				float: right;
-				font-size: 16px;"> Last access : 30 May 2014 &nbsp; <a href="logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+				font-size: 16px;"> Welcome <%= session.getAttribute("name") %>  &nbsp; <a href="logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>
 		
 		
@@ -58,27 +78,31 @@
 					</li>
 
                     <li>
-                        <a class="active-menu"  href="index.jsp"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
+                        <a   href="index.jsp"><i class="fa fa-dashboard fa-3x"></i> QCO Dashboard</a>
                     </li>
                     
                     <li>
-                        <a   href="FullPresettingDashboard.jsp"><i class="fa fa-desktop fa-3x"></i>  Full presetting dashboard</a>
+                        <a   href="FullPresettingDashboard.jsp"><i class="fa fa-file-text-o fa-3x "></i>  Full Presetting Details</a>
+                    </li>
+                    
+                     <li>
+                        <a   href="#"><i class="fa fa-desktop fa-3x"></i>  Bucketloss Details</a>
                     </li>
                     
                     
                      <li>
-                        <a  href="#"><i class="fa fa-plus-square fa-3x"></i> Add records</a>
+                        <a  href="#"><i class="fa fa-plus-square fa-3x"></i> Add Records</a>
                         
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="AddStyleRecords.jsp">Add style records</a>
+                                <a href="AddStyleRecords.jsp">Add Style Records</a>
                             </li>
                             <li>
-                                <a href="AddWeeklyRecords.jsp">Add weekly records</a>
+                                <a href="AddWeeklyRecords.jsp">Add Weekly Records</a>
                             </li>
                             
                             <li>
-                                <a href="AddMonthlyRecords.jsp">Add monthly records</a>
+                                <a href="AddMonthlyRecords.jsp">Add Monthly Records</a>
                             </li>
                             
                         </ul>
@@ -87,54 +111,27 @@
                     
                     
                     <li>
-                        <a  href="#"><i class="fa fa-envelope-o fa-3x"></i>Charts</a>
+                        <a  href="#"><i class="fa fa-bar-chart-o fa-3x"></i>Charts</a>
                         
                         <ul class="nav nav-second-level">
+                        
+                        <%
+                          //Loading plant list to the drop down
+                          Plant plant = new Plant(); 
+                          
+                           List<Plant> allPlants =   PlantDAO.getAllPlants();
+                           for(Plant p:allPlants){
+           				   plant = p;
+                           
+			             %>
+                        
+                        
                             <li>
-                                <a href="MASActiveChart.jsp">MAS Active</a>
+                                <a  href="#" onclick="getPlant(<%= plant.getId() %> , '<%= plant.getName() %>'  );return false;"><%= plant.getName()  %></a>
                             </li>
-                            <li>
-                                <a href="ShadowlineChart.jsp">Shadowline</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Shadeline</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Contourline</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Leisureline</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Asialine</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Synergy</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Sleekline</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Linea AITC</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Mihintale</a>
-                            </li>
-                            
-                            <li>
-                                <a href="">Vaanavil</a>
-                            </li>
+                            <% } %>
                             
                         </ul>
-                        
                     </li>
                     
                     
@@ -148,7 +145,7 @@
                     </li>	
                     
                     <li  >
-                        <a  href="SetBaselines.jsp"><i class="fa fa-bar-chart-o fa-3x"></i> Setup Baselines</a>
+                        <a  href="SetBaselines.jsp"><i class="fa fa-wrench fa-3x"></i> Setup Baselines</a>
                     </li>
                       
                     	

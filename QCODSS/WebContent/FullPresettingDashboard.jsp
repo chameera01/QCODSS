@@ -41,7 +41,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Full prestting dashboard</h3>   
+	                 <h3>Full prestting details</h3>   
 	                  
 	            </div>
 	    	<!-- /. row  -->	
@@ -50,61 +50,67 @@
 	    	<hr>
 			
 			<div class="row">
+	    	
+	    			<div class="col-md-12">
 				
 				
-					<div class="col-md-3 col-sm-6 col-xs-6">           
+					<div class="col-md-6">           
 						<div class="panel panel-back noti-box">
-                			<span class="icon-box bg-color-red set-icon">
-                    			<i class="fa fa-envelope-o"></i>
+                			<span class="icon-box set-icon">
+                    			<i class="fa fa-file-text"></i>
                 			</span>
                 	
 		                	<div class="text-box" >
-		                    	<p class="main-text">120 New</p>
-		                    	<p class="text-muted">Messages</p>
+		                    	<p class="main-text"> <a href="#" > Full presetting details </a> </p> 
+		                    	<p class="text-muted">View full presetting information </p>
 		                	</div>
                 	
              			</div>
 		     		</div>
 		     		
-                    <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="col-md-6">           
 						<div class="panel panel-back noti-box">
-			                <span class="icon-box bg-color-green set-icon">
-			                    <i class="fa fa-bars"></i>
+			                <span class="icon-box set-icon">
+			                    <i class="fa fa-clipboard"></i>
 			                </span>
 			                <div class="text-box" >
-			                    <p class="main-text">30 Tasks</p>
-			                    <p class="text-muted">Remaining</p>
+			                    <p class="main-text"> <a href="#" > Pre setting details </a></p>
+			                    <p class="text-muted">View presetting information</p>
 			                </div>
 			             </div>
 		     		</div>
 		     		
-                    <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="col-md-6">           
 						<div class="panel panel-back noti-box">
-                			<span class="icon-box bg-color-blue set-icon">
-                    			<i class="fa fa-bell-o"></i>
+                			<span class="icon-box set-icon">
+                    			<i class="fa fa-list-alt"></i>
                 			</span>
                 		<div class="text-box" >
-                    		<p class="main-text">240 New</p>
-                    		<p class="text-muted">Notifications</p>
+                    		<p class="main-text"> <a href="#" > Pre training details</a> </p>
+                    		<p class="text-muted">View pre training information</p>
                 		</div>
              			</div>
 		     		</div>
                     
-                    <div class="col-md-3 col-sm-6 col-xs-6">           
+                    <div class="col-md-6">           
 						<div class="panel panel-back noti-box">
-                				<span class="icon-box bg-color-brown set-icon">
-                    			<i class="fa fa-rocket"></i>
+                				<span class="icon-box  set-icon">
+                    			<i class="fa fa-file-text-o"></i>
                 				</span>
                 		<div class="text-box" >
-                    		<p class="main-text">3 Orders</p>
-                    		<p class="text-muted">Pending</p>
+                    		<p class="main-text"> <a href="#" > Pre bulk details </a> </p>
+                    		<p class="text-muted">View pre bulk information</p>
                 		</div>
              			</div>
 		     		</div>
+                    
+                   
+		     		
+		     		
 		
 				
 				
-				
+				</div>
 				
 				
 				
@@ -112,46 +118,7 @@
 			</div>
 			
 			
-			<div class="row"> 
-                    
-                      
-                        <div class="col-md-9 col-sm-12 col-xs-12">                     
-             				<div class="panel panel-default">
-                 				<div class="panel-heading">
-                     					Bar Chart Example
-                 				</div>
-                 				<div class="panel-body">
-                     				<div id="morris-bar-chart"></div>
-                 				</div>
-             				</div>            
-         				</div>
-         				
-         				
-             			<div class="col-md-3 col-sm-12 col-xs-12">                       
-             				<div class="panel panel-primary text-center no-boder bg-color-green">
-                 				<div class="panel-body">
-                     					<i class="fa fa-bar-chart-o fa-5x"></i>
-                     					<h3>120 GB </h3>
-                 				</div>
-                 				<div class="panel-footer back-footer-green">
-                    						Disk Space Available
-                     
-                 				</div>
-             				</div>
-             				
-             			<div class="panel panel-primary text-center no-boder bg-color-red">
-                 				<div class="panel-body">
-                     					<i class="fa fa-edit fa-5x"></i>
-                     					<h3>20,000 </h3>
-                 				</div>
-                 				<div class="panel-footer back-footer-red">
-                     				Articles Pending
-                     
-                 				</div>
-             			</div>                         
-                 		</div>
-                
-           </div>
+			
            
            
 <!--            	 birt intergration -->

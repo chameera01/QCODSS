@@ -1,4 +1,3 @@
-
 <%@page import="com.qcodss.dao.PlantDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="com.qcodss.model.Plant"%>
@@ -60,23 +59,110 @@
 	    	<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h1>MAS Active QCO Dashboard</h1>   
-	                  <h5>Welcome <%= session.getAttribute("name") %></h5>
-	            </div>
-	    	<!-- /. row  -->	
-	    	</div>
+				  <div class="jumbotron">
+				    <h1>MAS Active QCODSS</h1>
+				    <p>Quick Changeover Decision Support System 1.0</p>
+				    
+				  </div>
+				
+				 
+				</div>
+			
+			</div>
 	    	
-	    	<hr>
 	    	
+	    	<div class="row">
 	    	
-	    	
+	    			<div class="col-md-12">
+				
+				
+					<div class="col-md-6">           
+						<div class="panel panel-back noti-box">
+                			<span class="icon-box set-icon">
+                    			<i class="fa fa-file-text"></i>
+                			</span>
+                	
+		                	<div class="text-box" >
+		                    	<p class="main-text"> <a href="WeeklyReportSingle.jsp" > Weekly report-Single </a> </p> 
+		                    	<p class="text-muted">Generate single weekly report </p>
+		                	</div>
+                	
+             			</div>
+		     		</div>
+		     		
+                    <div class="col-md-6">           
+						<div class="panel panel-back noti-box">
+			                <span class="icon-box set-icon">
+			                    <i class="fa fa-bars"></i>
+			                </span>
+			                <div class="text-box" >
+			                    <p class="main-text"> <a href="#" > Weekly report-All </a></p>
+			                    <p class="text-muted">Generate weekly report for all weeks</p>
+			                </div>
+			             </div>
+		     		</div>
+		     		
+                    <div class="col-md-6">           
+						<div class="panel panel-back noti-box">
+                			<span class="icon-box set-icon">
+                    			<i class="fa fa-list-alt"></i>
+                			</span>
+                		<div class="text-box" >
+                    		<p class="main-text"> <a href="#" > Weekly report-Active </a> </p>
+                    		<p class="text-muted">Generate MAS Active weekly report</p>
+                		</div>
+             			</div>
+		     		</div>
+                    
+                    <div class="col-md-6">           
+						<div class="panel panel-back noti-box">
+                				<span class="icon-box  set-icon">
+                    			<i class="fa fa-file-text-o"></i>
+                				</span>
+                		<div class="text-box" >
+                    		<p class="main-text"> <a href="#" > Monthly report-Single </a> </p>
+                    		<p class="text-muted">Generate single monthly report</p>
+                		</div>
+             			</div>
+		     		</div>
+                    
+                    <div class="col-md-6">           
+						<div class="panel panel-back noti-box">
+                				<span class="icon-box set-icon">
+                    			<i class="fa fa-files-o"></i>
+                				</span>
+                		<div class="text-box" >
+                    		<p class="main-text"> <a href="#" > Monthly report-All </a> </p>
+                    		<p class="text-muted">Generate monthly report for all months</p>
+                		</div>
+             			</div>
+		     		</div>
+		     		
+		     		<div class="col-md-6">           
+						<div class="panel panel-back noti-box">
+                				<span class="icon-box set-icon">
+                    			<i class="fa fa-clipboard"></i>
+                				</span>
+                		<div class="text-box" >
+                    		<p class="main-text"> <a href="#" > Monthly report-Active </a> </p>
+                    		<p class="text-muted">Generate MAS Active monthly report</p>
+                		</div>
+             			</div>
+		     		</div>
+		
+				
+				
+				</div>
+				
+				
+				
+			<!-- /. row  -->	
+			</div>
 	    	
 	    	
 	    	
 	    	<div class="row"> 
-                    
-                      
-                        <div class="col-md-9 col-sm-12 col-xs-12">                     
+                        <div class="col-md-12">                     
              				<div class="panel panel-default">
                  				<div class="panel-heading">
                      					Weekly Report Generator
@@ -97,8 +183,8 @@
 		                                            <%
 		                                            /* Loading plant list to the drop down and 
 		                                            	default plant is selected using plantid sotored in the session */
-		                                            Plant plant = new Plant(); 
-		                                            List<Plant> allPlants = PlantDAO.getAllPlants();
+		                                            	 //Plant plantName = new Plant(); 
+			                                            //List<Plant> allPlantsList = PlantDAO.getAllPlants();
 		                                            for(Plant p:allPlants){
 		                             				 	plant = p;
 		                             				 	if( plant.getId()==(Integer)session.getAttribute("plantID") ){ %>                           				
@@ -302,29 +388,7 @@
          				</div>
          				
          				
-             			<div class="col-md-3 col-sm-12 col-xs-12">                       
-             				<div class="panel panel-primary text-center no-boder bg-color-green">
-                 				<div class="panel-body">
-                     					<i class="fa fa-bar-chart-o fa-5x"></i>
-                     					<h3>120 GB </h3>
-                 				</div>
-                 				<div class="panel-footer back-footer-green">
-                    						Disk Space Available
-                     
-                 				</div>
-             				</div>
-             				
-	             			<div class="panel panel-primary text-center no-boder bg-color-red">
-	                 				<div class="panel-body">
-	                     					<i class="fa fa-edit fa-5x"></i>
-	                     					<h3>20,000 </h3>
-	                 				</div>
-	                 				<div class="panel-footer back-footer-red">
-	                     				Articles Pending
-	                     
-	                 				</div>
-	             			</div>                         
-                 		</div>
+             			
                 
            </div>
 

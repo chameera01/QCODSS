@@ -18,6 +18,13 @@
 		
 		</action>
 		
+		<action name="deleteuser" class="com.qcodss.struts.DeleteUserAction">
+		
+			<result name="success">/AddUser.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
 		<action name="login" class="com.qcodss.struts.LoginAction">
 		
 			<result name="success">/index.jsp</result>
