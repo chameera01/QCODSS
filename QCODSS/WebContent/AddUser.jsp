@@ -218,15 +218,15 @@
 	                                            <%
 	                                            /* Loading plant list to the drop down and 
 	                                            	default plant is selected using plantid sotored in the session */
-	                                            //Plant plant = new Plant(); 
-	                                            //List<Plant> allPlants = PlantDAO.getAllPlants();
+	                                            //Plant userPlant = new Plant(); 
+	                                            //List<Plant> allUserPlants = PlantDAO.getAllPlants();
 	                                            for(Plant p:allPlants){
-	                             				 	plant = p;
+	                                            	plant = p;
 	                             				 	if( plant.getId()==(Integer)session.getAttribute("plantID") ){ %>                           				
-	                             				   		<option value="<%= plant.getId()%>" selected> <%= plant.getName()  %></option>
+	                             				   		<option value="<%= plant.getName()%>" selected> <%= plant.getName()  %></option>
 		                             				<%  
 		                             				} else{ %>
-		                             					<option value="<%= plant.getId()%>"> <%= plant.getName()  %></option>
+		                             					<option value="<%= plant.getName()%>"> <%= plant.getName()  %></option>
 		                             				<%	
 		                             				}
 		                                            %>

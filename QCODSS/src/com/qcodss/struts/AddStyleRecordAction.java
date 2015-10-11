@@ -56,8 +56,11 @@ public class AddStyleRecordAction implements SessionAware {
 		if(fullPresettingChecker()){
 			style.setFullPresetting(1);
 		}
-	
-		Boolean value = StyleDAO.addStyle(style);
+		
+		
+		StyleDAO styleDao = new StyleDAO();
+		
+		Boolean value = styleDao.addStyle(style);
 		
 		System.out.println("** : "+value);
 	

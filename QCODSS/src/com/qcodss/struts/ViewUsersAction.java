@@ -15,7 +15,9 @@ public class ViewUsersAction {
 	
 	public String execute(){
 		
-		allUsers = UserDAO.getAllUsers();
+		UserDAO userDao = new UserDAO();
+		
+		allUsers = userDao.getAllUsers();
 		
 		
 		

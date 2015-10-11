@@ -22,8 +22,8 @@ public class StyleDayThreeAction implements SessionAware{
 		String returnVal = "error";
 		
 		styleNo = (String) userSession.get("styleNo");
-		
-		style = StyleDAO.getStyle(styleNo);
+		StyleDAO styleDao = new StyleDAO();
+		style = styleDao.getStyle(styleNo);
 		
 		
 		style.setClockedHrs_3(dayThreeClocked);
@@ -32,8 +32,8 @@ public class StyleDayThreeAction implements SessionAware{
 		style.setTotalFTT_3(dayThreeTotalPassed);
 		
 		
-		
-		boolean success = StyleDAO.addStyle(style);
+		//StyleDAO styleDao = new StyleDAO();
+		boolean success = styleDao.addStyle(style);
 		
 		if(success){
 			returnVal = "success";

@@ -16,8 +16,9 @@ public class StyleLoadAction implements SessionAware{
 	public String execute(){
 		
 			String returnVal ="error";
-		
-			Style style = StyleDAO.getStyle(styleNo);
+			
+			StyleDAO styleDao = new StyleDAO();
+			Style style = styleDao.getStyle(styleNo);
 			
 			if(style != null){
 				userSession.put("styleNo", style.getStyle_no());

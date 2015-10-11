@@ -27,7 +27,9 @@ public class LoginAction implements SessionAware {
 		receivedUser.setEmail(email);
 		receivedUser.setPassword(password);
 		
-		User authenticatedUser = UserDAO.login(receivedUser);
+		UserDAO userDao = new UserDAO();
+		
+		User authenticatedUser = userDao.login(receivedUser);
 		
 		
 		

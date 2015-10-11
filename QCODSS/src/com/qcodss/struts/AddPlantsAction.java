@@ -16,7 +16,10 @@ public class AddPlantsAction {
 		Plant p1 = new Plant();
 		
 		p1.setName(name);
-		PlantDAO.addPlant(p1);
+		
+		PlantDAO plantDao = new PlantDAO(); 
+		
+		plantDao.addPlant(p1);
 		
 		
 		return returnVal;

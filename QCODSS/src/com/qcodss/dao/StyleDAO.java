@@ -17,7 +17,7 @@ public class StyleDAO {
 	   /* Method to CREATE a STYLE
 	    * (return boolean true or false) 
 	    */
-	   public static boolean addStyle(Style style) {
+	   public boolean addStyle(Style style) {
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -41,7 +41,7 @@ public class StyleDAO {
 	    * (return Style Object ) 
 	    */
 	   
-	   public static Style getStyle(String styleNo){
+	   public Style getStyle(String styleNo){
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -82,7 +82,7 @@ public class StyleDAO {
 	    * (return Style list Object ) 
 	    */
 	   
-	   public static List<Style> getAllStyles( ){
+	   public List<Style> getAllStyles( ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<Style> allStyles = null;
@@ -102,7 +102,7 @@ public class StyleDAO {
 	   }  
 	   
 	   //This method is to return number of months style has been inserted during an year
-	   public static int getNumofMonthes(int year){
+	   public int getNumofMonthes(int year){
 		   List numberOfMonthes;
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -130,7 +130,7 @@ public class StyleDAO {
 	   }
 	   
 	   
-	   public static List<Style> getAllStylesByWeek(int weekNo , int plantID, int year ){
+	   public List<Style> getAllStylesByWeek(int weekNo , int plantID, int year ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<Style> allStyles = null;
@@ -149,7 +149,7 @@ public class StyleDAO {
 		   return allStyles;
 	   } 
 	   
-	   public static List<Style> getAllStylesByMonth(int month , int plantID, int year ){
+	   public List<Style> getAllStylesByMonth(int month , int plantID, int year ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<Style> allStyles = null;
@@ -172,7 +172,7 @@ public class StyleDAO {
 	    * @param : plantID -> possible value formats -> "*", "1", "1,2,3"
 	    * @return : Style list Object
 	    */
-	   public static List<Style> getStylesbyWeeksPlants(String fromWeek, String toWeek, String year, String plantID){
+	   public List<Style> getStylesbyWeeksPlants(String fromWeek, String toWeek, String year, String plantID){
 		   
 		   // plant condition ( "1=1" indicates "all" )
 		   String whereClause_1;

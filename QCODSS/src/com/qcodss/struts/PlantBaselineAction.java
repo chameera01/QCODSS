@@ -39,7 +39,9 @@ public class PlantBaselineAction implements SessionAware  {
 		pb.setYear(year);
 		pb.setBudgetedEfficiency(budgetedEff);
 		
-		boolean value = PlantBaselineDAO.addPlantBaseline(pb);
+		PlantBaselineDAO plantBaselineDao = new PlantBaselineDAO();
+		
+		boolean value = plantBaselineDao.addPlantBaseline(pb);
 		
 		if(value){
 			returnVal = "success";

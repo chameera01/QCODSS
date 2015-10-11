@@ -15,7 +15,7 @@ public class PlantWRDAO {
 	   /* Method to CREATE a Plant Weekly Record(PlantWR) in the database 
 	    * (return boolean true or false) 
 	    */
-	   public static boolean addPlantWR(PlantWR plantWR) {
+	   public boolean addPlantWR(PlantWR plantWR) {
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -37,7 +37,7 @@ public class PlantWRDAO {
 	   
 	   
 	   //Get Old week reports by weekno
-	   public static List<PlantWR> getOldRecordsByWeek(int weekNo , int plantID, int year ){
+	   public List<PlantWR> getOldRecordsByWeek(int weekNo , int plantID, int year ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<PlantWR> plantWR = null;
@@ -56,7 +56,7 @@ public class PlantWRDAO {
 		   return plantWR;
 	   } 
 	   
-	   public static List<PlantWR> getOldRecordsByMonth(int month , int plantID, int year ){
+	   public List<PlantWR> getOldRecordsByMonth(int month , int plantID, int year ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<PlantWR> plantWR = null;

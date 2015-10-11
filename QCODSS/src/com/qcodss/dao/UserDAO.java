@@ -17,7 +17,7 @@ public class UserDAO {
 	   /* Method to CREATE an User in the database 
 	    * (return boolean true or false)
 	    */
-	   public static boolean addUser(User user) {
+	   public boolean addUser(User user) {
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -38,7 +38,7 @@ public class UserDAO {
 	   }
 	   
 	   
-	   public static boolean deleteUser(User user) {
+	   public boolean deleteUser(User user) {
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -60,7 +60,7 @@ public class UserDAO {
 	   
 	   
 	   /* Method to  GET all the Users (return list of all users) */
-	   public static List<User> getAllUsers( ){
+	   public List<User> getAllUsers( ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<User> allUsers = null;
@@ -79,7 +79,7 @@ public class UserDAO {
 		   return allUsers;
 	   }
 	   
-	   public static User findUserByID(int id){
+	   public User findUserByID(int id){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<User> userList = null;
@@ -107,7 +107,7 @@ public class UserDAO {
 	   }
 	   
 	   
-	   public static User login (User receivedUser){
+	   public User login (User receivedUser){
 		   
 		   User returnUser = new User();
 		   

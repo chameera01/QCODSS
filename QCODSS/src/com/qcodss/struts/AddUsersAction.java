@@ -11,7 +11,7 @@ public class AddUsersAction {
 	public String email;
 	public String password;
 	public String userlevel;
-	public String plant;
+	public String plantName;
 	
 	
 	public String execute(){
@@ -19,8 +19,16 @@ public class AddUsersAction {
 		//int id = Integer.parseInt(ActionContext.getContext().getSession().get("id").toString());
 		
 		String returnVal = "error";
+		
+		//System.out.println("From the drop down" + plantName);
+		
 		Plant p = new Plant();
-		p = PlantDAO.getPlant(plant);
+		
+		PlantDAO plantDao = new PlantDAO();
+		
+		p = plantDao.getPlant(plantName);
+		
+		//System.out.println("from plant table "+ p.getName());
 		
 		User user = new User();
 		user.setName(name);
@@ -29,7 +37,9 @@ public class AddUsersAction {
 		user.setPlantid(p);
 		user.setRole(userlevel);
 		
-		boolean ret = UserDAO.addUser(user);
+		UserDAO userDao = new UserDAO();
+		
+		boolean ret = userDao.addUser(user);
 		
 		if(ret){
 			returnVal = "success";

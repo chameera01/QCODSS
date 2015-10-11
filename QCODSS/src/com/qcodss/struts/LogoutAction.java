@@ -14,10 +14,9 @@ public class LogoutAction implements SessionAware{
 		
 		if(userSession != null){
 			
-			userSession.remove("id");
-			userSession.remove("name");
-			userSession.remove("plantID");
-			userSession.remove("role");
+			userSession.clear();
+			
+			
 			returnVal="success";
 		}
 		

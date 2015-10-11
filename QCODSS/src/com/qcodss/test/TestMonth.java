@@ -52,8 +52,8 @@ public class TestMonth {
 		
 		System.out.println("4 5 Efficiency average : " + mr.getAvgEff_45());
 		
-		
-		System.out.println("Number of monthes 2015  : "+StyleDAO.getNumofMonthes(2015));
+		StyleDAO styleDao = new StyleDAO();
+		System.out.println("Number of monthes 2015  : "+styleDao.getNumofMonthes(2015));
 		
 	}
 }

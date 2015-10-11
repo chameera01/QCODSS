@@ -13,7 +13,7 @@ import com.qcodss.model.User;
 
 public class PlantDAO {
 
-	   public static Integer addPlant(Plant p){
+	   public Integer addPlant(Plant p){
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -35,7 +35,7 @@ public class PlantDAO {
 	   }	
 	   
 	   /* Method to  GET all Plants (return list of all plants) */
-	   public static List<Plant> getAllPlants( ) {
+	   public List<Plant> getAllPlants( ) {
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<Plant> allPlants = null;
@@ -54,7 +54,7 @@ public class PlantDAO {
 		   return allPlants;
 	   }
 	   
-	   public static Plant getPlant(String plantName){
+	   public Plant getPlant(String plantName){
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;

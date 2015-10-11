@@ -13,7 +13,9 @@ public class DeleteUserAction {
 		User user = new User();
 		user.setId(id);
 		
-		boolean result = UserDAO.deleteUser(user);
+		UserDAO userDao = new UserDAO();
+		
+		boolean result = userDao.deleteUser(user);
 		
 		if(result){
 			returnVal = "success";

@@ -132,7 +132,10 @@ public class SessionAction implements SessionAware {
 	
 	public void loadForm() {
 		Style style = new Style();	
-		style = StyleDAO.getStyle((String)styleRecSession.get("styleNo"));
+		
+		StyleDAO styleDao = new StyleDAO();
+		
+		style = styleDao.getStyle((String)styleRecSession.get("styleNo"));
 		
 		
 		

@@ -31,7 +31,10 @@ public class ReportController {
 	public ReportController(int weekNo, int year, int plantID) {
 		this.weekNo = weekNo;
 		// weekNo should be passed as a parameter to the below method
-		allStyles = StyleDAO.getAllStylesByWeek(weekNo, plantID, year);
+		
+		StyleDAO styleDao = new StyleDAO();
+		
+		allStyles = styleDao.getAllStylesByWeek(weekNo, plantID, year);
 		
 		if(allStyles.size()>0){
 			noOfStyles = allStyles.size();
@@ -40,7 +43,10 @@ public class ReportController {
 		}
 		
 		wr = new WeeklyReport();
-		AB = ActiveBaselineDAO.getActiveBaseline(year);
+		
+		ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();
+		
+		AB = activeBaselineDao.getActiveBaseline(year);
 
 	}
 
@@ -74,15 +80,23 @@ public class ReportController {
 		} else if (monthName.equals("December")) {
 			month = 12;
 		}
-
-		allStyles = StyleDAO.getAllStylesByMonth(month, plantID, year);
+		
+		StyleDAO styleDao = new StyleDAO();
+		
+		allStyles = styleDao.getAllStylesByMonth(month, plantID, year);
 
 		noOfStyles = allStyles.size();
 
 		mr = new MonthlyReport();
 		mr.setMonth(month);
-		AB = ActiveBaselineDAO.getActiveBaseline(year);
-		PB = PlantBaselineDAO.getPlantBaseline(month, year, plantID);
+		
+		ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();
+		
+		AB = activeBaselineDao.getActiveBaseline(year);
+		
+		PlantBaselineDAO plantBaselineDao = new PlantBaselineDAO();
+		
+		PB = plantBaselineDao.getPlantBaseline(month, year, plantID);
 
 	}
 

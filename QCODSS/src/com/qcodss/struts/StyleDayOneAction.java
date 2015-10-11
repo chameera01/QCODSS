@@ -24,8 +24,8 @@ public class StyleDayOneAction implements SessionAware {
 		String returnVal = "error";
 		
 		styleNo = (String) userSession.get("styleNo");
-		
-		style = StyleDAO.getStyle(styleNo);
+		StyleDAO styleDao = new StyleDAO();
+		style = styleDao.getStyle(styleNo);
 		
 		
 		style.setClockedHrs_1(dayOneClocked);
@@ -33,9 +33,9 @@ public class StyleDayOneAction implements SessionAware {
 		style.setTotalInspected_1(dayOneTotalInspected);
 		style.setTotalFTT_1(dayOneTotalPassed);
 		
+		//StyleDAO styleDao = new StyleDAO();
 		
-		
-		boolean success = StyleDAO.addStyle(style);
+		boolean success = styleDao.addStyle(style);
 		
 		if(success){
 			returnVal = "success";

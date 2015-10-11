@@ -18,7 +18,9 @@ public String styleNo;
 		String returnVal = "success";
 		styleNo = (String) userSession.get("styleNo");
 		
-		style = StyleDAO.getStyle(styleNo);
+		StyleDAO styleDao = new StyleDAO();
+		
+		style = styleDao.getStyle(styleNo);
 		
 		Date date = new Date();
 		System.out.println(date);

@@ -12,7 +12,7 @@ import com.qcodss.model.ActiveBaseline;
 
 public class ActiveBaselineDAO {
 
-	public static boolean addActiveBaseline(ActiveBaseline ab) {
+	public boolean addActiveBaseline(ActiveBaseline ab) {
 
 		Session session = DB.getSessionFactory().openSession();
 		Transaction tx = null;
@@ -33,7 +33,7 @@ public class ActiveBaselineDAO {
 		return true;
 	}
 	
-	public static List<ActiveBaseline> getActiveBaseline(int year){
+	public List<ActiveBaseline> getActiveBaseline(int year){
 		
 		List<ActiveBaseline> AB = null;
 		Session session = DB.getSessionFactory().openSession();
@@ -55,7 +55,7 @@ public class ActiveBaselineDAO {
 		return AB;
 	}
 
-	public static List<ActiveBaseline> getAllActiveBaselines() {
+	public List<ActiveBaseline> getAllActiveBaselines() {
 		Session session = DB.getSessionFactory().openSession();
 		Transaction tx = null;
 		List<ActiveBaseline> allAB = null;
@@ -78,7 +78,7 @@ public class ActiveBaselineDAO {
 	/*	method return list of years for which active baseline records were setup
 	 *  @return -> list(String) of year
 	 */
-	public static List<Integer> getAllABYears() {
+	public List<Integer> getAllABYears() {
 		Session session = DB.getSessionFactory().openSession();
 		Transaction tx = null;
 		List<Integer> allABYears = null;

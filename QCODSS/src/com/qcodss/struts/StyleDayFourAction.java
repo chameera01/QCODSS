@@ -20,11 +20,14 @@ public class StyleDayFourAction implements SessionAware{
 	
 	public String execute(){
 		String returnVal = "success";
-
+		
+		StyleDAO styleDao = new StyleDAO();
 		
 		styleNo = (String) userSession.get("styleNo");
 		
-		style = StyleDAO.getStyle(styleNo);
+		
+		
+		style = styleDao.getStyle(styleNo);
 		
 		
 		style.setClockedHrs_4(dayFourClocked);
@@ -34,7 +37,8 @@ public class StyleDayFourAction implements SessionAware{
 		
 		
 		
-		boolean success = StyleDAO.addStyle(style);
+		
+		boolean success = styleDao.addStyle(style);
 		
 		if(success){
 			returnVal = "success";

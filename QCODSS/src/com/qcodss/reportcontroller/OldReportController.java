@@ -33,7 +33,10 @@ public class OldReportController {
 	
 	
 	public OldReportController(int weekNo, int month, int year, int plantID ){
-		oldReports = PlantWRDAO.getOldRecordsByWeek(weekNo, plantID, year);
+		
+		PlantWRDAO plantWRDao = new PlantWRDAO();
+		
+		oldReports = plantWRDao.getOldRecordsByWeek(weekNo, plantID, year);
 		
 		if(oldReports.size()>0){
 			noOfOldReports = oldReports.size();
@@ -44,13 +47,22 @@ public class OldReportController {
 		wr = new WeeklyReport();
 		wr.setYear(year);
 		wr.setWeekNo(weekNo);
-		AB = ActiveBaselineDAO.getActiveBaseline(year);
-		PB = PlantBaselineDAO.getPlantBaseline(month, year, plantID);
+		
+		ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();
+		
+		AB = activeBaselineDao.getActiveBaseline(year);
+		
+		PlantBaselineDAO plantBaselineDao = new PlantBaselineDAO();
+		
+		PB = plantBaselineDao.getPlantBaseline(month, year, plantID);
 		
 	}
 	
 	public OldReportController(int month, int year, int plantID ){
-		oldReports = PlantWRDAO.getOldRecordsByMonth(month, plantID, year);
+		
+		PlantWRDAO plantWRDao = new PlantWRDAO();
+		
+		oldReports = plantWRDao.getOldRecordsByMonth(month, plantID, year);
 		
 		if(oldReports.size()>0){
 			noOfOldReports = oldReports.size();
@@ -61,8 +73,14 @@ public class OldReportController {
 		mr = new MonthlyReport();
 		mr.setYear(year);
 		mr.setMonth(month);
-		AB = ActiveBaselineDAO.getActiveBaseline(year);
-		PB = PlantBaselineDAO.getPlantBaseline(month, year, plantID);
+		
+		ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();
+		
+		AB = activeBaselineDao.getActiveBaseline(year);
+		
+		PlantBaselineDAO plantBaselineDao = new PlantBaselineDAO();
+		
+		PB = plantBaselineDao.getPlantBaseline(month, year, plantID);
 		
 	}
 	

@@ -8,5 +8,40 @@
 </head>
 <body>
 
+<div id="container">
+
+	<div id="page-inner"> 
+
+		<div class="row">
+		
+			<div class="col-md-12">	
+
+	     		<div class="panel panel-default ">
+	     		
+	     			<div class= "panel-heading">
+	     				<h1> Error </h1>
+	     			</div>
+	     			
+	     			<div class="panel-body">
+	     				
+	     				
+	     				<p> Some error occurred</p>
+	     				
+	     			</div>
+	     		
+	     		</div>
+	     		
+	     		
+	     	</div>	
+		
+		<!-- End of row -->
+		</div>
+		
+	</div>
+	
+	
+<!-- End of container -->
+</div>
+
 </body>
 </html>

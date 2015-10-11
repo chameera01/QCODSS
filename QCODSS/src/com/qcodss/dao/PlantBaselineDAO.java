@@ -13,7 +13,7 @@ import com.qcodss.model.PlantBaseline;
 
 
 public class PlantBaselineDAO {
-	 public static boolean addPlantBaseline(PlantBaseline pb) {
+	 public boolean addPlantBaseline(PlantBaseline pb) {
 		   
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
@@ -34,7 +34,7 @@ public class PlantBaselineDAO {
 	   }
 	 
 	 
-	 public static List<PlantBaseline> getPlantBaseline(int month, int year, int plantID){
+	 public List<PlantBaseline> getPlantBaseline(int month, int year, int plantID){
 			
 			List<PlantBaseline> PB = null;
 			Session session = DB.getSessionFactory().openSession();
@@ -58,7 +58,7 @@ public class PlantBaselineDAO {
 	 
 	 
 	 
-	 public static List<PlantBaseline> getAllPlantBaselines( ){
+	 public List<PlantBaseline> getAllPlantBaselines( ){
 		   Session session = DB.getSessionFactory().openSession();
 		   Transaction tx = null;
 		   List<PlantBaseline> allPB = null;

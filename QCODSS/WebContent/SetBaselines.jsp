@@ -245,7 +245,10 @@
 								<%
 								/* Loading Active Baseline years list to the drop down */
 								ActiveBaseline activeBaseline = new ActiveBaseline();
-								List<Integer> allABYears = ActiveBaselineDAO.getAllABYears();
+		                                            		
+		                        ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();                    		
+		                                            		
+								List<Integer> allABYears = activeBaselineDao.getAllABYears();
 								for(int year:allABYears){ %>                           				
 									<option value="<%=year%>"> <%=year%> </option>
 								<%   

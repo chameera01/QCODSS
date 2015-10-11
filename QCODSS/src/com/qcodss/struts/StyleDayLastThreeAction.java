@@ -22,7 +22,9 @@ public class StyleDayLastThreeAction implements SessionAware{
 		String returnVal = "error";
 		styleNo = (String) userSession.get("styleNo");
 		
-		style = StyleDAO.getStyle(styleNo);
+		
+		StyleDAO styleDao = new StyleDAO();
+		style = styleDao.getStyle(styleNo);
 		
 		
 		style.setClockedHrs_3d(dayLastThreeClocked);
@@ -30,9 +32,9 @@ public class StyleDayLastThreeAction implements SessionAware{
 		style.setTotalInspected_3d(dayLastThreeTotalInspected);
 		style.setTotalFTT_3d(dayLastThreeTotalPassed);
 		
+		//StyleDAO styleDao = new StyleDAO();
 		
-		
-		boolean success = StyleDAO.addStyle(style);
+		boolean success = styleDao.addStyle(style);
 		
 		if(success){
 			returnVal = "success";

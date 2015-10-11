@@ -24,7 +24,8 @@ public class StyleLastDayAction implements SessionAware{
 		
 		styleNo = (String) userSession.get("styleNo");
 		
-		style = StyleDAO.getStyle(styleNo);
+		StyleDAO styleDao = new StyleDAO();
+		style = styleDao.getStyle(styleNo);
 		
 		
 		style.setClockedHrs_1d(dayLastClocked);
@@ -33,8 +34,8 @@ public class StyleLastDayAction implements SessionAware{
 		style.setTotalFTT_1d(dayLastTotalPassed);
 		
 		
-		
-		boolean success = StyleDAO.addStyle(style);
+		//StyleDAO styleDao = new StyleDAO();
+		boolean success = styleDao.addStyle(style);
 		
 		if(success){
 			returnVal = "success";

@@ -18,7 +18,9 @@ public class ActiveBaselineAction {
 		AB.setNewTarget(newTarget);
 		AB.setRepeatTarget(repeatTarget);
 		
-		boolean value = ActiveBaselineDAO.addActiveBaseline(AB);
+		ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();
+		
+		boolean value = activeBaselineDao.addActiveBaseline(AB);
 		
 		if(value){
 			returnVal="success";

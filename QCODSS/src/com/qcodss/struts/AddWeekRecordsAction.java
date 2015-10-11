@@ -131,7 +131,9 @@ public class AddWeekRecordsAction {
 		WR.setTotalInspected_5r(day5TotalInspectedr);
 		WR.setTotalFTT_5r(day5FTTr);
 		
-		Boolean value = PlantWRDAO.addPlantWR(WR);
+		PlantWRDAO plantWRDao = new PlantWRDAO();
+		
+		Boolean value = plantWRDao.addPlantWR(WR);
 		
 		if(value){
 			returnVal = "success";
