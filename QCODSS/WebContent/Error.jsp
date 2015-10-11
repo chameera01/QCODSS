@@ -20,6 +20,7 @@
 	     		
 	     			<div class= "panel-heading">
 	     				<h1> Error </h1>
+	     				<hr>
 	     			</div>
 	     			
 	     			<div class="panel-body">

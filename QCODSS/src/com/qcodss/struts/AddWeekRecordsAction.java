@@ -8,6 +8,9 @@ import com.qcodss.model.PlantWR;
 public class AddWeekRecordsAction {
 	
 	public Integer plantName;
+	
+	
+	
 	public int year;
 	public int month;
 	public int weekNumber;
@@ -67,9 +70,12 @@ public class AddWeekRecordsAction {
 	String returnVal="error";
 	Plant plant= new Plant();
 	
-	PlantWR WR ;
+	PlantWR WR = null ;
 	
 	public String execute(){
+		
+		System.out.println(plantName);
+		
 		WR = new PlantWR();
 		
 		plant.setId(plantName);
@@ -133,7 +139,7 @@ public class AddWeekRecordsAction {
 		
 		PlantWRDAO plantWRDao = new PlantWRDAO();
 		
-		Boolean value = plantWRDao.addPlantWR(WR);
+		boolean value = plantWRDao.addPlantWR(WR);
 		
 		if(value){
 			returnVal = "success";
