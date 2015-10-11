@@ -121,7 +121,15 @@ public class UserDAO {
 			   
 			   tx.commit();
 		  }catch (HibernateException e) {
-			  if (tx!=null) tx.rollback();
+			  if (tx!=null) {
+				  try {
+					  tx.rollback();					  
+				  } catch(Exception re) {
+					  System.err.println("Error when trying to rollback transaction: ");
+					  re.printStackTrace();
+				  }
+				  
+			  }
 			  e.printStackTrace();
 			  
 			  

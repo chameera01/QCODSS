@@ -79,6 +79,8 @@ function loadForm(){
 		    	$("#dayLastTotalInspected").val(data.totalInspected_1d);
 		    	$("#dayLastTotalPassed").val(data.totalFTT_1d);
 		    	
+		    	alert("dayLastTotalPassed : "+data.totalFTT_1d);
+		    	
 		    	/* style fields - last 2 day */
 		    	$("#dayLastTwoClocked").val(data.clockedHrs_2d);
 		    	$("#dayLastTwoProduced").val(data.producedHrs_2d);
