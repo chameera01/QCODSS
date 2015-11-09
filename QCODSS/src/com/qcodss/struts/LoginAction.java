@@ -49,7 +49,7 @@ public class LoginAction implements SessionAware {
 		System.out.println("id : " + userSession.get("id"));
 		System.out.println("name : " + userSession.get("name"));
 		System.out.println("plantID : " + userSession.get("plantID"));
-		
+		System.out.println("User role :" + userSession.get("role"));
 		
 		
 	

@@ -146,8 +146,23 @@
                         <a   href="AddPlant.jsp"><i class="fa fa-home fa-3x"></i> Authenticate Plants</a>
                     </li>	
                     
-                    <li  >
-                        <a  href="SetBaselines.jsp"><i class="fa fa-wrench fa-3x"></i> Setup Baselines</a>
+                   
+                    
+                    <li>
+                        <a  href="#"><i class="fa fa-wrench fa-3x"></i> Set Baselines</a>
+                        
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="SetBaselines.jsp">Set Plant Baselines</a>
+                            </li>
+                            <li>
+                                <a href="SetActiveBaselines.jsp">Set Active Baselines</a>
+                            </li>
+                            
+                           
+                            
+                        </ul>
+                        
                     </li>
                       
                     	

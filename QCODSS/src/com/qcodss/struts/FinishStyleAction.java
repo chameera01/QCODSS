@@ -10,20 +10,27 @@ import com.qcodss.model.Style;
 
 public class FinishStyleAction implements SessionAware{
 public String styleNo;
+public Date datepicker;
 	
 	Style style;
 	private Map<String, Object> userSession ;
 	
 	public String execute(){
-		String returnVal = "success";
+		String returnVal = "error";
 		styleNo = (String) userSession.get("styleNo");
 		
 		StyleDAO styleDao = new StyleDAO();
 		
 		style = styleDao.getStyle(styleNo);
 		
-		Date date = new Date();
-		System.out.println(date);
+		style.setFinishDate(datepicker);
+		
+		
+		boolean value = styleDao.addStyle(style);
+		
+		if(value){
+			returnVal = "success";
+		}
 		
 		return returnVal;
 	}	

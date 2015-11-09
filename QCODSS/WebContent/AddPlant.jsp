@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@taglib prefix="s" uri="/struts-tags"  %>       
+    
 <!DOCTYPE html >
 <html>
 <head>
@@ -19,7 +21,21 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	
+	<script type="text/javascript">
 
+	function deletePlant(plantID){
+		alert("Deleting plant "+ plantID);
+		
+		
+		
+	}
+
+
+	</script>
+	
+	
+	
 </head>
 <body>
 
@@ -31,6 +47,14 @@
 	<div id="page-wrapper">
 	
 		<div id="page-inner"> 
+			
+			<% 
+				if(session.getAttribute("role").equals("admin") == false){
+					String redirectURL = "NoAccess.jsp";
+					response.sendRedirect(redirectURL);
+				}
+			%>
+			
 			
 			<div class="row">
 	    	
@@ -91,6 +115,89 @@
 		    	
 	    	<!-- /. row  -->	
 	    	</div>
+	    	
+	    	
+	    	
+	    	<div class="row">
+	    		
+	    		<div class="col-md-8">	
+		
+			     <div class="panel panel-default ">
+	                 
+	                 	
+	                 	
+	                 	
+	                 	<div class="panel-heading">
+                         	Authenticated plants
+                        </div>
+                        
+                        
+                        <div class="panel-body">
+                        
+                        	<div class="row"> 
+                        			
+                        		 <div class="col-md-8">	
+                        			
+                        		  <form action="viewAllPlants" method="post">
+                        		  	
+                       		  			<div class="form-group">
+                                           
+                                           
+                                           <input type="submit" class="btn btn-danger" value="View list of plants"  />
+                                           
+                                           <hr>
+                                           
+                                           		<table class="table table-bordered">
+                                           			
+                                           			<thead>
+												      <tr>
+												      	<th style="display:none;">ID</th>
+												        <th>Plant name</th>
+												        <th>Action</th>
+												        
+												      </tr>
+												    </thead>
+                                           			
+                                           			<tbody>
+                                           			
+                                           		<s:iterator value="allPlants" var="allPlants">
+                                           		
+ 
+													<tr>
+														<td style="display:none;"> <s:property value="#allPlants.id" /> </td>
+													    <td><s:property value="#allPlants.name" /></td>
+													    
+													    <td> <button onclick="deletePlant(<s:property value="#allPlants.id" />)" id="<s:property value="#allPlants.id" />" class="btn btn-danger">Delete</button></td>
+													</tr>
+													
+													
+                                           		 </s:iterator>
+
+                                            </tbody>	
+                                            
+                                           	</table>
+                                       </div>
+                        		  	   
+                        		  	   
+                        		  	   	
+                        		  		
+                        		  </form>
+                        		  
+                        		  
+                        		
+                        		 </div>
+                        		
+                        	</div>
+                        
+                        
+                        </div>
+	                 
+	                 
+	                  </div>
+		
+				</div>
+						
+			</div>
 			
 			
 		

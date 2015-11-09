@@ -104,7 +104,7 @@
 		
 		<action name="finishStyle" class="com.qcodss.struts.FinishStyleAction">
 		
-			<result name="success">/AddStyleRecords.jsp</result>
+			<result name="success">/index.jsp</result>
 			<result name="error">/Error.jsp</result>
 		
 		</action>
@@ -156,6 +156,14 @@
 			<result name="error">/Error.jsp</result>
 		
 		</action>
+		
+		<action name="viewAllPlants" class="com.qcodss.struts.ViewPlantsAction" >
+		
+			<result name="success">/AddPlant.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
 		
 		<!-- this action is for center charts -->
 		<action name="centerChart" class="com.qcodss.struts.CenterChartAction">

@@ -8,7 +8,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>QCODSS | Setup baselines</title>
+<title>QCODSS | Setup plant baselines</title>
 
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,7 +41,7 @@
 			<div class="row">
 	    	
 		    	<div class="col-md-12">
-	                 <h3>Setup baselines</h3>   
+	                 <h3>Setup plant baselines</h3>   
 	                  
 	            </div>
 	    	<!-- /. row  -->	
@@ -66,73 +66,8 @@
 	                 	<div class="panel-body">
 	                 	
 	                 		<div class="row">
-	                 			<div class="col-md-6">
-	                 			
-	                 				<ul class="nav nav-tabs">
-		                                <li class="active"><a href="#home" data-toggle="tab">Active baselines</a>
-		                                </li>
-		                                <li class=""><a href="#profile" data-toggle="tab">Plant baselines</a>
-		                                </li>
-		                               
-		                            </ul>
-		                            
-		                            <div class="tab-content">
-		                                <div class="tab-pane fade active in" id="home">
-		                                	
-		                                	<form action="addActiveBaseline" method="post"> 
-	                 					
-			                 					<div class="form-group">
-			                                            <label>Select year</label>
-			                                            <select class="form-control" name="year">
-			                                            
-			                                                <option>2013</option>
-			                                          		<option>2014</option>
-			                                                <option>2015</option>
-			                                                <option>2016</option>
-			                                                <option>2017</option>
-			                                                <option>2018</option>
-			                                                <option>2019</option>
-			                                                <option>2020</option>
-			                                                <option>2021</option>
-			                                                <option>2022</option>
-			                                                <option>2023</option>
-			                                                <option>2024</option>
-			                                                <option>2025</option>
-			                                                <option>2026</option>
-			                                                <option>2027</option>
-			                                                <option>2028</option>
-			                                                <option>2029</option>
-			                                                <option>2030</option>
-			                                                
-			                                                
-			                                            </select>
-			                                        </div>
-		                                        
-		                                        <div class="form-group">
-		                                            <label>Enter yearly target efficiency for new styles</label>
-		                                            <input class="form-control" placeholder="Enter  new target" name="newTarget" />
-		                                        </div>
-		                                        
-		                                        <div class="form-group">
-		                                            <label>Enter yearly target efficiency for repeat styles</label>
-		                                            <input class="form-control" placeholder="Enter repeat target   " name="repeatTarget" />
-		                                        </div>
-			                 					
-			                 					
-			                 					<div class="form-group">
-		                                            
-		                                            <input type="submit" class="btn btn-danger" value="Save"  />
-		                                            <input type="reset" class="btn btn-danger" value="Reset"  />
-		                                        </div>
-	                 					
-	                 				
-	                 						</form>
-
-		                                
-		                                </div>
-		                                
-		                                
-		                                <div class="tab-pane fade" id="profile">
+    
+		                               <div class="col-md-6">
 		                                
 			                                <form action="addPlantBaseline" method="post" > 
 			                                
@@ -202,8 +137,8 @@
 		                 				
 		                 					</form>
 		                                
-		                                
 		                                </div>
+		                           
 		                                
 		                            </div>
 	                 				
@@ -224,46 +159,6 @@
 	                 
 	                 </div>
 	                  
-	            </div>
-		    	
-	    	<!-- /. row  -->	
-	    	</div>
-			
-			<!-- previous baseline records is displayed here -->
-			<div class="row">
-	    		<div class="col-md-8">
-	            	<div class="panel panel-default">
-	                	<div class="panel-heading">
-                            See previous Baseline records
-                        </div>
-	                 	<div class="panel-body">
-	                 	
-		                <div class="form-group">
-                       		<label>Select Year</label>
-                       		<div class="input-group">
-	                       		<select id="ABYear" class="form-control" name="ABYear">	                                        	
-								<%
-								/* Loading Active Baseline years list to the drop down */
-								ActiveBaseline activeBaseline = new ActiveBaseline();
-		                                            		
-		                        ActiveBaselineDAO activeBaselineDao = new ActiveBaselineDAO();                    		
-		                                            		
-								List<Integer> allABYears = activeBaselineDao.getAllABYears();
-								for(int year:allABYears){ %>                           				
-									<option value="<%=year%>"> <%=year%> </option>
-								<%   
-								}		                                            
-								           %>	                                            	                                            
-								</select>
-								<span><button class="btn btn-danger" type="button" onclick="loadBLTable()">Preview</button></span>
-								
-							</div>
-						</div>
-	                 	</div>
-	                 </div>
-				</div>
-	    	<!-- /. row  -->	
-	    	</div>	
 		
 		</div>
 	

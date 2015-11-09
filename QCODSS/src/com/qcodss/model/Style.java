@@ -192,6 +192,20 @@ public class Style {
 	
 	@Column(name = "style_totalFTT_3d")
 	private double totalFTT_3d;
+	
+	
+	private Date finishedDate;
+	
+	
+	
+
+	public Date getFinishedDate() {
+		return finishedDate;
+	}
+
+	public void setFinishedDate(Date finishedDate) {
+		this.finishedDate = finishedDate;
+	}
 
 	public Plant getPlant() {
 		return plant;

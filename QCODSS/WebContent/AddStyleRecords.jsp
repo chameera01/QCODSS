@@ -58,6 +58,17 @@
 		  $( "#datepicker" ).datepicker();
 		});
 	</script>
+	
+	
+	<script>
+		function finishStyle(){
+			var finishDate = document.getElementById("datepicker");
+			alert("Finish date "+ finishDate);
+		}
+	
+	
+	</script>
+	
     
 </head>
 <body>
@@ -727,12 +738,17 @@
 	        </div>
 	        <!-- End of tabs-->
 	        
-	        <div class="form-group">
-                       
-              <p>Date: <input type="text" id="datepicker"></p>
-              <a href="finishStyle" class="btn btn-danger square-btn-adjust">Finish style</a>
-              
-       		</div>
+	        <form action = "finishStyle" method="post">
+	        	
+		        <div class="form-group">
+	                       
+	              <p>Date: <input type="Date" name="datepicker"></p>
+	              <input type="submit"   class="btn btn-danger square-btn-adjust" value="Finish capturing time"> 
+	              
+	       		</div>
+       		
+       		</form>
+       		
   </div>         
 		<!-- End of page inner-->
 		</div>

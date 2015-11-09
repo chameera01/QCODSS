@@ -62,6 +62,14 @@
 	
 		<div id="page-inner"> 
 				
+				<% 
+					if(session.getAttribute("role").equals("admin") == false){
+						String redirectURL = "NoAccess.jsp";
+						response.sendRedirect(redirectURL);
+					}
+				%>
+				
+				
 				<div class="row">
 	    		
 	    		<div class="col-md-8">	
