@@ -44,13 +44,11 @@ $(document).ready(function(){
 		rules: {
 			dayOneClocked: { 	 
 				 required: true,
-				 number: true,
-				 max: 24
+				 number: true
 			},
 			dayOneProduced: {   	 
 				required: true,
-				number: true,
-				max: 24
+				number: true
 			},
 			dayOneTotalInspected: {   	 
 				required: true,
