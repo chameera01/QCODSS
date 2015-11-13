@@ -11,10 +11,13 @@ $(document).ready(function(){
 				 required: true,
 			     maxlength: 12
 			},
+			weekNo: { 	 
+				 required: true
+			},
 			moduleNo: {   	 
-				required: true,
-				digits: true,
-				maxlength: 3
+				required: true
+				//digits: true,
+				//maxlength: 3
 			},
 			feedingTime: {   	 
 				required: true,
@@ -32,6 +35,7 @@ $(document).ready(function(){
 		},
 		messages: {
 		    styleNo: "",
+		    weekNo: "",
 		    moduleNo: "",
 		    feedingTime: "",
 		    QCOTime: "",
