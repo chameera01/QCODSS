@@ -20,7 +20,7 @@ public class SessionAction implements SessionAware {
 	
 /* these style fields are sent as json object */	
 	private String newRepeat;
-	private int moduleNo;
+	private String moduleNo;
 	private int preSetting;
 	private int preTraining;
 	private int preBulk;
@@ -216,7 +216,7 @@ public class SessionAction implements SessionAware {
 		return newRepeat;
 	}
 
-	public int getModuleNo() {
+	public String getModuleNo() {
 		return moduleNo;
 	}
 
@@ -384,7 +384,7 @@ public class SessionAction implements SessionAware {
 		this.newRepeat = newRepeat;
 	}
 
-	public void setModuleNo(int moduleNo) {
+	public void setModuleNo(String moduleNo) {
 		this.moduleNo = moduleNo;
 	}
 
