@@ -18,7 +18,7 @@ public class AddStyleRecordAction implements SessionAware {
 	public Integer plantName;
 	public String styleNo;
 	public String styleType;
-	public Integer moduleNo;
+	public String moduleNo;
 	public Integer machineSetting;
 	public Integer preTraining;
 	public Integer preBulk;

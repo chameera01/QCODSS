@@ -57,7 +57,7 @@ public class Style {
 	private int rsr;
 	
 	@Column(name = "style_moduleNo")
-	private int moduleNo;
+	private String moduleNo;
 	
 	@Column(name = "style_feedingTime")
 	private int feedingTime;
@@ -267,7 +267,7 @@ public class Style {
 		return rsr;
 	}
 
-	public int getModuleNo() {
+	public String getModuleNo() {
 		return moduleNo;
 	}
 
@@ -443,7 +443,7 @@ public class Style {
 		this.rsr = rsr;
 	}
 
-	public void setModuleNo(int moduleNo) {
+	public void setModuleNo(String moduleNo) {
 		this.moduleNo = moduleNo;
 	}
 

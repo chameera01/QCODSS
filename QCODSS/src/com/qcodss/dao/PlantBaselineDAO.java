@@ -8,6 +8,7 @@ import org.hibernate.Transaction;
 
 import com.qcodss.db.DB;
 import com.qcodss.model.ActiveBaseline;
+import com.qcodss.model.Plant;
 import com.qcodss.model.PlantBaseline;
 
 
@@ -76,4 +77,25 @@ public class PlantBaselineDAO {
 		   
 		   return allPB;
 	   }
+	 
+	 public List<PlantBaseline> getAllPlantBaselinesByPlant(int plantID ){
+		   Session session = DB.getSessionFactory().openSession();
+		   Transaction tx = null;
+		   List<PlantBaseline> allPB = null;
+		   
+		   try{
+			   tx = session.beginTransaction();
+			   allPB = session.createQuery("FROM PlantBaseline pb Where pb.plant= '" +plantID+ "'  ").list();
+			   tx.commit();
+		   }catch (HibernateException e) {
+			   if (tx!=null) tx.rollback();
+			   e.printStackTrace(); 
+		   }finally {
+			   session.close(); 
+		   }
+		   
+		   return allPB;
+	   }
+	 
+	 
 }
