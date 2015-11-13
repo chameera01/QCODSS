@@ -1,6 +1,8 @@
+<%@page import="com.qcodss.model.Plant"%>
 <%@page import="com.qcodss.model.ActiveBaseline"%>
 <%@page import="com.qcodss.dao.ActiveBaselineDAO"%>
 <%@page import="java.util.List"%>
+<%@taglib prefix="s" uri="/struts-tags"  %>  
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -24,7 +26,17 @@
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
    
+	<script type="text/javascript">
 
+	function deletePlantBaseline(id){
+		alert("Deleting plant baseline "+ id);
+		
+		
+		
+	}
+
+
+	</script>
 
 </head>
 <body>
@@ -158,6 +170,121 @@
 	                 	
 	                 
 	                 </div>
+	                 
+	                 
+		                 <!-- Start of the table section -->
+			    		<div class="row">
+			    			
+			    			<div class="col-md-8">	
+			
+						     <div class="panel panel-default ">
+	
+				                 	<div class="panel-heading">
+			                         	Plant baselines
+			                        </div>
+			                        
+			                        
+			                        <div class="panel-body">
+			                        
+			                        	<div class="row"> 
+			                        			
+			                        		 <div class="col-md-8">	
+			                        			
+			                        		  <form action="getPlantBaselines" method="post">
+			                        		  
+			                        		  		<div class="form-group">
+			                        		  			
+			                        		  			<label>Select plant</label>
+				                                        <select class="form-control" name="plantID">
+			                                                
+			                                                
+			                                                
+			                                                
+			                                            
+				                                        <%
+								                          //Loading plant list to the drop down
+								                           //Plant plant = new Plant(); 
+								                           
+								                           //PlantDAO plantDao = new PlantDAO();	
+								                        
+								                           //List<Plant> allPlants =   plantDao.getAllPlants();
+								                           
+								                           for(Plant p:allPlants){
+								           				   plant = p;
+								                           
+											             %>
+											             	<option value="<%= plant.getId() %>"><%= plant.getName()  %></option>
+											              
+								                         <% } %>
+								                            
+								                            
+				                                          </select>
+			                        		  		</div>
+			                        		  	
+			                       		  			<div class="form-group">
+			                                           
+			                                           
+			                                           <input type="submit" class="btn btn-danger" value="View plant baselines"  />
+			                                           
+			                                           <hr>
+			                                           
+			                                           		<table class="table table-bordered">
+			                                           			
+			                                           			<thead>
+															      <tr>
+															        <th style="display:none;">ID</th>
+															      	<th>Year</th>
+															        <th>Month</th>
+															        <th>Budgeted efficiency</th>
+															        <th>Action</th>
+															        
+															      </tr>
+															    </thead>
+			                                           			
+			                                           			<tbody>
+			                                           			
+			                                           		<s:iterator value="allPlantBaselines" var="allPlantBaselines">
+			                                           		
+			 
+																<tr>
+																    <td style="display:none;"> <s:property value="#allPlantBaselines.id" /> </td>
+																	<td> <s:property value="#allPlantBaselines.year" /> </td>
+																    <td><s:property value="#allPlantBaselines.month" /></td>
+																    <td><s:property value="#allPlantBaselines.budgetedEfficiency" /></td>
+																    <td> <button onclick="deletePlantBaseline(<s:property value="#allPlantBaselines.id" />)" id="<s:property value="#allActiveBaselines.id" />" class="btn btn-danger">Delete</button></td>
+																</tr>
+																
+																
+			                                           		 </s:iterator>
+			
+			                                            </tbody>	
+			                                            
+			                                           	</table>
+			                                       </div>
+			                        		  	   
+			                        		  	   
+			                        		  	   	
+			                        		  		
+			                        		  </form>
+			                        		  
+			                        		  
+			                        		
+			                        		 </div>
+			                        		
+			                        	</div>
+			                        
+			                        
+			                        </div>
+				                 
+				                 
+				                  </div>
+					
+							</div>
+			    		
+			    		
+			    		</div>
+		    			<!-- end of table section --> 
+	                 
 	                  
 		
 		</div>

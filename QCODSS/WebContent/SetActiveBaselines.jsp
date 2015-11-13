@@ -1,6 +1,7 @@
 <%@page import="com.qcodss.model.ActiveBaseline"%>
 <%@page import="com.qcodss.dao.ActiveBaselineDAO"%>
 <%@page import="java.util.List"%>
+<%@taglib prefix="s" uri="/struts-tags"  %>  
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -20,7 +21,20 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	
+   <script type="text/javascript">
 
+	function deleteActiveBaseline(year){
+		alert("Deleting activebaseline "+ year);
+		
+		
+		
+	}
+
+
+	</script>	
+	
+	
 </head>
 <body>
 <div id="wrapper">
@@ -64,13 +78,7 @@
 	                 	
 	                 		<div class="row">
 	                 			<div class="col-md-6">
-	                 			
-	                 				
-		                           
-		                                
-		                                	
-		                                
-		                                	
+
 		                                	<form action="addActiveBaseline" method="post"> 
 	                 					
 			                 					<div class="form-group">
@@ -136,10 +144,89 @@
 	                 	
 	                 
 	                 </div>
-	                  
+	                 <!-- end of first row --> 
 	           
-		    	
-	    	
+		    		<!-- Start of the table section -->
+		    		<div class="row">
+		    			
+		    			<div class="col-md-8">	
+		
+					     <div class="panel panel-default ">
+
+			                 	<div class="panel-heading">
+		                         	Active baselines
+		                        </div>
+		                        
+		                        
+		                        <div class="panel-body">
+		                        
+		                        	<div class="row"> 
+		                        			
+		                        		 <div class="col-md-8">	
+		                        			
+		                        		  <form action="getActiveBaselines" method="post">
+		                        		  	
+		                       		  			<div class="form-group">
+		                                           
+		                                           
+		                                           <input type="submit" class="btn btn-danger" value="View active baselines"  />
+		                                           
+		                                           <hr>
+		                                           
+		                                           		<table class="table table-bordered">
+		                                           			
+		                                           			<thead>
+														      <tr>
+														      	<th>Year</th>
+														        <th>New target</th>
+														        <th>Repeat target</th>
+														        <th>Action</th>
+														        
+														      </tr>
+														    </thead>
+		                                           			
+		                                           			<tbody>
+		                                           			
+		                                           		<s:iterator value="allActiveBaselines" var="allActiveBaselines">
+		                                           		
+		 
+															<tr>
+																<td> <s:property value="#allActiveBaselines.year" /> </td>
+															    <td><s:property value="#allActiveBaselines.newTarget" /></td>
+															    <td><s:property value="#allActiveBaselines.repeatTarget" /></td>
+															    <td> <button onclick="deleteActiveBaseline(<s:property value="#allActiveBaselines.year" />)" id="<s:property value="#allActiveBaselines.year" />" class="btn btn-danger">Delete</button></td>
+															</tr>
+															
+															
+		                                           		 </s:iterator>
+		
+		                                            </tbody>	
+		                                            
+		                                           	</table>
+		                                       </div>
+		                        		  	   
+		                        		  	   
+		                        		  	   	
+		                        		  		
+		                        		  </form>
+		                        		  
+		                        		  
+		                        		
+		                        		 </div>
+		                        		
+		                        	</div>
+		                        
+		                        
+		                        </div>
+			                 
+			                 
+			                  </div>
+				
+						</div>
+		    		
+		    		
+		    		</div>
+	    			<!-- end of table section --> 
 			
 		
 		</div>
