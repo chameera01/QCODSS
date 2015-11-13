@@ -18,7 +18,8 @@ public class SessionAction implements SessionAware {
 	
 	public int styleExist;
 	
-/* these style fields are sent as json object */	
+/* these style fields are sent as json object */
+	private int weekNo;
 	private String newRepeat;
 	private String moduleNo;
 	private int preSetting;
@@ -146,6 +147,7 @@ public class SessionAction implements SessionAware {
 		}
 
 		setStyleExist(1);
+		setWeekNo(style.getWeekNo());
 		setNewRepeat(style.getNewRepeat());
 		setModuleNo(style.getModuleNo());
 		setPreSetting(style.getPreSetting());
@@ -210,6 +212,10 @@ public class SessionAction implements SessionAware {
 	
 	public int getStyleExist() {
 		return styleExist;
+	}
+	
+	public int getWeekNo() {
+		return weekNo;
 	}
 	
 	public String getNewRepeat() {
@@ -380,6 +386,10 @@ public class SessionAction implements SessionAware {
 		this.styleExist = styleExist;
 	}
 
+	public void setWeekNo(int weekNo) {
+		this.weekNo = weekNo;
+	}
+	
 	public void setNewRepeat(String newRepeat) {
 		this.newRepeat = newRepeat;
 	}

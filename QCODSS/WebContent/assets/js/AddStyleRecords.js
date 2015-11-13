@@ -20,6 +20,8 @@ function loadForm(){
 	    	/* if style exist load style data into fields */
 	    	if(data.styleExist==1){
 	    	
+	    		$("#weekNo").val(data.weekNo);
+	    		
 		    	var $styleTypeRadios = $('input:radio[name=styleType]');
 		    	$styleTypeRadios.filter('[value='+data.newRepeat+']').prop('checked', true);
 		    	
@@ -53,8 +55,6 @@ function loadForm(){
 		    	$("#dayTwoTotalInspected").val(data.totalInspected_2);
 		    	$("#dayTwoTotalPassed").val(data.totalFTT_2);
 		    	
-		    	alert("totalFTT_2 : "+data.totalFTT_2);
-		    	
 		    	/* style fields - day 03 */
 		    	$("#dayThreeClocked").val(data.clockedHrs_3);
 		    	$("#dayThreeProduced").val(data.producedHrs_3);
@@ -78,8 +78,6 @@ function loadForm(){
 		    	$("#dayLastProduced").val(data.producedHrs_1d);
 		    	$("#dayLastTotalInspected").val(data.totalInspected_1d);
 		    	$("#dayLastTotalPassed").val(data.totalFTT_1d);
-		    	
-		    	alert("dayLastTotalPassed : "+data.totalFTT_1d);
 		    	
 		    	/* style fields - last 2 day */
 		    	$("#dayLastTwoClocked").val(data.clockedHrs_2d);
