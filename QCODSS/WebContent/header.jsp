@@ -164,6 +164,11 @@
                         </ul>
                         
                     </li>
+                    
+                    
+                    <li>
+                        <a  href="ReportGenerator.jsp"><i class="fa fa-briefcase fa-3x"></i> Report generator</a>                      
+                    </li>
                       
                     	
                 </ul>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
 <struts>
-	<package name="default" extends="struts-default,json-default">
+	<package name="default" extends="struts-default,json-default,jasperreports-default" >
 		
 		
 		<action name="addplant" class="com.qcodss.struts.AddPlantsAction">
@@ -164,6 +164,20 @@
 		
 		</action>
 		
+		<action name="getActiveBaselines" class="com.qcodss.struts.GetAllActiveBaselinesAction" >
+		
+			<result name="success">/SetActiveBaselines.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
+		<action name="getPlantBaselines" class="com.qcodss.struts.GetPlantBaselinesAction" >
+		
+			<result name="success">/SetBaselines.jsp</result>
+			<result name="error">/Error.jsp</result>
+		
+		</action>
+		
 		
 		<!-- this action is for center charts -->
 		<action name="centerChart" class="com.qcodss.struts.CenterChartAction">
@@ -181,8 +195,23 @@
 			<result type="json"></result>
 		</action>
 		
+<!-- 		<action name="myJasperTest" class="com.qcodss.struts.JasperAction"> -->
+
+<!-- 			<result name="success" type="jasper"> -->
+<!-- 	            <param name="location">/jasper/contacts.jasper</param> -->
+<!-- 	            <param name="dataSource">people</param> -->
+<!-- 	            <param name="format">PDF</param> -->
+<!-- 	        </result> -->
+	        
+<!-- 	        <result name="error" type="jasper">/Error.jsp</result> -->
+
+<!--     	</action> -->
 		
-		
+		<!-- this action is to save week report to DB --> 
+		<action name="saveWeekReport" class="com.qcodss.struts.SaveWeeklyReportAction">
+			<result name="success">/GenerateWeeklyReport.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
 		
 	</package>
 	

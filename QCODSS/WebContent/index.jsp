@@ -84,7 +84,7 @@
                 	
 		                	<div class="text-box" >
 		                    	<p class="main-text"> <a href="WeeklyReportSingle.jsp" > Weekly report-Single </a> </p> 
-		                    	<p class="text-muted">Generate single weekly report </p>
+		                    	<p class="text-muted">View single weekly report </p>
 		                	</div>
                 	
              			</div>
@@ -97,7 +97,7 @@
 			                </span>
 			                <div class="text-box" >
 			                    <p class="main-text"> <a href="#" > Weekly report-All </a></p>
-			                    <p class="text-muted">Generate weekly report for all weeks</p>
+			                    <p class="text-muted">View single weekly report </p>
 			                </div>
 			             </div>
 		     		</div>
@@ -109,7 +109,7 @@
                 			</span>
                 		<div class="text-box" >
                     		<p class="main-text"> <a href="#" > Weekly report-Active </a> </p>
-                    		<p class="text-muted">Generate MAS Active weekly report</p>
+                    		<p class="text-muted">View single weekly report </p>
                 		</div>
              			</div>
 		     		</div>
@@ -121,7 +121,7 @@
                 				</span>
                 		<div class="text-box" >
                     		<p class="main-text"> <a href="#" > Monthly report-Single </a> </p>
-                    		<p class="text-muted">Generate single monthly report</p>
+                    		<p class="text-muted">View single weekly report </p>
                 		</div>
              			</div>
 		     		</div>
@@ -133,7 +133,7 @@
                 				</span>
                 		<div class="text-box" >
                     		<p class="main-text"> <a href="#" > Monthly report-All </a> </p>
-                    		<p class="text-muted">Generate monthly report for all months</p>
+                    		<p class="text-muted">View single weekly report </p>
                 		</div>
              			</div>
 		     		</div>
@@ -145,7 +145,7 @@
                 				</span>
                 		<div class="text-box" >
                     		<p class="main-text"> <a href="#" > Monthly report-Active </a> </p>
-                    		<p class="text-muted">Generate MAS Active monthly report</p>
+                    		<p class="text-muted">View single weekly report </p>
                 		</div>
              			</div>
 		     		</div>

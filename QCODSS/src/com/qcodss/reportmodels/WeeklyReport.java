@@ -2,8 +2,19 @@ package com.qcodss.reportmodels;
 
 import java.text.DecimalFormat;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+@Entity
 public class WeeklyReport {
 	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	private int plantID;
 	private int year;
 	private int month;
 	private int weekNo;
@@ -38,6 +49,18 @@ public class WeeklyReport {
 	
 	
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getPlantID() {
+		return plantID;
+	}
+	public void setPlantID(int plantID) {
+		this.plantID = plantID;
+	}
 	public int getYear() {
 		return year;
 	}

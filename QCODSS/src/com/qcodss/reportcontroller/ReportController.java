@@ -14,6 +14,8 @@ import com.qcodss.reportmodels.WeeklyReport;
 public class ReportController {
 
 	private int weekNo;
+	private int year;
+	private int plantID;
 	
 	private int noOfStyles;
 	List<ActiveBaseline> AB = null;
@@ -30,6 +32,8 @@ public class ReportController {
 	// Weekly report constructor
 	public ReportController(int weekNo, int year, int plantID) {
 		this.weekNo = weekNo;
+		this.year = year;
+		this.plantID = plantID;
 		// weekNo should be passed as a parameter to the below method
 		
 		StyleDAO styleDao = new StyleDAO();
@@ -605,7 +609,11 @@ public class ReportController {
 
 	// Method to get single weekly report
 	public WeeklyReport getReport() {
-
+		
+		wr.setYear(year);
+		wr.setPlantID(plantID);
+		wr.setWeekNo(weekNo);
+		
 		getAB();
 
 		wr.setNumberOfNew(calNumberofNew(allStyles));

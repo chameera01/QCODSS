@@ -26,6 +26,8 @@
 		<mapping class="com.qcodss.model.ActiveBaseline"/>
 		<mapping class="com.qcodss.model.PlantBaseline"/>
 		
+		<mapping class="com.qcodss.reportmodels.WeeklyReport"/>
+		
 		
 	</session-factory>
 	
