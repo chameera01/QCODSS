@@ -135,8 +135,8 @@ $( document ).ready(function() {
 	                                                
 	                                                <option>2013</option>
 	                                                <option>2014</option>
-	                                                <option>2015</option>
-	                                                <option>2016</option>
+	                                                <option selected>2015</option>
+	                                                <option >2016</option>
 	                                                <option>2017</option>
 	                                                <option>2018</option>
 	                                                <option>2019</option>
@@ -158,17 +158,26 @@ $( document ).ready(function() {
 										
 										<div class="form-group">
                                            <label>Week No </label>
-                                           <input type="text" name="weekNo" placeholder="Enter Week No"/>
+                                           <input class="form-control" type="text" name="weekNo" placeholder="Enter Week No"/>
                                         
                                         </div> 
                                         
-										<div class="form-group">
-                                           
-                                           <input type="submit" class="btn btn-danger" value="View Weekly Report"  />
+                                        <div class="row">
                                         
-                                        </div> 
+											<div class="form-group col-md-4">
+	                                           
+	                                           <input type="submit" class="btn btn-danger" value="View"  />
+	                                           
+	                                        
+	                                        </div> 
+	                                        
+	                                        <div class="form-group col-md-4">
+	                                           
+	                                           <input type="reset" class="btn btn-danger" value="Reset"  />
+	                                        
+	                                        </div>
                                            
-                                           
+                                        </div>   
                            
                         		  	   
                         		  	   
@@ -266,6 +275,16 @@ $( document ).ready(function() {
     					
     					</div>	
     					
+    					
+    					<div class="row">
+    						
+    						<div class="col-md-4">
+    							
+    							<a href="index.jsp" class="btn btn-danger"> Back </a>
+    						
+    						</div>
+    						
+    					</div>
     						
     						
 	
