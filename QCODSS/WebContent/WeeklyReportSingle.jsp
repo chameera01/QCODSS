@@ -98,7 +98,7 @@ $( document ).ready(function() {
                         			
                         		 <div class="col-md-2">	
                         			
-                        		  <form action="weeklyReportGen" method="post">
+                        		  <form action="weeklyReportSingleGen" method="post">
                         		  	
                        		  			<div class="form-group">
                                            

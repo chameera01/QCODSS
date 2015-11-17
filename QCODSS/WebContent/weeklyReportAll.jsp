@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Weekly Report-Single</title>
+<title>Weekly Report-All</title>
 
 <!-- BOOTSTRAP STYLES-->
 <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -82,7 +82,7 @@ $( document ).ready(function() {
 	     		<div class="panel panel-default ">
 	     		
 	     			<div class= "panel-heading">
-	     				<h1> Weekly Report-Single </h1>
+	     				<h1> Weekly Report-All </h1>
 	     			</div>
 	     			
 	     			<div class="panel-body">
@@ -98,7 +98,7 @@ $( document ).ready(function() {
                         			
                         		 <div class="col-md-2">	
                         			
-                        		  <form action="weeklyReportGen" method="post">
+                        		  <form action="weeklyReportAllGen" method="post">
                         		  	
                        		  			<div class="form-group">
                                            
@@ -135,8 +135,8 @@ $( document ).ready(function() {
 	                                                
 	                                                <option>2013</option>
 	                                                <option>2014</option>
-	                                                <option>2015</option>
-	                                                <option>2016</option>
+	                                                <option selected>2015</option>
+	                                                <option >2016</option>
 	                                                <option>2017</option>
 	                                                <option>2018</option>
 	                                                <option>2019</option>
@@ -155,20 +155,23 @@ $( document ).ready(function() {
 	                                                
 	                                            </select>
 										</div>
-										
-										<div class="form-group">
-                                           <label>Week No </label>
-                                           <input type="text" name="weekNo" placeholder="Enter Week No"/>
                                         
-                                        </div> 
+                                        <div class="row">
                                         
-										<div class="form-group">
+											<div class="form-group col-md-4">
+	                                           
+	                                           <input type="submit" class="btn btn-danger" value="View"  />
+	                                           
+	                                        
+	                                        </div> 
+	                                        
+	                                        <div class="form-group col-md-4">
+	                                           
+	                                           <input type="reset" class="btn btn-danger" value="Reset"  />
+	                                        
+	                                        </div>
                                            
-                                           <input type="submit" class="btn btn-danger" value="View Weekly Report"  />
-                                        
-                                        </div> 
-                                           
-                                           
+                                        </div>   
                            
                         		  	   
                         		  	   
@@ -266,6 +269,16 @@ $( document ).ready(function() {
     					
     					</div>	
     					
+    					
+    					<div class="row">
+    						
+    						<div class="col-md-4">
+    							
+    							<a href="index.jsp" class="btn btn-danger"> Back </a>
+    						
+    						</div>
+    						
+    					</div>
     						
     						
 	
