@@ -86,4 +86,26 @@ public class WeeklyReportDAO {
 		 
 		 return wr;
 	 }
+	 
+	 public List<WeeklyReport> getWRbyPlantWeekYear(int year, int plantID, int weekNo){
+		 
+		 Session session = DB.getSessionFactory().openSession();
+		 Transaction tx = null;
+		 List<WeeklyReport> wRList = null;
+		 
+		 
+		 try{
+			   tx = session.beginTransaction();
+			   wRList = session.createQuery("FROM  WeeklyReport w WHERE w.year = '" + year + "' and  w.weekNo = '" + weekNo + "' and  w.plantID = '" + plantID + "'  ").list();
+			   tx.commit();
+		   }catch(HibernateException e){
+			   if (tx!=null) tx.rollback();
+				e.printStackTrace(); 
+		   }
+		   finally {
+				  session.close();
+		   }
+		 
+		 return wRList;
+	 }
 }
