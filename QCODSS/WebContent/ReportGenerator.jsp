@@ -68,33 +68,7 @@
              			</div>
 		     		</div>
 		     		
-		     		<div class="col-md-6">           
-						<div class="panel panel-back noti-box">
-                			<span class="icon-box set-icon">
-                    			<i class="fa fa-list-alt"></i>
-                			</span>
-                	
-		                	<div class="text-box" >
-		                    	<p class="main-text"> <a href="#" > Monthly report </a> </p> 
-		                    	<p class="text-muted">Generate monthly report </p>
-		                	</div>
-                	
-             			</div>
-		     		</div>
 		     		
-		     		<div class="col-md-6">           
-						<div class="panel panel-back noti-box">
-                			<span class="icon-box set-icon">
-                    			<i class="fa fa-clipboard"></i>
-                			</span>
-                	
-		                	<div class="text-box" >
-		                    	<p class="main-text"> <a href="#" > Year report </a> </p> 
-		                    	<p class="text-muted">Generate yearly report </p>
-		                	</div>
-                	
-             			</div>
-		     		</div>
 		     		
 	    		</div>
 	    		
