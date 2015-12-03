@@ -15,8 +15,30 @@ public class WRGeneratorAction {
 	
 	public String execute(){
 		
+//		WeeklyReportDAO wRDAO = new WeeklyReportDAO();
+//		wRList = wRDAO.getWRbyPlantWeekYear(year, plantID, weekNo);
+//		
+//		System.out.println("execute");
+		
+		return "success";
+	}
+	
+	public String wRSingleGenerator(){
+		
 		WeeklyReportDAO wRDAO = new WeeklyReportDAO();
-		wRList = wRDAO.getWRbyPlantWeekYear(year, plantID, weekNo);
+		wRList = wRDAO.getWRSinglebyPlantWeekYear(year, plantID, weekNo);
+		
+		System.out.println("single");
+		
+		return "success";
+	}
+	
+	public String wRAllGenerator(){
+		
+		WeeklyReportDAO wRDAO = new WeeklyReportDAO();
+		wRList = wRDAO.getWRAllbyPlantYear(year, plantID);
+		
+		System.out.println("All");
 		
 		return "success";
 	}

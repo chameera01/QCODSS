@@ -213,9 +213,15 @@
 			<result name="error">/Error.jsp</result>
 		</action>
 		
-<!-- 		weekly report generator -->
-		<action name="weeklyReportGen" class="com.qcodss.struts.WRGeneratorAction">
+<!-- 		weekly report-single generator -->
+		<action name="weeklyReportSingleGen" class="com.qcodss.struts.WRGeneratorAction" method="wRSingleGenerator">
 			<result name="success">/WeeklyReportSingle.jsp</result>
+			<result name="error">/Error.jsp</result>
+		</action>
+		
+<!-- 		weekly report-all generator -->
+		<action name="weeklyReportAllGen" class="com.qcodss.struts.WRGeneratorAction" method="wRAllGenerator">
+			<result name="success">/weeklyReportAll.jsp</result>
 			<result name="error">/Error.jsp</result>
 		</action>
 		

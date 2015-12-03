@@ -96,7 +96,7 @@
 			                    <i class="fa fa-bars"></i>
 			                </span>
 			                <div class="text-box" >
-			                    <p class="main-text"> <a href="#" > Weekly report-All </a></p>
+			                    <p class="main-text"> <a href="weeklyReportAll.jsp" > Weekly report-All </a></p>
 			                    <p class="text-muted">View single weekly report </p>
 			                </div>
 			             </div>

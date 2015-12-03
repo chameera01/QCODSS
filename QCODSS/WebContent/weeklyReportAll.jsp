@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Weekly Report-Single</title>
+<title>Weekly Report-All</title>
 
 <!-- BOOTSTRAP STYLES-->
 <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -82,7 +82,7 @@ $( document ).ready(function() {
 	     		<div class="panel panel-default ">
 	     		
 	     			<div class= "panel-heading">
-	     				<h1> Weekly Report-Single </h1>
+	     				<h1> Weekly Report-All </h1>
 	     			</div>
 	     			
 	     			<div class="panel-body">
@@ -98,7 +98,7 @@ $( document ).ready(function() {
                         			
                         		 <div class="col-md-2">	
                         			
-                        		  <form action="weeklyReportSingleGen" method="post">
+                        		  <form action="weeklyReportAllGen" method="post">
                         		  	
                        		  			<div class="form-group">
                                            
@@ -155,12 +155,6 @@ $( document ).ready(function() {
 	                                                
 	                                            </select>
 										</div>
-										
-										<div class="form-group">
-                                           <label>Week No </label>
-                                           <input class="form-control" type="text" name="weekNo" placeholder="Enter Week No"/>
-                                        
-                                        </div> 
                                         
                                         <div class="row">
                                         
